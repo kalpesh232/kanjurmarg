@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Post App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    {{posts}}
+    <p id="message"></p>
+    {% for post in post %}
+    <h3>{{ forloop.counter }} {{ post.post_heading }} </h3>
+    <p>{{ post.post_text }}</p>
+    <a class="likebutton" href="#" id="like{{post.id}}" data-catid="{{ post.id}}">Like</a>
+    {% endfor %}
+</body>
+</html>
+------------------------------------------------
+from .models import Post, Like
+
+# Register your models here.
+admin.site.register(Post)
+
+admin.site.register(Like)
+---------------------------------
+
+class Post(models.Model):
+   
+    post_heading = models.CharField(max_length=200)
+    post_text = models.TextField()
+
+    def __str__(self):
+        return self.post_heading
+    
+class Like(models.Model):
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+-------------------------------------------------------------
+urlpatterns = [
+  path("",views.html_form,name='html_form'),
+  path("home", views.Index, name='all_posts')
+]
+----------------------------------------------
+def Index(request):
+    posts = Post.objects.all()
+    print('posts : ',posts)
+    return render(request, 'ajax_app/index.html',{'posts' : posts})
