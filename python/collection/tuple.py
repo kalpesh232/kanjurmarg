@@ -1,0 +1,15 @@
+tpl = ([0,1,2,3,4],[5,6,7,8,9])
+# print('tpl : ', tpl)
+# print('tpl : ', type(tpl))
+tpl[0][3] = 91
+tpl_to_ls = list(tpl)
+# print('tpl_to_ls 1 : ', tpl_to_ls)
+# print('tpl_to_ls 2 : ', tpl_to_ls)
+# print('tpl : ', tpl)
+tpl = tuple(tpl_to_ls)
+# print('tpl : ', tpl)
+# print('----', tpl[5])
+
+t9 = (1,2,{1:'A',2:'B'})
+print('t9 : ', t9[2])
+print('t9 : ', type(t9[2]))
