@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+
+</head>
+
+<body>
+    <center>
+        <h1>HTML Form</h1>
+        <form action="" method="post" name="frm">
+            {%csrf_token%}
+            <table>
+                <tr>
+                    <td>First Name : </td>
+                    <td><input type="text" name="fname" id="fname" onblur="check_fname();"></td>
+                    <span><td id="error" style="color: red;"></td></span>
+                </tr>
+                <tr>
+                    <td>Last Name : </td>
+                    <td><input type="text" name="lname" id="lname"></td>
+                </tr>
+                <tr>
+                    <td>Email Address : </td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Phone Number : </td>
+                    <td><input type="tel" name="phone" id="phone"></td>
+                </tr>
+                <center>
+                    <tr>
+                        <td> <input type="submit" value="Insert"></td>
+                    </tr>
+                </center>
+            </table>
+        </form>
+    </center>
+    <script>
+        function check_fname() {
+            var f = document.frm.fname.value
+            let regex = /^[a-zA-Z]+$/; 
+            if(!regex .test(f)){
+                document.getElementById('error').innerHTML = "Please Fill the Value";
+            }else if(f.trim()==""){
+                document.getElementById('error').innerHTML = "Please Insert only Alphbates "
+            }else{
+                document.getElementById('error') = ""
+            }
+        }
+    </script>
+</body>
+
+</html>
