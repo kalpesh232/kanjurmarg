@@ -1,0 +1,119 @@
+data defination language - create, drop, alter, truncate
+data manipulation language - insert, updaate, delete
+data query language - select
+data transsaction language - commit, rollback, save-point 
+data control language - grant, revoke
+
+SELECT * FROM one.products where name like '%n___Book' ;
+select * from products where name in ('pen set', 'notebook');
+select * from products where name is null;
+update products set name = null where prod_id = 3;
+alter table  products modify name varchar(50) null;
+select *  from products limit 5,7;
+select concat(prod_code, ' - ' ,name) as 'prod_desc', quentity, price from products;
+alter table products add supplire_id int not null default 0, add supplier_name varchar(50) null, add supplire_phone char(10) not null default 0 after name ; 
+alter table products change supplire_phone supplire_contact char(8);
+describe products;
+alter table products drop column supplire_contact;
+alter table products rename to new_products;
+update  new_products set supplire_id = 3 where prod_id in (3,7,11);
+ALTER TABLE new_products ADD FOREIGN KEY (supplire_id) REFERENCES suppliers (sup_id);
+SHOW COLUMNS FROM new_products;
+alter table new_products  change sup_id supplire_id   int unsigned not null ;
+ALTER TABLE new_products modify column sup_id int unsigned  not null;
+
+
+select * from new_products join suppliers
+on new_products.supplire_id = suppliers.sup_id;
+
+select * from new_products left join suppliers on new_products.supplire_id = suppliers.sup_id;
+select * from new_products right join suppliers on new_products.supplire_id = suppliers.sup_id;
+select * from new_products left join suppliers on new_products.supplire_id = suppliers.sup_id 
+union all
+select * from new_products right join suppliers on new_products.supplire_id = suppliers.sup_id
+where new_products.supplire_id is null;
+-- create database if not exists one;
+-- create table if not exists products
+-- (
+-- prod_id int unsigned not null auto_increment,
+-- prod_code char(4) not null,
+-- name varchar(50) not null,
+-- quentity int unsigned not null default 0,
+-- price decimal(10,2) not null default 99999.99,
+-- primary key(prod_id)
+-- );
+
+-- insert into products values ('prod','myprod');
+
+-- INSERT INTO products (prod_code, name, quentity, price) VALUES
+-- ('P001', 'Pen Set', 100, 49.99),
+-- ('P002', 'Notebook', 75, 29.99),
+-- ('P003', 'Sticky Notes', 50, 19.99),
+-- ('P004', 'Pencil Case', 200, 99.99),
+-- ('P005', 'Highlighter Set', 150, 69.99),
+-- ('P006', 'Erasers', 120, 79.99),
+-- ('P007', 'Ruler', 90, 59.99),
+-- ('P008', 'Binder Clips', 110, 79.99),
+-- ('P009', 'Printer Paper', 80, 29.99),
+-- ('P010', 'Envelopes', 60, 39.99);
+
+-- INSERT INTO products (prod_code, name, quentity, price) VALUES
+-- ('P011', 'Tape Dispenser', 40, 24.99),
+-- ('P012', 'Correction Fluid', 60, 15.99),
+-- ('P013', 'Stapler', 70, 44.99);
+create table if not exists suppliers 
+(
+sup_id int unsigned auto_increment  not null,
+name varchar(50) not null ,
+phone char(10) not null,
+primary key (sup_id)
+);
+
+INSERT INTO suppliers (name, phone) VALUES
+('Tech Solutions Inc.', '5551234567'),
+('GlobeWide Traders', '9876543210'),
+('Global Distributors LLC', '5551112233'),
+('Allied Enterprises', '4448889999');
+select * from new_products cross join suppliers;
+
+create  or replace view  product_view as
+select new_products.prod_id, new_products.name as 'product_name', new_products.price, suppliers.name as 'suppliers_name'
+from new_products left join suppliers on
+new_products.prod_id =suppliers.sup_id;
+
+create or replace view new_view as 
+select np.prod_id, sp.name from new_products as np join suppliers as sp on
+np.prod_id =  sp.sup_id;
+
+select * from product_view  ;
+select * from new_products;
+select * from suppliers;
+
+CREATE TABLE your_table_name (
+    id INT,
+    fname VARCHAR(50),
+    lname VARCHAR(50),
+    class VARCHAR(20),
+    age INT,
+    marks INT
+);
+
+INSERT INTO your_table_name (fname, lname, class, age, marks)
+VALUES
+    ('John', 'Doe', 'Math', 25, 90),
+    ('Alice', 'Smith', 'Science', 22, 85),
+    ('Michael', 'Johnson', 'History', 28, 78),
+    ('Sarah', 'Williams', 'English', 23, 92),
+    ('David', 'Brown', 'Art', 30, 88);
+
+DELIMITER  //
+CREATE FUNCTION Performance(marks INT) 
+RETURNS VARCHAR(50)
+BEGIN
+DECLARE   level varchar(50);
+IF (marks < 20) THEN SET level = 'poor';
+ELSEIF ( 20 < marks < 60) THEN set level = 'good';
+ELSEIF ( marks  > 60 ) THEN set level = 'very good';
+END IF;
+RETURN(level);
+END

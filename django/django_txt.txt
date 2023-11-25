@@ -1,0 +1,13 @@
+1. schema
+2. modules
+3.  templates and static files
+----------
+python -m venv myenv
+django-admin satrtproject project .
+python manage.py startapp app
+pip install mysalclient
+4(s,s,u,u)
+templates, static
+views
+url
+models

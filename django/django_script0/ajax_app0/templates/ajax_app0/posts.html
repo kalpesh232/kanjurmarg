@@ -1,0 +1,36 @@
+{% extends 'ajax_app0/base.html' %}
+
+{% block title %} All Posts {% endblock %}
+
+{% block content %} 
+{% if posts %}
+{% for post in posts %}
+<h3 id="message"></h3>
+<tr>
+<td>{{ post.id }}</td> 
+<td>{{post.post_heaading}}</td> <br>
+</tr>
+<a  class="likebutton" href="#" id="like+{{post.id}}" data-catid="{{ post.id }}">Like</a> 
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+<script type="text/javascript">
+    $('.likebutton').click(function(){
+        var catid ;
+        catid = $(this).attr("data-catid");
+        $.ajax(
+            {
+                type : "GET",
+                url : "/likepost",
+                data : {post_id : catid},
+                success : function(){
+                    $("#like"+catid).remove();
+                    $("#message").text(data);
+                }
+
+            }
+        )
+    
+    })
+</script>
