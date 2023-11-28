@@ -1,0 +1,20 @@
+1. what is abstraction and encapsulation?
+-> Abstraction
+Abstraction is a fundamental concept in object-oriented programming (OOP) that involves hiding the complex 
+implementation details and showing only the necessary features of an object. 
+In Python, abstraction can be achieved through abstract classes and interfaces.
+An abstract class in Python is a class that cannot be instantiated on its own
+It may contain abstract methods, which are methods without a body.
+Abstract base classes allow you to define a common interface for a set of subclasses.
+
+-> Encapsulation 
+Encapsulation in Python is like putting data and the actions that work on that data into a box called a class. This helps organize and protect the data, keeping some parts private (like a secret, using double underscores) and others protected (handle with care, using a single underscore). The double underscore makes it harder to access and modify, acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and more organized.
+
+-> Method Overloading
+In Python, you can create multiple functions with the same name but different arguments or numbers, a concept known as function overloading.  it's not supported in Python. This limitation exists because Python is an interpreted language.
+
+-> Method overriding
+Method overriding is an ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+
+->  Handle Exceptions 
+you can handle exceptions using try and except blocks. If you want to prevent errors from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.
