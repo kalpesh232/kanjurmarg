@@ -1,0 +1,125 @@
+12. Tell me about yourself
+-> Hello, I graduated in 2018 and began my professional journey as a PHP developer for six months. Following that, I transitioned to become a Python and Django instructor. Currently, I'm employed as a Python Developer at Electronics Plus Software. My main focus is using Flask to connect front-end and back-end systems, with responsibilities ranging from user registration to device management and sensor data integration. I actively contributed to the development of a smart plug project, allowing users to efficiently control their devices, and also worked on sensor integration, collecting and presenting data from various sensors.
+
+1.why we use cros?
+-> CORS helps when your website asks another website for data, but security measures might block the request. CORS allows these requests, making it possible for your website to get the data it needs from another service.
+
+2.differeance between shallow copy and deep copy 
+-> Shallow copy shares references, so changes affect both the original and the copy. Deep copy creates independent copies with values, so changes in one don't impact the other.
+
+3.how can we secure our apis?
+-> We secure APIs by using authentication, authorization, and token validation. When a request comes in, we check if it's authorized to execute the associated function by validating a token with a secret key. Input validation ensures data integrity. CORS prevents unauthorized external requests, keeping our API safe.
+
+4.indexing in sql
+-> Indexing in SQL is like a book's index page, making data retrieval faster. Instead of scanning all pages, it jumps directly to the desired information, optimizing database performance
+
+5.sum of sql table column
+-> select sum(salary) from employees;
+
+6.default port of flask.
+-> 5000
+
+7.git fetch vs pull
+-> git fetch gets changes from the remote repository but doesn't merge them into your local branch. git pull gets changes and immediately merges them into your current branch.
+
+8.what is decoraters in python?
+->Decorators in Python let you modify a function's behavior without altering the original code. They work by wrapping the original function in another function, allowing you to add or change functionality without directly modifying the original function
+
+9.what is inheritance in python?
+-> In Python, inheritance lets a class inherit properties and methods from another class. There are five types: single level, multi-level, multiple, hybrid, and hierarchical. It helps reuse and extend code by utilizing properties and methods from other classes.
+
+10.join
+-> Select * from table1 join table2 on table1.column = table2.column where table1.column = 'something'
+
+11.how can or in how many tpe we defin e a url in  flask python?
+-> In Flask, you define URLs using route decorators. There are two types: static (with fixed paths) and dynamic (with variable parts). Syntax-wise, you can use @app.route for decorators or app.add_url_rule method to create URLs. Both ways help map URLs to functions in your Flask application.
+
+13.which  libraries are you using in python?
+->
+NumPy:
+Purpose: Numerical computing library.
+Example: Used for array operations, mathematical functions.
+
+Pandas:
+Purpose: Data manipulation and analysis library.
+Example: Used for working with structured data (DataFrames).
+
+Matplotlib:
+Purpose: Data visualization library.
+Example: Used for creating plots and charts.
+
+Requests:
+Purpose: HTTP library for sending HTTP requests.
+Example: Used for making API calls.
+
+Flask:
+Purpose: Web framework for building web applications.
+Example: Used for creating web servers.
+
+Django:
+Purpose: Web framework for building web applications.
+Example: Used for creating full-stack web applications.
+
+SQLite3:
+Purpose: Database library for SQLite.
+Example: Used for interacting with SQLite databases.
+
+Random:
+Purpose: Library for generating random numbers.
+Example: Used for simulating random events in programs.
+
+Time:
+Purpose: Library for working with time-related functions.
+Example: Used for measuring execution time or introducing delays.
+
+OS:
+Purpose: Library for interacting with the operating system.
+Example: Used for file operations, directory manipulation, etc.
+
+14.Differences and Applications of List, Tuple, Set and Dictionary in Python
+->
+Represented:
+Duplicate:
+Created:
+Mutable:
+Ordered:
+Add:
+Pop:
+
+15.What is the difference between a class method and an instance method in Python?
+->
+Instance Method:
+Operates on an instance of the class.
+Can access and modify the instance's attributes.
+Defined using the def keyword inside the class, with self as the first parameter.
+Called on an instance of the class: instance.method().
+
+Class Method:
+Operates on the class itself, rather than an instance.
+Cannot access or modify instance-specific attributes.
+Defined using the @classmethod decorator, with cls as the first parameter.
+Called on the class: Class.method().
+
+15.What is the difference between a module and a package in Python?
+->
+Module:
+A single file containing Python code.
+Can define variables, functions, and classes.
+Used for organizing code within a single file.
+
+Package:
+A collection of modules organized in directories.
+Contains a special file called __init__.py to indicate it's a package.
+Used for organizing code across multiple files and subdirectories.
+
+15.What is the purpose of using lambda functions in Python?
+->
+Lambda functions in Python are used for concise and anonymous function definitions, often in situations where a full function is unnecessary They are especially useful for short-lived operations.
+
+16.What is MQTT?
+->
+MQTT, which stands for Message Queuing Telemetry Transport.
+MQTT is a messaging protocol used for communication between devices with limited bandwidth. In MQTT, the "broker" is like a hub that manages messages. Devices subscribe to "topics" they are interested in, and the broker ensures messages reach the right devices. "Publish" is sending a message, and "subscribe" is receiving messages on a specific topic. It's a simple and efficient way for devices to communicate in scenarios like IoT
+
+
+
