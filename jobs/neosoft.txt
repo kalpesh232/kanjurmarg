@@ -18,3 +18,16 @@ Method overriding is an ability of any object-oriented programming language that
 
 ->  Handle Exceptions 
 you can handle exceptions using try and except blocks. If you want to prevent errors from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.
+
+-> With
+In Python, the with statement is like a helper for managing resources, such as files. It makes sure that things are set up and cleaned up properly around a block of code.
+The code without with  manually opens, reads, and closes a file. The second code, using with, automatically takes care of opening and closing the file, making the code cleaner and less prone to mistakes
+
+-> Logging 
+In Flask, you can use the Python logging module to keep track of different types of events and errors in your application. There are several levels like notset, debug, info, error, and critical. If you set the logging level to, for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+
+-> Immutable String
+Yes, in Python, strings are immutable. This means that once you create a string object, you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
+
+-> Flask blueprint
+https://realpython.com/flask-blueprint/#:~:text=Each%20Flask%20Blueprint%20is%20an,before%20you%20can%20run%20it.
