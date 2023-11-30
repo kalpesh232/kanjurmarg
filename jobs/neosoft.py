@@ -269,18 +269,18 @@
 
 #  ##########################   Django, signals
 
-# from django.dispatch import receiver
-# # models.py
-# from django.db import models
-# from .neosoft_signanls import object_saved
+from django.dispatch import receiver
+# models.py
+from django.db import models
+from neosoft_signanls import object_saved
 
-# class MyModel(models.Model):
-#     name = models.CharField(max_length=100)
+class MyModel(models.Model):
+    name = models.CharField(max_length=100)
 
-# # Signal sent when an object is saved
-# @receiver(models.signals.post_save, sender=MyModel)
-# def send_object_saved_signal(sender, instance, **kwargs):
-#     object_saved.send(sender=sender, instance=instance)
+# Signal sent when an object is saved
+@receiver(models.signals.post_save, sender=MyModel)
+def send_object_saved_signal(sender, instance, **kwargs):
+    object_saved.send(sender=sender, instance=instance)
 
 #  ########################## Generators over  for loop  
 
@@ -303,15 +303,15 @@
 
 # --------- Synchronous 
 
-def task1():
-    print("Task 1 completed")
+# def task1():
+#     print("Task 1 completed")
 
-def task2():
-    print("Task 2 completed")
+# def task2():
+#     print("Task 2 completed")
 
-# Synchronous execution
-task2()
-task1()
+# # Synchronous execution
+# task2()
+# task1()
 
 # ---------- Asynchronous
 
