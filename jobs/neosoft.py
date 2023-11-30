@@ -284,20 +284,54 @@
 
 #  ########################## Generators over  for loop  
 
-mylist = ["apple", "banana", "cherry"]
+# mylist = ["apple", "banana", "cherry"]
 
-# For loop with list
-for fruit in mylist:
-    print(fruit)
+# # For loop with list
+# for fruit in mylist:
+#     print(fruit)
 
-# Generator function
-def fruit_generator():
-    for fruit in ["apple", "banana", "cherry"]:
-        yield fruit
+# # Generator function
+# def fruit_generator():
+#     for fruit in ["apple", "banana", "cherry"]:
+#         yield fruit
 
-# Using the generator
-for fruit in fruit_generator():
-    print(fruit)
+# # Using the generator
+# for fruit in fruit_generator():
+#     print(fruit)
+
+# ####################### Synchronous  & Asynchronous 
+
+# --------- Synchronous 
+
+def task1():
+    print("Task 1 completed")
+
+def task2():
+    print("Task 2 completed")
+
+# Synchronous execution
+task2()
+task1()
+
+# ---------- Asynchronous
+
+# import asyncio
+
+# async def task1():
+#     print("Task 1 started")
+#     await asyncio.sleep(1)  # Simulate a non-blocking operation
+#     print("Task 1 completed")
+
+# async def task2():
+#     print("Task 2 started")
+#     await asyncio.sleep(1)  # Simulate a non-blocking operation
+#     print("Task 2 completed")
+
+# async def main():
+#     await asyncio.gather(task1(), task2())
+
+# # Run the event loop with the main coroutine
+# asyncio.run(main())
 
 
 
