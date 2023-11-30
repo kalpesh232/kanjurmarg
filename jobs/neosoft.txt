@@ -52,3 +52,15 @@ In Django, signals are a way for different parts of your app to talk to each oth
 
 -> Generators over  for loop 
 Generators in Python are memory-efficient because they produce values on-the-fly, one at a time, as you iterate over them. They don't store the entire sequence of values in memory all at once, unlike a regular for loop with a list. This is especially helpful when working with large datasets, as it avoids using excessive memory since values are generated only when needed during iteration.
+
+->  synchronize and asynchronize
+
+- Synchronous:
+Things happen one at a time, in a specific order.
+Step-by-step, one after the other.
+Example: Like waiting for your turn in a line.
+
+- Asynchronous:
+Things can happen independently, not necessarily in a specific order.
+Things happening independently, not strictly in order.
+Example: Like sending messages and doing other things while waiting for replies.
