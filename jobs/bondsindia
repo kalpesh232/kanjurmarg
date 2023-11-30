@@ -1,0 +1,14 @@
+post and put method difference
+-> we can not use put to insert the data
+-> we can update by post
+
+update query with join table
+-> UPDATE employees JOIN departments 
+ON employees.department_id = departments.department_id
+SET employees.salary = employees.salary * 1.1
+WHERE departments.department_name = 'Engineering';
+
+
+json.dump
+list slicing
+having query in sql
