@@ -1,0 +1,159 @@
+$ git status
+$ git init
+$ git status
+$ git add --a
+$ git status
+$ git commit -m "initial commit"
+$ git status
+$ git log
+$ git status
+$ git add v1.txt
+$ git status
+$ git commit -m "changed v1.txt and added better  desing"
+$ git log
+$ rm -rf .git
+$ git status
+$ pwd
+$ ls
+$ cd tensorflow/
+$ ls
+$ git status
+$ git add --a
+$ git status
+$ git commit -m "chenged readme"
+$ git status
+$ git log
+ git status
+$ git init
+$ git status
+$ git add --a
+$ git status
+$ git config user.name
+
+$ git status
+$ touch error.log
+$ git status
+$ touch .gitignore
+$ git status
+$ git add --a
+$ git status
+$ git commit -m "added gitignore"
+$ git status
+$ git commit -m "ignore all files of log extention"
+$ git status
+$ git commit -m "git ignore 14-10-23 23:56"
+$ git status
+$ git status
+$ git add --a
+$ git commit -m "git ignore 14-10-23 23:56")
+$ git status
+$ git add --a
+$ git commit -m "git ignore 14-10-23 23:59"
+$ git add --a
+$ git status
+$ git add --a
+$ git commit -m "dir folder in gitignore 00:08"
+$ git status
+$ git add --a
+$ git status
+$ git diff
+$ git status
+$ git add --a
+$ git status
+$ git diff --staged
+$ git status
+
+
+$ git status
+$ git add .
+$ git commit -m "this is good commit"
+$ git status
+$ git commit -a -m "skiiping stag"
+$ git status
+$ git add sencond.txt
+$ git status
+$ git commit -m "skiiping stag two"
+$ git status
+$ git commit -a -m "skiiping stag 3"
+$ git status
+$ git log
+$ git status
+$ git rm  sencond.txt
+$ git status
+$ git reset
+$ git checkout sencond.txt
+$ git status
+$ git mv  sencond.txt thired.txt
+$ git status
+$ git reset
+$ git checkout sencond.txt
+$ git status
+$ git add .
+$ git status
+$ git commit -m "rename files"
+$ git status
+$ git mv git.txt.txt git
+$ git status
+$ git commit -a -m "chached"
+$ git status
+$ git rm --cached git
+$ git status
+$ git commit -a -m " --chached file name"
+$ git status
+$ git commit -a -m "chached 1"
+$ git status
+$ git rm  --cached sencond.txt
+$ git status
+
+$$$$$$$ change-latest-status-pretty-amend-format-since $$$$$$$$
+
+$ git status
+$ git commit -a -m "clean viewing and changing commit in git"
+$ git status
+$ rm -rf git
+$ git status
+$ rm -rf .git
+$ git status
+$ git clone https://github.com/pandas-dev/pandas.git mypanda
+$ git status
+$ cd mypanda/
+$ git status
+$ git log
+$ git log -p
+$ git log
+$ git log -p -3
+$ git log
+$ git log -3
+$ git log --stat
+$ git log --stat -3
+$ git log --pretty=oneline
+$ git log --pretty=short
+$ git log --pretty=full
+$ git log --since=2.days
+$ git log
+$ git log -1
+$ git commit --amend
+$ git status
+$ git add .
+$ git status
+$ git commit --amend
+$ git log
+$ git log -1
+$ git log --pretty="format:%h-%an"
+
+$$$$$$ restore_alias_merg $$$$$$$$$$$$
+
+$ git restore --staged abc.txt
+$ git checkout -- abc.txt
+$ git checkout -f
+$ git config --global alias st.status
+$ git merge myBranch
+$ git branch -v
+$ git branch --merged
+$ git branch --no-merged
+$ git push -d origin bugfix
+
+
+
+
+

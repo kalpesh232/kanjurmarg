@@ -1,0 +1,14 @@
+<center>
+    <H1>Home Page</H1>
+    <h3> {{request.session.Firstname}}</h3>
+    <br>
+    <h3> {{request.session.Lastname}}</h3>
+    <br>
+    <h3>{{ request.session.Password}}</h3>
+    <br>
+    <h3>{{ request.session.ImageName}}</h3>
+    <br>
+    {{MEDIA_URL}}{{request.session.pic}}{{.url}}
+    <br>
+    <img src="{{MEDIA_URL}}{{request.session.pic}}{{.url}}" alt="">
+</center>
