@@ -189,19 +189,117 @@
 
 # ############################### Flask Blueprint
 
-from flask import Flask
-from neosoft_blueprint import neosoft_blueprint
+# from flask import Flask
+# from neosoft_blueprint import neosoft_blueprint
 
-app = Flask(__name__)
-app.register_blueprint(neosoft_blueprint)
+# app = Flask(__name__)
+# app.register_blueprint(neosoft_blueprint)
 
-@app.route('/')
-def index():
-    return "This is an example app"
+# @app.route('/')
+# def index():
+#     return "This is an example app"
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+# ############################# session.commit AND session.flush
+
+# from sqlalchemy import create_engine, Column, Integer, String, Sequence
+# from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy.orm import sessionmaker
+
+# Base = declarative_base()
+# engine = create_engine('mysql+mysqlconnector://root:root@localhost:3306/alchemy',echo=False)
+# Session = sessionmaker(bind=engine)
+# session = Session()
+
+# class User(Base):
+#     __tablename__ = 'user'
+#     id = Column(Integer, primary_key=True)
+#     name = Column(String(50))
+
+# Base.metadata.create_all(engine)
+
+# # Adding a new user to the session
+# stu1 = User(id =1, name='kalpesh')
+# session.add(stu1)
+# # Using flush to synchronize changes (check availability)
+# session.flush()
+# # At this point, the changes are in the session and synchronized with the database,
+# # but they are not committed yet.
+
+# # Now, let's modify the user's name before committing
+# stu1.name = 'John Smith'
+# # Using commit to make changes permanent
+# session.commit()
+# # The changes are now permanent in the database.
+
+# # Let's query the database to verify the changes
+# queried_user = session.query(User).filter_by(name='John Smith').first()
+# print(queried_user.name)  # Output: John Smith
+
+# #############  Global Interpreter Lock (GIL)
+
+# import threading
+
+# # Shared counter variable
+# counter = 0
+
+# # Function to calculate the square of numbers
+# def calculate_square():
+#     global counter
+#     for _ in range(1_000_000):
+#         counter += 1  # Increment the counter
+
+# # Create two threads to perform the task
+# thread1 = threading.Thread(target=calculate_square)
+# thread2 = threading.Thread(target=calculate_square)
+
+# # Start the threads
+# thread1.start()
+# thread2.start()
+
+# # Wait for both threads to finish
+# thread1.join()
+# thread2.join()
+
+# # Print the final counter value
+# print("Final Counter Value:", counter)
+
+#  ##########################   Django, signals
+
+# from django.dispatch import receiver
+# # models.py
+# from django.db import models
+# from .neosoft_signanls import object_saved
+
+# class MyModel(models.Model):
+#     name = models.CharField(max_length=100)
+
+# # Signal sent when an object is saved
+# @receiver(models.signals.post_save, sender=MyModel)
+# def send_object_saved_signal(sender, instance, **kwargs):
+#     object_saved.send(sender=sender, instance=instance)
+
+#  ########################## Generators over  for loop  
+
+mylist = ["apple", "banana", "cherry"]
+
+# For loop with list
+for fruit in mylist:
+    print(fruit)
+
+# Generator function
+def fruit_generator():
+    for fruit in ["apple", "banana", "cherry"]:
+        yield fruit
+
+# Using the generator
+for fruit in fruit_generator():
+    print(fruit)
+
+
 
 
 

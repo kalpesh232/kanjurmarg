@@ -30,4 +30,25 @@ In Flask, you can use the Python logging module to keep track of different types
 Yes, in Python, strings are immutable. This means that once you create a string object, you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
 
 -> Flask blueprint
-https://realpython.com/flask-blueprint/#:~:text=Each%20Flask%20Blueprint%20is%20an,before%20you%20can%20run%20it.
+A Flask Blueprint is a way to organize a Flask web application into smaller, reusable parts. It helps break down the code into manageable sections for better organization and maintenance. Blueprints can have their own routes, templates, and static files. They are registered with the main application to add their functionality
+
+->  session.commit() and session.flush() 
+
+-: session.commit():
+The commit() method is used to save any changes made during the current session to the database.
+When you add, update, or delete objects within a session, those changes are not immediately reflected in the database. Committing the session makes those changes permanent.
+It is typically used at the end of a logical unit of work or a transaction.
+
+-: session.flush():
+The flush() method is used to synchronize the session's state with the database, but it doesn't commit the transaction.
+It pushes any pending changes in the session to the database, allowing you to see the effects of those changes within the same transaction.
+Unlike commit(), flush() doesn't end the transaction, so you can continue making changes before eventually committing.
+
+->  Global Interpreter Lock (GIL)
+The Global Interpreter Lock (GIL) in Python is like a traffic cop for threads. It makes sure only one thread can execute Python code at a time, preventing conflicts and simplifying certain aspects of memory management. While it helps with simplicity, it can limit the performance of multi-threaded programs on multi-core computers.
+
+->  Django, signals
+In Django, signals are a way for different parts of your app to talk to each other. They allow one part to send a message when something happens, and other parts can listen for that message and react to it. It helps keep different parts of your app loosely connected, making it easier to change and maintain. For example, when you save something in the database, a signal can be sent, and other parts can respond to it, like sending a notification.
+
+-> Generators over  for loop 
+Generators in Python are memory-efficient because they produce values on-the-fly, one at a time, as you iterate over them. They don't store the entire sequence of values in memory all at once, unlike a regular for loop with a list. This is especially helpful when working with large datasets, as it avoids using excessive memory since values are generated only when needed during iteration.
