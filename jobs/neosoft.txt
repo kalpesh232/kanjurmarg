@@ -64,3 +64,15 @@ Example: Like waiting for your turn in a line.
 Things can happen independently, not necessarily in a specific order.
 Things happening independently, not strictly in order.
 Example: Like sending messages and doing other things while waiting for replies.
+
+-> "list" and "array"
+
+- List:
+In Python, a list is a built-in data type that represents a collection of items.
+Lists are versatile and can contain elements of different data types.
+Elements in a list are accessed by their index.
+Lists support various operations like appending, slicing, and more.
+
+- Array:
+The term "array" is sometimes used to refer to a list in Python. In everyday Python programming, when people talk about arrays, they often mean lists.
+In a more formal sense, an array may refer to the array module in Python, which provides a compact array of items of the same type. This is similar to a list but with a more restrictive structure.

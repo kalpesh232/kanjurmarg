@@ -269,18 +269,18 @@
 
 #  ##########################   Django, signals
 
-from django.dispatch import receiver
-# models.py
-from django.db import models
-from neosoft_signanls import object_saved
+# from django.dispatch import receiver
+# # models.py
+# from django.db import models
+# from neosoft_signanls import object_saved
 
-class MyModel(models.Model):
-    name = models.CharField(max_length=100)
+# class MyModel(models.Model):
+#     name = models.CharField(max_length=100)
 
-# Signal sent when an object is saved
-@receiver(models.signals.post_save, sender=MyModel)
-def send_object_saved_signal(sender, instance, **kwargs):
-    object_saved.send(sender=sender, instance=instance)
+# # Signal sent when an object is saved
+# @receiver(models.signals.post_save, sender=MyModel)
+# def send_object_saved_signal(sender, instance, **kwargs):
+#     object_saved.send(sender=sender, instance=instance)
 
 #  ########################## Generators over  for loop  
 
@@ -332,6 +332,13 @@ def send_object_saved_signal(sender, instance, **kwargs):
 
 # # Run the event loop with the main coroutine
 # asyncio.run(main())
+
+# ####################### "list" and "array"
+
+my_list = [1, 2, 3, "apple", "banana"]
+
+from array import array
+my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
 
 
 
