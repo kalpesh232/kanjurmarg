@@ -110,38 +110,73 @@
 
 # #################################### lock
 
+# import time
+# import multiprocessing
+
+# start_time = time.time()
+# def deposite(balance,lock):
+#     for i in range(100):
+#         time.sleep(0.01)
+#         # lock.acquire()
+#         print('deposite : ',balance.value)
+#         balance.value += 1
+#         # lock.release()
+
+# def withdraw(balance,lock):
+#     for i in range(100):
+#         time.sleep(0.01)
+#         # lock.acquire()
+#         print('withdraw : ',balance.value)
+#         balance.value -= 1
+#         # lock.release()
+
+# if __name__ == '__main__':
+
+#     balance = multiprocessing.Value('i',200)
+#     lock = multiprocessing.Lock()
+
+#     t1 = multiprocessing.Process(target=deposite, args=(balance,lock))
+#     t2 =  multiprocessing.Process(target=withdraw, args=(balance,lock))
+
+#     t1.start()
+#     t2.start()
+
+#     t1.join()
+#     t2.join()
+
+#     print('balance.value : ', balance.value)
+
+# ####################### pool
+
 import time
 import multiprocessing
+from multiprocessing import Pool
+
+square_list = []
 
 start_time = time.time()
-def deposite(balance,lock):
-    for i in range(100):
-        time.sleep(0.01)
-        # lock.acquire()
-        print('deposite : ',balance.value)
-        balance.value += 1
-        # lock.release()
-
-def withdraw(balance,lock):
-    for i in range(100):
-        time.sleep(0.01)
-        # lock.acquire()
-        print('withdraw : ',balance.value)
-        balance.value -= 1
-        # lock.release()
+def f(n):
+    sum = 0
+    for i in range(n):
+         sum += i*i
+    return sum
 
 if __name__ == '__main__':
 
-    balance = multiprocessing.Value('i',200)
-    lock = multiprocessing.Lock()
+    p = Pool ()
+    result = p.map(f, range(10000))
 
-    t1 = multiprocessing.Process(target=deposite, args=(balance,lock))
-    t2 =  multiprocessing.Process(target=withdraw, args=(balance,lock))
+    p.close()
+    p.join()
 
-    t1.start()
-    t2.start()
+    end_time = time.time()
+    print(f'Time taken for poll: {end_time - start_time} seconds')
 
-    t1.join()
-    t2.join()
+    result = []
+    for x in range(10000):
+        result.append(f(x))
 
-    print('balance.value : ', balance.value)
+    end_time = time.time()
+    print(f'Time taken for normal: {end_time - start_time} seconds')
+
+
