@@ -335,10 +335,10 @@
 
 # ####################### "list" and "array"
 
-my_list = [1, 2, 3, "apple", "banana"]
+# my_list = [1, 2, 3, "apple", "banana"]
 
-from array import array
-my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+# from array import array
+# my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
 
 
 
