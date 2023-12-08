@@ -9,4 +9,5 @@ urlpatterns = [
     path('otpverify',views.OTPVerify,name='otpverify'),
     path('login/',views.LoginPage,name='loginpage'),
     path('loginuser/',views.LoginUser,name='loginuser'),
+    path('profile_update/<int:pk>/',views.profile_update,name='profileupdate'),
 ]

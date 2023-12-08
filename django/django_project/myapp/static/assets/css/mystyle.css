@@ -80,3 +80,36 @@ button:hover {
 }
 
 /* otp e */
+
+/* profile s */
+.profile-update-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-update-form {
+    display: grid;
+    gap: 10px;
+}
+
+.profile-update-label {
+    font-weight: bold;
+}
+
+.profile-update-select,
+.profile-update-input,
+.profile-update-textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.profile-update-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* profile e */

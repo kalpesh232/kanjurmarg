@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
+from django.shortcuts import render, HttpResponse, get_object_or_404, redirect, HttpResponseRedirect
 from .models import *
 import random
 
@@ -88,3 +88,41 @@ def LoginUser(request):
 
     else:
         return render(request, 'login.html')
+    
+def profile_update(request, pk):
+    user = myUserMaster.objects.get(pk=pk)
+    role = request.session['role']
+    if role == 'candidate' :
+        can_com = myCandidate.objects.get(id=pk)
+    else:
+        can_com = myCompany.objects.get(id=pk)
+    if request.method == 'POST':
+        can_com.contact = request.POST['phone_number']
+        can_com.state = request.POST['state']
+        can_com.city = request.POST['city']
+        can_com.address = request.POST['address']
+        can_com.dob = request.POST['dob']
+        can_com.firstname = request.POST['firstname']
+        can_com.lastname = request.POST['lastname']
+        can_com.gender = request.POST['gender']
+        can_com.job_title = request.POST['job_title']
+        can_com.job_type = request.POST['job_type']
+        can_com.job_category = request.POST['job_category']
+        can_com.country = request.POST['country']
+        can_com.year_of_exp = request.POST['years_of_experience']
+        can_com.edu_level = request.POST['education_level']
+        can_com.website = request.POST['website']
+        can_com.min_salary = request.POST['min_salary']
+        can_com.max_salary = request.POST['max_salary']
+        can_com.job_desc = request.POST['job_description']
+        # can_com.profile_pic = request.POST['profile_pic']
+        can_com.shift = request.POST['shift']
+        can_com.profile_pic = request.FILES['profile_photo']
+
+        can_com.save()
+        print('user.id : ', user.id)
+        url = f'profile_update/{user.id}/'
+        return HttpResponseRedirect(request.path_info)
+
+    else:
+        return render(request, 'profile.html',{'user' : user, 'can_com' :can_com })
