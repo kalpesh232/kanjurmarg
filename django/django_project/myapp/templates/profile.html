@@ -1,0 +1,116 @@
+To create a form with dropdowns and input fields for updating a user's profile, you can use Django forms. Create a Django form for the profile update, and then render the form in your template. Here's an example of how you can modify your template:
+
+First, create a Django form in your `forms.py`:
+
+```python
+# forms.py
+from django import forms
+
+class UserProfileUpdateForm(forms.Form):
+    JOB_TITLES = [
+        ('software_engineer', 'Software Engineer'),
+        ('data_analyst', 'Data Analyst'),
+        # Add other job titles as needed
+    ]
+
+    JOB_TYPES = [
+        ('full_time', 'Full Time'),
+        ('part_time', 'Part Time'),
+        # Add other job types as needed
+    ]
+
+    JOB_CATEGORIES = [
+        ('it', 'IT'),
+        ('finance', 'Finance'),
+        # Add other job categories as needed
+    ]
+
+    COUNTRIES = [
+        ('usa', 'USA'),
+        ('canada', 'Canada'),
+        # Add other countries as needed
+    ]
+
+    YEARS_OF_EXPERIENCE = [
+        (1, '1 year'),
+        (2, '2 years'),
+        # Add other options as needed
+    ]
+
+    EDUCATION_LEVELS = [
+        ('high_school', 'High School'),
+        ('bachelors', 'Bachelor\'s Degree'),
+        # Add other education levels as needed
+    ]
+
+    GENDERS = [
+        ('male', 'Male'),
+        ('female', 'Female'),
+        ('other', 'Other'),
+    ]
+
+    SHIFTS = [
+        ('morning', 'Morning'),
+        ('evening', 'Evening'),
+        # Add other shift options as needed
+    ]
+
+    job_title = forms.ChoiceField(choices=JOB_TITLES, required=False)
+    job_type = forms.ChoiceField(choices=JOB_TYPES, required=False)
+    job_category = forms.ChoiceField(choices=JOB_CATEGORIES, required=False)
+    country = forms.ChoiceField(choices=COUNTRIES, required=False)
+    years_of_experience = forms.ChoiceField(choices=YEARS_OF_EXPERIENCE, required=False)
+    education_level = forms.ChoiceField(choices=EDUCATION_LEVELS, required=False)
+    gender = forms.ChoiceField(choices=GENDERS, required=False)
+    shift = forms.ChoiceField(choices=SHIFTS, required=False)
+
+    city = forms.CharField(max_length=100, required=False)
+    min_salary = forms.DecimalField(max_digits=10, decimal_places=2, required=False)
+    max_salary = forms.DecimalField(max_digits=10, decimal_places=2, required=False)
+    website = forms.URLField(required=False)
+    email = forms.EmailField(required=False)
+    phone_number = forms.CharField(max_length=15, required=False)
+    job_description = forms.CharField(widget=forms.Textarea, required=False)
+    resume = forms.FileField(required=False)
+```
+
+Then, in your template:
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="profile-update-container">
+    <h2>Update Profile</h2>
+    <form action="{% url 'profile_update' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Dropdowns -->
+        {{ form.job_title }}
+        {{ form.job_type }}
+        {{ form.job_category }}
+        {{ form.country }}
+        {{ form.years_of_experience }}
+        {{ form.education_level }}
+        {{ form.gender }}
+        {{ form.shift }}
+
+        <!-- Input fields -->
+        {{ form.city }}
+        {{ form.min_salary }}
+        {{ form.max_salary }}
+        {{ form.website }}
+        {{ form.email }}
+        {{ form.phone_number }}
+        {{ form.job_description }}
+
+        <!-- File upload -->
+        {{ form.resume }}
+
+        <button type="submit">Update Profile</button>
+    </form>
+</div>
+{% endblock %}
+```
+
+Make sure you have the corresponding URL pattern in your `urls.py` file and the view for handling profile updates. Adjust the form fields and choices according to your application's requirements.

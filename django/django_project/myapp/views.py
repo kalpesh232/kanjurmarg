@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, get_object_or_404
+from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from .models import *
 import random
 
@@ -54,3 +54,37 @@ def OTPVerify(request):
         else:
             message = 'User Not Found'
             return render(request, 'signup.html', {'msg' : message})
+        
+def LoginPage(request):
+    return render(request, 'login.html')
+
+def LoginUser(request):
+    if request.method == 'POST':
+        account_type = request.POST['account-type']
+        user_email = request.POST['user-email']
+        password = request.POST['password']
+
+        user = myUserMaster.objects.get(email=user_email)
+        if user:
+           if user.password == password:
+               request.session['id'] = user.id
+               request.session['role'] = user.role
+               request.session['email'] = user.email
+               if account_type == 'Candidate':
+                   can = myCandidate.objects.get(user_id=user)
+                   request.session['firstname'] = can.firstname
+                   request.session['lastname'] = can.lastname
+               else:
+                   com = myCompany.objects.get(user_id=user)
+                   request.session['firstname'] = com.firstname
+                   request.session['lastname'] = com.lastname 
+               return redirect('index_page')
+           else:
+            message = "Passwaord Not Registred"
+            return render(request, 'login.html',{'msg' : message})
+        else:
+            message = "Email Not Registred"
+            return render(request, 'login.html',{'msg' : message})
+
+    else:
+        return render(request, 'login.html')
