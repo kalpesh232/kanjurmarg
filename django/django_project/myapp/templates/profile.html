@@ -1,116 +1,122 @@
-To create a form with dropdowns and input fields for updating a user's profile, you can use Django forms. Create a Django form for the profile update, and then render the form in your template. Here's an example of how you can modify your template:
-
-First, create a Django form in your `forms.py`:
-
-```python
-# forms.py
-from django import forms
-
-class UserProfileUpdateForm(forms.Form):
-    JOB_TITLES = [
-        ('software_engineer', 'Software Engineer'),
-        ('data_analyst', 'Data Analyst'),
-        # Add other job titles as needed
-    ]
-
-    JOB_TYPES = [
-        ('full_time', 'Full Time'),
-        ('part_time', 'Part Time'),
-        # Add other job types as needed
-    ]
-
-    JOB_CATEGORIES = [
-        ('it', 'IT'),
-        ('finance', 'Finance'),
-        # Add other job categories as needed
-    ]
-
-    COUNTRIES = [
-        ('usa', 'USA'),
-        ('canada', 'Canada'),
-        # Add other countries as needed
-    ]
-
-    YEARS_OF_EXPERIENCE = [
-        (1, '1 year'),
-        (2, '2 years'),
-        # Add other options as needed
-    ]
-
-    EDUCATION_LEVELS = [
-        ('high_school', 'High School'),
-        ('bachelors', 'Bachelor\'s Degree'),
-        # Add other education levels as needed
-    ]
-
-    GENDERS = [
-        ('male', 'Male'),
-        ('female', 'Female'),
-        ('other', 'Other'),
-    ]
-
-    SHIFTS = [
-        ('morning', 'Morning'),
-        ('evening', 'Evening'),
-        # Add other shift options as needed
-    ]
-
-    job_title = forms.ChoiceField(choices=JOB_TITLES, required=False)
-    job_type = forms.ChoiceField(choices=JOB_TYPES, required=False)
-    job_category = forms.ChoiceField(choices=JOB_CATEGORIES, required=False)
-    country = forms.ChoiceField(choices=COUNTRIES, required=False)
-    years_of_experience = forms.ChoiceField(choices=YEARS_OF_EXPERIENCE, required=False)
-    education_level = forms.ChoiceField(choices=EDUCATION_LEVELS, required=False)
-    gender = forms.ChoiceField(choices=GENDERS, required=False)
-    shift = forms.ChoiceField(choices=SHIFTS, required=False)
-
-    city = forms.CharField(max_length=100, required=False)
-    min_salary = forms.DecimalField(max_digits=10, decimal_places=2, required=False)
-    max_salary = forms.DecimalField(max_digits=10, decimal_places=2, required=False)
-    website = forms.URLField(required=False)
-    email = forms.EmailField(required=False)
-    phone_number = forms.CharField(max_length=15, required=False)
-    job_description = forms.CharField(widget=forms.Textarea, required=False)
-    resume = forms.FileField(required=False)
-```
-
-Then, in your template:
-
-```html
 {% extends 'base.html' %}
 
 {% block content %}
 <div class="profile-update-container">
     <h2>Update Profile</h2>
-    <form action="{% url 'profile_update' %}" method="post" enctype="multipart/form-data">
+    <form action="{% url 'profileupdate' request.session.id %}" method="post" class="profile-update-form" enctype="multipart/form-data">
         {% csrf_token %}
         
         <!-- Dropdowns -->
-        {{ form.job_title }}
-        {{ form.job_type }}
-        {{ form.job_category }}
-        {{ form.country }}
-        {{ form.years_of_experience }}
-        {{ form.education_level }}
-        {{ form.gender }}
-        {{ form.shift }}
+        <label for="job-title" class="profile-update-label">Job Title:</label>
+        <select id="job-title" name="job_title" class="profile-update-select">
+            <option value="software_engineer">{{can_com.job_title}}</option>
+            <option value="software_engineer">Software Engineer</option>
+            <option value="data_analyst">Data Analyst</option>
+            <!-- Add other job titles as needed -->
+        </select>
+
+        <label for="job-type" class="profile-update-label">Job Type:</label>
+        <select id="job-type" name="job_type" class="profile-update-select">
+            <option value="software_engineer">{{can_com.job_type}}</option>
+            <option value="full_time">Full Time</option>
+            <option value="part_time">Part Time</option>
+            <!-- Add other job types as needed -->
+        </select>
+
+        <label for="job-category" class="profile-update-label">Job Category:</label>
+        <select id="job-category" name="job_category" class="profile-update-select">
+            <option value="software_engineer">{{can_com.job_category}}</option>
+            <option value="it">IT</option>
+            <option value="finance">Finance</option>
+            <!-- Add other job categories as needed -->
+        </select>
+
+        <label for="country" class="profile-update-label">Country:</label>
+        <select id="country" name="country" class="profile-update-select">
+            <option value="software_engineer">{{can_com.country}}</option>
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <!-- Add other countries as needed -->
+        </select>
+
+        <label for="state" class="profile-update-label">State:</label>
+        <select id="state" name="state" class="profile-update-select">
+            <option value="software_engineer">{{can_com.state}}</option>
+            <option value="alabama">Alabama</option>
+            <option value="california">California</option>
+            <!-- Add other countries as needed -->
+        </select>
+
+        <label for="years-of-experience" class="profile-update-label">Years of Experience:</label>
+        <select id="years-of-experience" name="years_of_experience" class="profile-update-select">
+            <option value="software_engineer">{{can_com.year_of_exp}}</option>
+            <option value="1">1 year</option>
+            <option value="2">2 years</option>
+            <!-- Add other options as needed -->
+        </select>
+
+        <label for="education-level" class="profile-update-label">Education Level:</label>
+        <select id="education-level" name="education_level" class="profile-update-select">
+            <option value="high_school">{{can_com.edu_level}}</option>
+            <option value="high_school">High School</option>
+            <option value="bachelors">Bachelor's Degree</option>
+            <!-- Add other education levels as needed -->
+        </select>
+
+        <label for="gender" class="profile-update-label">Gender:</label>
+        <select id="gender" name="gender" class="profile-update-select">
+            <option value="male">{{can_com.gender}}</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="shift" class="profile-update-label">Shift:</label>
+        <select id="shift" name="shift" class="profile-update-select">
+            <option value="morning">{{can_com.shift}}</option>
+            <option value="morning">Morning</option>
+            <option value="evening">Evening</option>
+            <!-- Add other shift options as needed -->
+        </select>
 
         <!-- Input fields -->
-        {{ form.city }}
-        {{ form.min_salary }}
-        {{ form.max_salary }}
-        {{ form.website }}
-        {{ form.email }}
-        {{ form.phone_number }}
-        {{ form.job_description }}
+        <label for="city" class="profile-update-label">City:</label>
+        <input type="text" id="city" name="city" class="profile-update-input" required value="{{can_com.city}}" >
 
-        <!-- File upload -->
-        {{ form.resume }}
+        <label for="address" class="profile-update-label">Address:</label>
+        <input type="text" id="address" name="address" class="profile-update-input" required value="{{can_com.address}}" >
 
-        <button type="submit">Update Profile</button>
+        <label for="dob" class="profile-update-label">Birthday:</label>
+        <input type="date" id="dob" name="dob" class="profile-update-input" required  value="{{can_com.dob}}" >
+
+        <label for="firstname" class="profile-update-label">First Name:</label>
+        <input type="text" id="firstname" name="firstname" class="profile-update-input" required value="{{can_com.firstname}}" >
+
+        <label for="lastname" class="profile-update-label">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" class="profile-update-input" required value="{{can_com.lastname}}" >
+
+        <label for="min-salary" class="profile-update-label">Minimum Salary:</label>
+        <input type="number" id="min-salary" name="min_salary" class="profile-update-input" required  value="{{can_com.min_salary}}" >
+
+        <label for="max-salary" class="profile-update-label">Maximum Salary:</label>
+        <input type="number" id="max-salary" name="max_salary" class="profile-update-input" required value="{{can_com.max_salary}}" >
+
+        <label for="website" class="profile-update-label">Website:</label>
+        <input type="url" id="website" name="website" class="profile-update-input" value="{{can_com.website}}" >
+
+        <label for="email" class="profile-update-label">Email Address:</label>
+        <input type="email" id="email" name="email" class="profile-update-input" required value="{{user.email}}" >
+
+        <label for="phone-number" class="profile-update-label">Phone Number:</label>
+        <input type="tel" id="phone-number" name="phone_number" class="profile-update-input" required value="{{can_com.contact}}" >
+
+        <label for="imageUploadr" class="profile-update-label">Profile Photo:</label>
+        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" class="profile-update-input" required="" capture>
+       
+        <label for="job-description" class="profile-update-label">Job Description:</label>
+        <textarea id="job-description" name="job_description" rows="4" class="profile-update-textarea" required  ></textarea>
+
+        <button type="submit" class="profile-update-button">Update Profile</button>
     </form>
 </div>
 {% endblock %}
-```
-
-Make sure you have the corresponding URL pattern in your `urls.py` file and the view for handling profile updates. Adjust the form fields and choices according to your application's requirements.

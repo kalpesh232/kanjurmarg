@@ -1,1 +1,3 @@
 myenv/
+django/django_project/app/
+django/django_project/myapp/migrations/
