@@ -1,0 +1,66 @@
+{% if not user %}
+<!-- {% set user = 'No User' %} -->
+{% with user = 'User Absent' %}
+<h1> UserName : {{user}} </h1>
+<h1> Passwaord : <i>{{passw}}</i> </h1>
+{% endwith %}
+{% else %}
+<h1> UserName : {{user}} </h1>
+<h1> Passwaord : <i>{{passw}}</i> </h1>
+{% endif %}
+<br>
+<h1> Names : {{context.names  | default('Not Defined')}} </h1>
+<h1> Ages : <i>{{context.ages}}</i> </h1>
+
+<br>
+<h1>capitalize {{context.names | capitalize}}</h1>
+<br>
+<h1>Lower {{context.names | lower}}</h1>
+<br>
+<h1>Upper {{context.names | upper}}</h1>
+<br>
+<h1>wordcount {{context.names | wordcount}}</h1>
+<br>
+{% for age in context.ages %}
+    <h1>Absolute Value: {{ age | abs }}</h1>
+{% endfor %}
+<br>
+<h1>Replace {{context.names | replace('s','x')}}</h1>
+<br>
+<h1>Value in float {{context.value | float}}</h1>
+<br>
+<h1>Value in string {{context.value | string}}</h1>
+<br>
+<h1>Value in int {{context.value | int}}</h1>
+<br>
+<h1>Value in urlize {{context.value | urlize}}</h1>
+<br>
+<h1>Value in normal  {{context.value}}</h1>
+<br>
+<h1>Value in to json  {{context.dict | tojson}}</h1>
+<br>
+<h1>first {{context.names | first}}</h1>
+<br>
+<h1>last {{context.names | last}}</h1>
+<br>
+<h1>random  {{context.names | random}}</h1>
+<br>
+<h1>sum {{context.ages | sum}}</h1>
+<br>
+<h1>sort {{context.names | sort}}</h1>
+<br>
+<h1>Attribute: {{ context.ages[0] }}</h1>
+<br>
+{% set linecount = 2 %}
+{% for batch in context.names|batch(linecount) %}
+hi : {{batch}}
+    <div>
+        {% for name in batch %}
+            <span>{{ name }}</span>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+{% for batch in context.names|batch(2) %}
+    <h1>Batch: {{ batch | join(', ') }}</h1>
+{% endfor %}

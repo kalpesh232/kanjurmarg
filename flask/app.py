@@ -50,5 +50,22 @@ HelloApp.add_url_rule('/product','product',product)
 
 
 # print('Flask(__name__) : ',__name__)
+
+# ################### variables and filter
+
+@HelloApp.route('/var_demo')
+def var_demo():
+    username = 'kalpesh'
+    passaword = 'dd54as5d4as65d'
+
+    names = ['sita', 'Gita','nita','Mita', 'RITA']
+    ages = [24,-25,26.5,27.4,28.6]
+    # value = '11.11'
+    value = 'Visit the official website at https://www.example.com'
+    dict = {1 : 'A', 2 : 'B'}
+
+    return render_template('var_demo.html',  user = username, passw = passaword,context={'names': names, 'ages' : ages, 'value' : value, 'dict' :dict})
+    # return render_template('var_demo.html', user = username, passw = passaword)
+
 if __name__ == '__main__':
     HelloApp.run(host='0.0.0.0',port=5001, debug=True)
