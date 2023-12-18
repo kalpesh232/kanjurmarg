@@ -22,6 +22,7 @@ SHOW COLUMNS FROM new_products;
 alter table new_products  change sup_id supplire_id   int unsigned not null ;
 ALTER TABLE new_products modify column sup_id int unsigned  not null;
 
+-------- Join
 
 select * from new_products join suppliers
 on new_products.supplire_id = suppliers.sup_id;
@@ -61,6 +62,8 @@ where new_products.supplire_id is null;
 -- ('P011', 'Tape Dispenser', 40, 24.99),
 -- ('P012', 'Correction Fluid', 60, 15.99),
 -- ('P013', 'Stapler', 70, 44.99);
+
+-------- View
 create table if not exists suppliers 
 (
 sup_id int unsigned auto_increment  not null,
@@ -88,6 +91,8 @@ np.prod_id =  sp.sup_id;
 select * from product_view  ;
 select * from new_products;
 select * from suppliers;
+
+-------- Funtion 
 
 CREATE TABLE your_table_name (
     id INT,
@@ -117,3 +122,7 @@ ELSEIF ( marks  > 60 ) THEN set level = 'very good';
 END IF;
 RETURN(level);
 END
+select concat(fname , ' ', lname) as "Full Name" , class, age , performance(marks) as "Performance" from 
+your_table_name;
+
+
