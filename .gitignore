@@ -1,1 +1,8 @@
+
 myenv/
+django/django_project/app/
+django/django_project/myapp/migrations/
+jobs/neosoft.log
+jobs/__pycache__/
+
+
