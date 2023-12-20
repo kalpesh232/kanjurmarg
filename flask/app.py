@@ -59,7 +59,7 @@ def var_demo():
     passaword = 'dd54as5d4as65d'
 
     names = ['sita', 'Gita','nita','Mita', 'RITA']
-    ages = [24,-25,26.5,27.4,28.6]
+    ages = [24,-25,26.5,27.4,28.6,25.98]
     # value = '11.11'
     value = 'Visit the official website at https://www.example.com'
     dict = {1 : 'A', 2 : 'B'}

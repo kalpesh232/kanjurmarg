@@ -1,3 +1,7 @@
+{% extends 'base.html' if 'base.html' is defined else 'defalut.html' %}
+
+{% block content  %} 
+
 {% if not user %}
 <!-- {% set user = 'No User' %} -->
 {% with user = 'User Absent' %}
@@ -64,3 +68,30 @@ hi : {{batch}}
 {% for batch in context.names|batch(2) %}
     <h1>Batch: {{ batch | join(', ') }}</h1>
 {% endfor %}
+
+-------------------------------------------------
+<br>
+<h1>{{ context.ages }}</h1>
+{% for i in context.ages | reverse %}
+{{loop}} {{i}}
+<br>
+{% if i is divisibleby 3 %}
+{{i}} - divisible by 3
+{% else %}
+{{i}}  - not divisible by 3
+{% endif %}
+<br>
+loop - index {{loop.index}}
+<br>
+loop index 0 - {{loop.index0}}
+<br>
+loop rev index - {{loop.revindex}}
+<br>
+loop revindex 0 - {{ loop.revindex0 }} <LoopContext {{ loop.counter }}/{{ loop.counter0 }}>{{ i }}
+<br>
+first loop - {{loop.first}}
+<br>
+last loop - {{loop.last}}
+{% endfor %}
+
+{% endblock %}
