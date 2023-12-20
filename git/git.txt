@@ -153,6 +153,9 @@ $ git branch --merged
 $ git branch --no-merged
 $ git push -d origin bugfix
 
+git commit --amend --no-edit
+git commit --amend -m "New commit message"
+
 
 
 
