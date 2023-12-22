@@ -10,4 +10,9 @@ urlpatterns = [
     path('login/',views.LoginPage,name='loginpage'),
     path('loginuser/',views.LoginUser,name='loginuser'),
     path('profile_update/<int:pk>/',views.profile_update,name='profileupdate'),
+
+    # ########### comapny side ##########################
+
+    path('company_admin/',views.companyAdmin,name='company_index'),
+    path('company_profile/<int:pk>/',views.CompanyProfile,name='company_profile'),
 ]
