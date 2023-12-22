@@ -70,15 +70,17 @@ def LoginUser(request):
                request.session['id'] = user.id
                request.session['role'] = user.role
                request.session['email'] = user.email
-               if account_type == 'Candidate':
+               print('account_type : ', account_type)
+               if account_type == 'candidate':
                    can = myCandidate.objects.get(user_id=user)
                    request.session['firstname'] = can.firstname
                    request.session['lastname'] = can.lastname
+                   return redirect('index_page')
                else:
                    com = myCompany.objects.get(user_id=user)
                    request.session['firstname'] = com.firstname
                    request.session['lastname'] = com.lastname 
-               return redirect('index_page')
+                   return redirect('company_index')
            else:
             message = "Passwaord Not Registred"
             return render(request, 'login.html',{'msg' : message})
@@ -92,6 +94,7 @@ def LoginUser(request):
 def profile_update(request, pk):
     user = myUserMaster.objects.get(pk=pk)
     role = request.session['role']
+    print('role : ', role)
     if role == 'candidate' :
         can_com = myCandidate.objects.get(id=pk)
     else:
@@ -126,3 +129,21 @@ def profile_update(request, pk):
 
     else:
         return render(request, 'profile.html',{'user' : user, 'can_com' :can_com })
+    
+# ########### comapny side ##########################
+    
+def companyAdmin(request):
+    return render(request, 'company_index.html')
+
+def CompanyProfile(request,pk):
+    xxxxx = myUserMaster.objects.get(pk=pk)
+    print('comapny_user : ', xxxxx.email)
+    comapny_role = request.session['role']
+    if comapny_role == 'company':
+        user = myCompany.objects.get(user_id_id = pk)
+        return render(request, 'company_register.html',{'xxxxx': xxxxx , 'user' : user})
+    
+    return render(request, 'company_register.html')
+
+def Logout(request):
+    return render(request, 'login.html')
