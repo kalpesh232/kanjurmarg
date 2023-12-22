@@ -16,7 +16,6 @@
 # a = B(value)
 # print(a.fun_a())
 
-
 # ############################################### Encapsulation 
 
 # class BankAccount:
