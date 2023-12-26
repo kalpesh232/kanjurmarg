@@ -11,4 +11,11 @@ WHERE departments.department_name = 'Engineering';
 
 json.dump
 list slicing
-having query in sql
+
+-> The SQL HAVING Clause
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
