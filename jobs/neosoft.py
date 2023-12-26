@@ -2,7 +2,7 @@
 
 # from abc import ABC , abstractmethod
 # class A(ABC):
-#     @classmethod
+#     @abstractmethod
 #     def fun_a():
 #         pass
 # class B(A):
