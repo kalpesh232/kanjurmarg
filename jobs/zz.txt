@@ -1,7 +1,7 @@
 12. Tell me about yourself
 -> Hello, I graduated in 2018 and began my professional journey as a PHP developer for six months. Following that, I become a Python and Django instructor. Currently, I'm employed as a Python Developer at Electronics Plus Software. My main focus is using Flask to connect front-end and back-end systems, with responsibilities ranging from user registration to device management and sensor data integration. I actively contributed to the development of a smart plug project, allowing users to efficiently control their devices, and also worked on sensor integration, collecting and presenting data from various sensors.
 
-1.why we use cros?
+1.why we use cros?  Cross Origin Resource Sharing (CORS)
 -> CORS helps when your website asks another website for data, but security measures might block the request. CORS allows these requests, making it possible for your website to get the data it needs from another service.
 
 2.differeance between shallow copy and deep copy 
