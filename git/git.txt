@@ -158,6 +158,9 @@ git commit --amend -m "New commit message"
 
 git for-each-ref --sort=-committerdate refs/heads/
 
+git config --global branch.sort committerdate
+git branch
+
 
 
 
