@@ -4,5 +4,7 @@ django/django_project/myapp/migrations/
 jobs/neosoft.log
 jobs/__pycache__/
 django/django_project/myproject/__pycache__/
- django/django_project/myapp/__pycache__/
+django/django_project/myapp/__pycache__/
+django/django_project/myapp/__pycache__/
+django/django_project/myapp/__pycache__
 
