@@ -22,7 +22,6 @@ SHOW COLUMNS FROM new_products;
 alter table new_products  change sup_id supplire_id   int unsigned not null ;
 ALTER TABLE new_products modify column sup_id int unsigned  not null;
 
--------- Join
 
 select * from new_products join suppliers
 on new_products.supplire_id = suppliers.sup_id;
@@ -62,8 +61,6 @@ where new_products.supplire_id is null;
 -- ('P011', 'Tape Dispenser', 40, 24.99),
 -- ('P012', 'Correction Fluid', 60, 15.99),
 -- ('P013', 'Stapler', 70, 44.99);
-
--------- View
 create table if not exists suppliers 
 (
 sup_id int unsigned auto_increment  not null,
@@ -91,8 +88,6 @@ np.prod_id =  sp.sup_id;
 select * from product_view  ;
 select * from new_products;
 select * from suppliers;
-
--------- Funtion 
 
 CREATE TABLE your_table_name (
     id INT,
@@ -122,58 +117,3 @@ ELSEIF ( marks  > 60 ) THEN set level = 'very good';
 END IF;
 RETURN(level);
 END
-select concat(fname , ' ', lname) as "Full Name" , class, age , performance(marks) as "Performance" from 
-your_table_name;
-
--------- Procedure
-
-DELIMITER //
-CREATE PROCEDURE view_products()
-begin
-SELECT * FROM new_products;
-END //
-
-call view_products();
-
-DELIMITER //
-CREATE PROCEDURE insert_products(
-in p_code char(10), 
-in p_name  char(50), 
-in p_quentity int(100),
-in p_price decimal(10,2))
-begin
-insert into new_products (prod_code, name, quentity, price) values (p_code, p_name, p_quentity, p_price);
-end //
-
-call insert_products('P014', 'pen', 100, 5.00);
-
-drop procedure insert_products;
-
--------- Trigger
-
-CREATE TABLE marks (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    m1 INT,
-    m2 INT,
-    m3 INT,
-    total INT
-);
-
-INSERT INTO marks (name, m1, m2, m3, total) VALUES
-('John Doe', 85, 90, 78, 0),
-('Jane Smith', 92, 88, 95, 0),
-('Bob Johnson', 78, 85, 80, 0),
-('Alice Williams', 96, 94, 89, 0);
-
-DELIMITER // 
-create trigger my_new_trigger before insert
-on marks for EACH ROW 
-BEGIN set
-   new.total = new.m1 * new.m2 * new.m3;
-END //
-
-
-insert into marks values(null,'kalpesh shinde', 10,20,30,40);
-
-

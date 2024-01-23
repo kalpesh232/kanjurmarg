@@ -1,4 +1,4 @@
-from flask import Flask, url_for, make_response, render_template, request
+from flask import Flask, url_for, make_response, render_template
 HelloApp = Flask(__name__)
 
 @HelloApp.route('/')
@@ -16,10 +16,9 @@ def blog(blog_no=0):
     return 'This is blog number : '+ str(blog_no)
 
 with HelloApp.test_request_context():
-    # print('1 : ', url_for('index'))
-    # print('2 : ', url_for('blog', blog_no = 'lkkiuy fer'))
-    # print('3 : ', url_for('blog', blog_no = 99, blog_name = 'nine nine'))
-    pass
+    print('1 : ', url_for('index'))
+    print('2 : ', url_for('blog', blog_no = 'lkkiuy fer'))
+    print('3 : ', url_for('blog', blog_no = 99, blog_name = 'nine nine'))
 
 @HelloApp.route('/about')
 def about():
@@ -51,36 +50,5 @@ HelloApp.add_url_rule('/product','product',product)
 
 
 # print('Flask(__name__) : ',__name__)
-
-# ################### variables and filter
-
-@HelloApp.route('/var_demo')
-def var_demo():
-    username = 'kalpesh'
-    passaword = 'dd54as5d4as65d'
-
-    names = ['sita', 'Gita','nita','Mita', 'RITA']
-    ages = [24,-25,26.5,27.4,28.6,25.98]
-    # value = '11.11'
-    value = 'Visit the official website at https://www.example.com'
-    dict = {1 : 'A', 2 : 'B'}
-
-    return render_template('var_demo.html',  user = username, passw = passaword,context={'names': names, 'ages' : ages, 'value' : value, 'dict' :dict})
-    # return render_template('var_demo.html', user = username, passw = passaword)
-
-# ######## flask request object
-
-@HelloApp.route('/take_data')
-def take_data():
-    return render_template('req_args_form.html')
-
-@HelloApp.route('/request', methods=['POST','GET'])
-def request_demo():
-    # print(request.__dict__.items())               # flask req obj
-    # print(request.args)                             # using quer arg in flask
-    if request.method == 'POST':
-        return render_template('req_args.html')
-    return render_template('req_args_form.html')
-
 if __name__ == '__main__':
     HelloApp.run(host='0.0.0.0',port=5001, debug=True)
