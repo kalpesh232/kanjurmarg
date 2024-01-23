@@ -145,5 +145,21 @@ def CompanyProfile(request,pk):
     
     return render(request, 'company_register.html')
 
+def CompanyProfileUpdate(request,pk):
+    print('pk----------->', pk)
+    compUser = myUserMaster.objects.get(pk=pk)
+    print('compUser------------>', compUser.role)
+    if compUser.role ==  "company" :
+        comp = myCompany.objects.get(user_id = pk)
+        comp.firstname = request.POST['fname']
+        comp.lastname = request.POST['lname']
+        comp.state = request.POST['state']
+        comp.city = request.POST['city']
+        comp.contact = request.POST['contact']
+        comp.logo_pic = request.FILES['img']
+        comp.save()
+        url = f"/company_profile/{pk}"
+        return redirect(url)
+
 def Logout(request):
     return render(request, 'login.html')
