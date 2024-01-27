@@ -68,6 +68,7 @@ def LoginUser(request):
         if user:
            if user.password == password:
                request.session['id'] = user.id
+               print('----------->', request.session['id'])
                request.session['role'] = user.role
                request.session['email'] = user.email
                print('account_type : ', account_type)
@@ -160,6 +161,35 @@ def CompanyProfileUpdate(request,pk):
         comp.save()
         url = f"/company_profile/{pk}"
         return redirect(url)
+    
+def jobPostPage(request):
+    return render(request, 'jobpost.html')
+
+def JobDetailsSubmit(request):
+    user = myUserMaster.objects.get(id=request.session['id'])
+    print('request------>', user.role)
+    if user.role == "company":
+        comp = myCompany.objects.get(user_id=user)
+        jobname = request.POST['jobname']
+        companyname = request.POST['companyname']
+        address = request.POST['companyaddress']
+        jobdescription = request.POST['jobdescription']
+        qulification = request.POST['qulification']
+        responsibility = request.POST['responsibilities']
+        location = request.POST['location']
+        website = request.POST['companywebsite']
+        companycontact = request.POST['comapnycontact']
+        salary = request.POST['salarypackage']
+        companyemail = request.POST['companyemail']
+        experience = request.POST['experiance']
+        
+        logo = request.FILES['logo']
+
+        newjob = jobPosted.objects.create(
+            company_id=comp,jobname=jobname,companyname=companyname,companyaddress=address,jobdescription=jobdescription,qulification=qulification,responsibilities=responsibility,location=location,salarypackage=salary,experiance=experience,companywebsite=website,companyemail=companyemail,comapnycontact=companycontact,logo=logo)
+        
+        message = "Job Post SuccessFully"
+        return render(request, 'jobpost.html', {'message':message})
 
 def Logout(request):
     return render(request, 'login.html')

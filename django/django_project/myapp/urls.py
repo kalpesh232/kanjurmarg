@@ -15,5 +15,7 @@ urlpatterns = [
 
     path('company_admin/',views.companyAdmin,name='company_index'),
     path('company_profile/<int:pk>/',views.CompanyProfile,name='company_profile'),
-    path('companyprofileupdate/<int:pk>/', views.CompanyProfileUpdate,name='company_user_profile')
+    path('companyprofileupdate/<int:pk>/', views.CompanyProfileUpdate,name='company_user_profile'),
+    path('jobpost/', views.jobPostPage, name='jobpost'),
+    path('jobdetailssubmit/', views.JobDetailsSubmit, name='jobdetailssubmit')
 ]
