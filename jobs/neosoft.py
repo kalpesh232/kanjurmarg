@@ -60,7 +60,7 @@
 
 # a = Add()
 # a.sum(56,56,56)
-# pause.
+
 # ######################## Method Overriding
 
 class Animal:

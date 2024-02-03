@@ -24,8 +24,8 @@ In Django, class-based views (CBVs) and function-based views (FBVs) are two appr
 Function-Based Views (FBV):
 Definition: FBVs are views implemented as functions.
 Usage: FBVs are straightforward and concise, suitable for simpler views.
-Class-Based Views (CBV):
 
+Class-Based Views (CBV):
 Definition: CBVs are views implemented as classes.
 Usage: CBVs provide a more organized and reusable structure. They are suitable for complex views
 
@@ -35,6 +35,8 @@ Usage: CBVs provide a more organized and reusable structure. They are suitable f
 
 Definition: Polymorphism allows objects of different classes to be treated as objects of a common base class. It enables a single interface to represent different types of objects.
 Purpose: It simplifies code and enhances flexibility. For example, a function can work with objects of different classes
+
+pause_end_stop
 -----------------------------------------------------
 
  Data Manipulation Language (DML) ->
