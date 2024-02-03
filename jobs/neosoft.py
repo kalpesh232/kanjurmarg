@@ -1,53 +1,62 @@
 # ######################################## Abstraction 
 
 # from abc import ABC , abstractmethod
-
 # class A(ABC):
 #     @abstractmethod
 #     def fun_a():
 #         pass
 # class B(A):
-#     def __init__(self,radius):
+#     def __init__(self, radius):
 #         self.radius = radius
 
 #     def fun_a(self):
 #         return 3.14 * self.radius * self.radius
-    
+
 # value = 5
-# b = B(value)
-# print(b.fun_a())
+# a = B(value)
+# print(a.fun_a())
 
 # ############################################### Encapsulation 
 
-# class bankAccount:
-#     def __init__(self, ac_holder_name, account_balance):
-#         self._ac_holder_name = ac_holder_name
-#         self.__account_balance = account_balance
+# class BankAccount:
+#     def __init__(self, account_holder, initial_balance):
+#         self._account_holder = account_holder  # Protected member
+#         self.__balance = initial_balance  # Private member
 
-#     def deposit(self, deposit_amt):
-#         self.__account_balance += deposit_amt
-#         return self.__account_balance
-    
-#     def withdrawal(self, withdrawal_amt):
-#         if self.__account_balance > withdrawal_amt:
-#             self.__account_balance -= withdrawal_amt
-#             return self.__account_balance
-#         return 'Account Balance Should be Breater then Witdrawal Balanace'
-    
-#     def acholderName(self):
-#         return self._ac_holder_name
-    
-#     def acBalance(self):
-#         return self.__account_balance
-    
-# ba = bankAccount('kalpesh shinde', 5000)
-# print('Account Balance : ',  ba.acBalance())
-# print('Account Balance after Deposit: ',  ba.deposit(500))
-# print('Account Balance after Withdrawal: ',  ba.withdrawal(10000))
-# print('Account Holder Name: ',  ba.acholderName())
-# print('Account Final Balance: ',  ba.acBalance())
-# print(ba._ac_holder_name)
-# print(ba.__account_balance)
+#     def deposit(self, amount):
+#         self.__balance += amount
+
+#     def withdraw(self, amount):
+#         if amount <= self.__balance:
+#             self.__balance -= amount
+#         else:
+#             print("Insufficient funds!")
+
+#     def get_balance(self):
+#         return self.__balance
+
+#     def get_account_holder(self):
+#         return self._account_holder
+
+
+# # Creating an instance of BankAccount
+# account = BankAccount("John Doe", 1000)
+
+# # Accessing protected and private members
+# print("Account Holder:", account.get_account_holder())  # Protected member
+# print("Balance:", account.get_balance())  # Private member
+
+# # Depositing and withdrawing money
+# account.deposit(500)
+# print("Balance after deposit:", account.get_balance())
+
+# account.withdraw(200)
+# print("Balance after withdrawal:", account.get_balance())
+
+# account.withdraw(10000)  # Insufficient funds!
+
+# # Trying to access private member directly (will result in an error)
+# # print(account.__balance)
 
 # ####################################### Function Overloading:
 
@@ -55,35 +64,37 @@
 #     def sum(self, a,b):
 #         print(a+b)
 
-#     def sum(self,a,b,c):
+#     def sum(self, a,b,c):
 #         print(a+b+c)
 
 # a = Add()
+
 # a.sum(56,56,56)
+
 
 # ######################## Method Overriding
 
-class Animal:
-    def make_sound(self):
-        print("Generic animal sound")
+# class Animal:
+#     def make_sound(self):
+#         print("Generic animal sound")
 
-class Dog(Animal):
-    def make_sound(self):
-        print("Woof! Woof!")
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("Woof! Woof!")
 
-class Cat(Animal):
-    def make_sound(self):
-        print("Meow!")
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Meow!")
 
-# Create instances
-generic_animal = Animal()
-# my_dog = Dog()
-my_cat = Cat()
+# # Create instances
+# generic_animal = Animal()
+# # my_dog = Dog()
+# my_cat = Cat()
 
-# Call the overridden method
-# generic_animal.make_sound()  # Output: Generic animal sound
-# my_dog.make_sound()         # Output: Woof! Woof!
-my_cat.make_sound()         # Output: Meow!
+# # Call the overridden method
+# # generic_animal.make_sound()  # Output: Generic animal sound
+# # my_dog.make_sound()         # Output: Woof! Woof!
+# my_cat.make_sound()         # Output: Meow!
 
 ################################################  Handle Exceptions
 
