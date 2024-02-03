@@ -68,7 +68,9 @@
 #         print(a+b+c)
 
 # a = Add()
-# a.sum(89,45,12)
+
+# a.sum(56,56,56)
+
 
 # ######################## Method Overriding
 

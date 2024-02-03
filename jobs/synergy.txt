@@ -49,3 +49,56 @@ Key Differences:
 filter returns a queryset (which can contain multiple objects), while get returns a single object.
 If filter doesn't find any matching objects, it returns an empty queryset. If get doesn't find any matching object or finds more than one, it raises an exception (DoesNotExist or MultipleObjectsReturned).
 Use filter when you expect multiple results or when the result might be empty. Use get when you expect a single result, and an exception should be raised if there are zero or multiple results.
+
+----------------------------------------------X--------------------------------------------------------------
+
+-> Cron Job
+A cron job is a scheduled task that runs automatically at specified time intervals without manual intervention. To implement this in Python, you can use a library like APScheduler to create a scheduler within your script. Define the task as a function or code block, add it to the scheduler, and specify when it should run using a cron-like syntax. Finally, start the scheduler to initiate the automatic execution of the scheduled task. 
+
+how to convert dict in to List
+how to merge two List
+-"- dict
+unit test in flask
+def display(**kargs)
+if age < 15 throw user  not allow
+how we use venv
+if one of my collegue commit a changes that i don't want so how can i revert back
+
+-> revert in a version-controlled system (such as Git)
+
+git branch
+git checkout <branch_name>
+git revert <commit_hash>
+git diff
+git commit -m "Revert changes from <commit_hash>"
+git push origin <branch_name>
+
+->  built function we use to for empty input feild in foem front end validation
+
+In HTML forms, you can use the required attribute to enforce that a field must be filled out before submitting the form. 
+
+-> To find the employee with the highest salary in a SQL database
+SELECT *
+FROM employees
+ORDER BY salary DESC
+LIMIT 1;
+
+-> SELECT rollno.rollno, rollno.name, exam.exam_id, exam.score
+FROM rollno
+LEFT JOIN exam ON rollno.rollno = exam.rollno;
+
+->  A foreign key in a table is a column that represents the primary key of another table. It establishes a connection between two tables, where the table containing the foreign key is referred to as the child table. The values in the foreign key column must align with the values in the primary key of the referenced table. This ensures a relationship between the two tables, and the foreign key serves as a link between them, allowing for data integrity and relational connections.
+
+CREATE TABLE exam (
+    rollno INT,
+    s_code INT PRIMARY KEY,
+    marks INT,
+    p_code INT,
+    FOREIGN KEY (rollno) REFERENCES student(rollno)
+);
+
+
+option method
+linux 
+docker
+
