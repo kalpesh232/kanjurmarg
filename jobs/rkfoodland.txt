@@ -1,0 +1,80 @@
+Explain MVC in Django  ->
+
+In Django, the Model-View-Controller (MVC) architectural pattern is implemented as Model-View-Template (MVT). While the concepts are similar, Django uses slightly different terminology. 
+
+Model:
+The Model in Django represents the data structure and business logic of the application.
+It defines the structure of the database tables, including fields and relationships.
+Models are typically defined in Django using  classes django.db.models.Model.
+
+View:
+In Django, the View is responsible for processing user requests and returning appropriate responses.
+Views are implemented as Python functions or classes that receive an HTTP request and return an HTTP response.
+Views interact with the Model to fetch or manipulate data, and they pass the data to the Template for rendering.
+
+Template:
+The Template in Django is responsible for rendering the HTML, which is sent back to the user's browser.
+Templates receive data from the View and generate the final HTML to be displayed.
+------------------------------------------------
+
+Django, class-based views (CBVs) and function-based views (FBVs) - >
+
+In Django, class-based views (CBVs) and function-based views (FBVs) are two approaches for handling HTTP requests and responses.
+
+Function-Based Views (FBV):
+Definition: FBVs are views implemented as functions.
+Usage: FBVs are straightforward and concise, suitable for simpler views.
+
+Class-Based Views (CBV):
+Definition: CBVs are views implemented as classes.
+Usage: CBVs provide a more organized and reusable structure. They are suitable for complex views
+
+---------------------------------------------------
+
+-> Polymorphism
+
+Definition: Polymorphism allows objects of different classes to be treated as objects of a common base class. It enables a single interface to represent different types of objects.
+Purpose: It simplifies code and enhances flexibility. For example, a function can work with objects of different classes
+
+pause_end_stop
+-----------------------------------------------------
+
+ Data Manipulation Language (DML) ->
+
+In MySQL, Data Manipulation Language (DML) consists of SQL commands that deal with the manipulation of data stored in a database. 
+
+SELECT:
+Purpose: Retrieves data from one or more tables.
+
+INSERT:
+Purpose: Adds new rows of data into a table.
+
+UPDATE:
+Purpose: Modifies existing data in a table.
+
+DELETE:
+Purpose: Removes rows from a table based on a specified condition.
+
+------------------------------------------------------
+
+Different Types of JOINS in MySQL
+
+In MySQL, joins are used to retrieve data from multiple tables based on a common column between them.
+
+INNER JOIN:
+Description: Returns only the rows where there is a match in both tables based on the specified condition
+
+LEFT JOIN (or LEFT OUTER JOIN):
+Description: Returns all rows from the left table (table1) and the matching rows from the right table 
+(table2). If there is no match, NULL values are returned for columns from the right table.
+
+RIGHT JOIN (or RIGHT OUTER JOIN):
+Description: Returns all rows from the right table (table2) and the matching rows from the left table (table1). If there is no match, NULL values are returned for columns from the left table.
+
+FULL JOIN (or FULL OUTER JOIN):
+Description: Returns all rows when there is a match in either the left or right table. If there is no match, NULL values are returned for columns from the table without a match.
+
+CROSS JOIN:
+Description: Returns the Cartesian product of both tables, meaning every row from the first table is combined with every row from the second table. There is no explicit condition for matching.
+
+
