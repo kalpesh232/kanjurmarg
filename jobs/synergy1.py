@@ -109,5 +109,90 @@
 # print(x2)
 # print(type(x2))
 
+# ---------- monkey patching in Python
+
+# class monkey():
+#     def patch(self):
+#         print("patch() being called")
+
+# def monk_p(self):
+#     print("monk_p being called ")
+
+# obj = monkey()
+# monkey.patch = monk_p
+# obj.patch()
+
+# ---------- difference between merge, join and concatenate
+
+# import pandas as pd
+# import numpy as np
+
+# # dictionary of lists
+# dict = {'id':[1, 4, 2, 9,10],
+#         'Age': [30, 45, 35, 40,50],
+#         'Score':[200, 140, 180, 198,210]}
+
+# # dictionary of lists
+# dict1 = {'id':[1, 4, 2, 9,8,6],
+#         'Age1': [30, 45, 35, 40,50,45],
+#         'Score1':[200, 140, 180, 198,210,209]}
+
+# # creating a DataFrame
+# df = pd.DataFrame(dict)
+# df1 = pd.DataFrame(dict1)
+
+# # print(df)
+# # print(df1)
+
+# # x = pd.merge(df,df1, on='id')
+# # x = df1.join(df)
+# x = pd.concat([df,df1], axis=1)
+
+# print(x)
+
+# ----------  identify and deal with missing values
+
+# import pandas as pd
+# import numpy as np 
+
+# dict = {
+#     'id' : [1,4,np.nan, 9],
+#     'age' : [30,45,90, 55],
+#     'score' : [130, 140, np.nan, 198]
+# }
+
+# df = pd.DataFrame(dict)
+
+# # print(df.isnull().sum())
+# # drop missing values
+# # df.dropna(axis = 1, how = 'all')
+
+# # x = df.dropna()
+# # x = df.fillna(00.00)
+# # x = df.replace(to_replace=30, value=999)
+# x = df.interpolate(method='slinear', limit_direction='both')
+
+# print(x)
+
+# ---------- replace string space with a given character in Python
+
+# text = "D t C mpBl ckFrid yS le"
+# ch = "a"
+
+# x = text.replace(' ','a')
+# print(x)
+
+# ---------- positive integer num, write a function that returns True if num is a perfect square else False
+
+def valid_sqaure(num):
+    square = int(num**0.5)
+    if square**2 == num :
+        return True
+    return False
+
+x = int(input('Enter a Number : '))
+result = valid_sqaure(x)
+print(result)
+
 
 
