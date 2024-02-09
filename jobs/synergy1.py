@@ -67,19 +67,32 @@
 
 # --------- Write a Python program to check if a number is prime.
 
+# primt_list = []
+
 # def is_prime(x):
 #     if x < 2:
 #         print(f'{x} is not a Prime Number')
+#         return False
 #     for i in range(2, x):
 #         if x % i == 0 :
 #             print(f'{x} is Not  a Prime Number')
+#             return False
 #             break
 #     else:
 #         print(f'{x} is  a Prime Number')
+#         return True
         
 
-# x = int(input('Enter Number : '))
-# is_prime(x)
+# # x = int(input('Enter Number : '))
+# # is_prime(x)
+# countter = 1
+# while len(primt_list) < 50 :
+#     result = is_prime(countter)
+#     if result :
+#         primt_list.append(countter)
+#     countter += 1
+# print(len(primt_list))
+# print(sum(primt_list))
 
 # --------- Write a Python program to find the common elements between two lists.
 
@@ -184,15 +197,27 @@
 
 # ---------- positive integer num, write a function that returns True if num is a perfect square else False
 
-def valid_sqaure(num):
-    square = int(num**0.5)
-    if square**2 == num :
-        return True
-    return False
+# def valid_sqaure(num):
+#     square = int(num**0.5)
+#     if square**2 == num :
+#         return True
+#     return False
 
-x = int(input('Enter a Number : '))
-result = valid_sqaure(x)
+# x = int(input('Enter a Number : '))
+# result = valid_sqaure(x)
+# print(result)
+
+# --------- class representing a Book with properties such as title, author, and publication year. Include a method to display the book details.
+
+class book():
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
+    def display(self):
+        return f"Book Title : {self.title} | Author : {self.author} | Publish Year : {self.year}"
+b = book('myBook', 'kalpesh','2024')
+result = b.display()
 print(result)
-
 
 
