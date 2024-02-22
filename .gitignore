@@ -1,2 +1,4 @@
-/myenv
+myenv/
+jobs/neosoft.log
+jobs/__pycache__/
 

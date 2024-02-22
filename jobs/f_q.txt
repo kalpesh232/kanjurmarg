@@ -1,0 +1,23 @@
+
+########## What are Werkzeug and Jinja2 in Flask?
+
+Werkzeug: 
+It is a WSGI (Web Server Gateway Interface) toolkit in Flask. It manages sessions, requests, and responses and also functions as a web server.
+
+Jinja2: 
+It is a templating engine used for rendering dynamic data in Flask applications.
+What is url_for used for in Flask?
+
+url_for is used for generating URLs dynamically in Flask. It is particularly useful for calling routes and ensuring that your application's URLs are built consistently.
+Which HTTP methods are supported in Flask?
+
+########## Flask supports the following HTTP methods:
+GET
+POST
+PUT
+DELETE
+HEAD
+
+########## How are sessions managed in Flask?
+
+In Flask, sessions are managed using cookies. When using cookies directly, values are stored as-is. However, when using the Flask session object, cookie values are encoded for added security. A secret key is provided to the session object for encoding and decoding, enhancing security by preventing tampering with cookie values.
