@@ -1,0 +1,58 @@
+List vs Tuple: Difference Between List and Tuple
+
+List:
+It is mutable
+
+# decoraters in python
+
+# {
+#   "users": [
+#     {
+#       "name": "John Doe",
+#       "age": 28
+#     },
+#     {
+#       "name": "Jane Smith",
+#       "age": 35
+#     },
+#     {
+#       "name": "Bob Johnson",
+#       "age": 22
+#     },
+#     {
+#       "name": "Alice Williams",
+#       "age": 30
+#     }
+#   ]
+# }
+
+
+# from table fetch only two max sccore row of each user
+
+# context manager in python 
+
+# which method is called when we create a object of class
+
+# super method in python
+
+# monkey paching
+
+# encapsulation
+
+# sum of list using lambda
+
+# l1 = [0,0,1,1,1,1,2,3,3]
+# ls = []
+# ls1 = []
+# dict = {}
+
+# for i in l1:
+#     dict[i] = i
+
+# for key, value in dict.items():
+#     print(f'key : {key} | value : {value}')
+#     ls.append(key)
+#     ls1.append(value)
+# print(dict)
+# print(ls)
+# print(ls1)
