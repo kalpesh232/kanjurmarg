@@ -2,7 +2,7 @@
 
 # from abc import ABC , abstractmethod
 # class A(ABC):
-#     @classmethod
+#     @abstractmethod
 #     def fun_a():
 #         pass
 # class B(A):
@@ -15,7 +15,6 @@
 # value = 5
 # a = B(value)
 # print(a.fun_a())
-
 
 # ############################################### Encapsulation 
 
@@ -69,7 +68,9 @@
 #         print(a+b+c)
 
 # a = Add()
-# a.sum(89,45,12)
+
+# a.sum(56,56,56)
+
 
 # ######################## Method Overriding
 

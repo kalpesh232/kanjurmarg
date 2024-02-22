@@ -8,7 +8,7 @@ It may contain abstract methods, which are methods without a body.
 Abstract base classes allow you to define a common interface for a set of subclasses.
 
 -> Encapsulation 
-Encapsulation in Python is like putting data and the actions that work on that data into a box called a class. This helps organize and protect the data, keeping some parts private (like a secret, using double underscores) and others protected (handle with care, using a single underscore). The double underscore makes it harder to access and modify, acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and more organized.
+Encapsulation in Python is like putting data and the actions that work on that data into a box called a class. This helps to organize and protect the data, keeping some parts private (like a secret, using double underscores) and others protected (handle with care, using a single underscore). The double underscore makes it harder to access and modify, acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and more organized.
 
 -> Method Overloading
 In Python, you can create multiple functions with the same name but different arguments or numbers, a concept known as function overloading.  it's not supported in Python. This limitation exists because Python is an interpreted language.

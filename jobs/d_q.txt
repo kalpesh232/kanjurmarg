@@ -1,0 +1,26 @@
+1. **What is Django?**
+   - Django is a web development framework for Python that enables the creation of dynamic web applications.
+
+2. **Which architectural pattern does Django follow?**
+   - Django follows the MVT architecture, which stands for Model-View-Template. 
+
+3. **Explain Django Architecture.**
+   - In the Model, we create database tables. 
+   - View represents the backend, where server-side logic is implemented. Views control the interaction between models and templates, handling requests and generating responses. 
+   - Template stands for the frontend, where the user interface is designed.
+
+4. **What is Django ORM?**
+   - Django ORM (Object-Relational Mapping) provides methods like `get`, `filter`, `create`, `save`, and `delete` to interact with the database. It allows developers to perform database operations using Python code instead of raw SQL queries.
+
+5. **What are Django URLs?**
+   - Django URLs are responsible for mapping user requests to specific functions (views) in the application. They define the routing mechanism within a Django project.
+
+6. **What is the difference between Django project and app?**
+   - A Django project is a configuration container that organizes and manages multiple apps. It includes settings, database configurations, and the main URL configuration.
+   - An app is a module within a Django project that encapsulates specific functionality. It includes models, views, and templates related to a particular feature.
+
+7. **Which databases are supported by Django?**
+   - Django supports various databases, including PostgreSQL, MySQL, SQLite, and Oracle, allowing flexibility in choosing a backend data store.
+
+8. **What is the use of the session framework in Django?**
+   - The session framework in Django is used to handle user activity, such as determining if a user is logged in. It allows the storage and retrieval of data across multiple pages on the server side, providing a secure way to manage user sessions.
