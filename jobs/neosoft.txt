@@ -76,3 +76,36 @@ Lists support various operations like appending, slicing, and more.
 - Array:
 The term "array" is sometimes used to refer to a list in Python. In everyday Python programming, when people talk about arrays, they often mean lists.
 In a more formal sense, an array may refer to the array module in Python, which provides a compact array of items of the same type. This is similar to a list but with a more restrictive structure.
+
+-> why we use cros?
+- CORS helps when your website asks another website for data, but security measures might block the request. CORS allows these requests, making it possible for your website to get the data it needs from another service.
+
+-> differeance between shallow copy and deep copy 
+- Shallow copy shares references, so changes affect both the original and the copy. Deep copy creates independent copies with values, so changes in one don't impact the other.
+
+-> sum of sql table column
+- select sum(salary) from employees;
+
+-> default port of flask.
+- 5000
+
+-> git fetch vs pull
+- git fetch gets changes from the remote repository but doesn't merge them into your local branch. git pull gets changes and immediately merges them into your current branch.
+
+-> what is decoraters in python?
+- Decorators in Python let you modify a function's behavior without altering the original code. They work by wrapping the original function in another function, allowing you to add or change functionality without directly modifying the original function
+
+-> Differences and Applications of List, Tuple, Set and Dictionary in Python
+-
+Represented: []                 | ()      | {}       | {key: value}
+Duplicate:   Yes                | Yes     | No       | Keys are unique
+Created:     list()             | tuple() | set()    | dict()
+Mutable:     Yes                | No      | Yes      | Yes 
+Ordered:     Yes                | Yes     | No       | Yes 
+Add:         append(), extend() | Not     | add()    | dict[key] = value
+Pop:         remove()           | Not     | remove() | popitem()
+
+-> What is MQTT?
+-
+MQTT, which stands for Message Queuing Telemetry Transport.
+MQTT is a messaging protocol used for communication between devices with limited bandwidth. In MQTT, the "broker" is like a hub that manages messages. Devices subscribe to "topics" they are interested in, and the broker ensures messages reach the right devices. "Publish" is sending a message, and "subscribe" is receiving messages on a specific topic. It's a simple and efficient way for devices to communicate in scenarios like IoT
