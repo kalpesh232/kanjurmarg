@@ -1,0 +1,9 @@
+1. DataFrame in Pandas
+-> A DataFrame in Pandas is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns). It is similar to a table in a database or an Excel spreadsheet.
+
+2. List comprehension in Python
+-> A list comprehension in Python provides a concise way to create lists. It consists of brackets containing an expression followed by a for clause, and can also include multiple for or if clauses.
+
+
+
+
