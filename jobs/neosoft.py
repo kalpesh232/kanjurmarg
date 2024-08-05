@@ -11,6 +11,11 @@
 
 #     def fun_a(self):
 #         return 3.14 * self.radius * self.radius
+    
+# try:
+#     animal = A()  # This will raise a TypeError
+# except TypeError as e:
+#     print('Error : ',  e)
 
 # value = 5
 # a = B(value)
@@ -18,45 +23,46 @@
 
 # ############################################### Encapsulation 
 
-# class BankAccount:
-#     def __init__(self, account_holder, initial_balance):
-#         self._account_holder = account_holder  # Protected member
-#         self.__balance = initial_balance  # Private member
+class BankAccount:
+    def __init__(self, account_holder, initial_balance):
+        self._account_holder = account_holder  # Protected member
+        self.__balance = initial_balance  # Private member
 
-#     def deposit(self, amount):
-#         self.__balance += amount
+    def deposit(self, amount):
+        self.__balance += amount
 
-#     def withdraw(self, amount):
-#         if amount <= self.__balance:
-#             self.__balance -= amount
-#         else:
-#             print("Insufficient funds!")
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Insufficient funds!")
 
-#     def get_balance(self):
-#         return self.__balance
+    def get_balance(self):
+        return self.__balance
 
-#     def get_account_holder(self):
-#         return self._account_holder
+    def get_account_holder(self):
+        return self._account_holder
 
 
-# # Creating an instance of BankAccount
-# account = BankAccount("John Doe", 1000)
+# Creating an instance of BankAccount
+account = BankAccount("John Doe", 1000)
 
-# # Accessing protected and private members
-# print("Account Holder:", account.get_account_holder())  # Protected member
-# print("Balance:", account.get_balance())  # Private member
+# Accessing protected and private members
+print("Account Holder:", account.get_account_holder())  # Protected member
+print("Balance:", account.get_balance())  # Private member
 
-# # Depositing and withdrawing money
-# account.deposit(500)
-# print("Balance after deposit:", account.get_balance())
+# Depositing and withdrawing money
+account.deposit(500)
+print("Balance after deposit:", account.get_balance())
 
-# account.withdraw(200)
-# print("Balance after withdrawal:", account.get_balance())
+account.withdraw(200)
+print("Balance after withdrawal:", account.get_balance())
 
-# account.withdraw(10000)  # Insufficient funds!
+account.withdraw(10000)  # Insufficient funds!
 
-# # Trying to access private member directly (will result in an error)
-# # print(account.__balance)
+# Trying to access private member directly (will result in an error)
+print('----', account._account_holder)
+print(account.__balance)
 
 # ####################################### Function Overloading:
 
@@ -340,6 +346,14 @@
 
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+
+# ############## create a dictionary using a list 
+
+# keys = ['a', 'b', 'c']
+# dictionary = {key: None for key in keys}
+# print(dictionary)
+# # Output: {'a': None, 'b': None, 'c': None}
+
 
 
 

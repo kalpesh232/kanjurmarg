@@ -1,6 +1,6 @@
 Explain MVC in Django  ->
 
-In Django, the Model-View-Controller (MVC) architectural pattern is implemented as Model-View-Template (MVT). While the concepts are similar, Django uses slightly different terminology. 
+In Django, the Model-View-Controller (MVC) architectural pattern is implemented as Model-View-Template (MVT).
 
 Model:
 The Model in Django represents the data structure and business logic of the application.
@@ -9,7 +9,7 @@ Models are typically defined in Django using  classes django.db.models.Model.
 
 View:
 In Django, the View is responsible for processing user requests and returning appropriate responses.
-Views are implemented as Python functions or classes that receive an HTTP request and return an HTTP response.
+Views are implemented as Python functions or classes that receive  request and return  response.
 Views interact with the Model to fetch or manipulate data, and they pass the data to the Template for rendering.
 
 Template:
@@ -19,7 +19,7 @@ Templates receive data from the View and generate the final HTML to be displayed
 
 Django, class-based views (CBVs) and function-based views (FBVs) - >
 
-In Django, class-based views (CBVs) and function-based views (FBVs) are two approaches for handling HTTP requests and responses.
+In Django, class-based views (CBVs) and function-based views (FBVs) are two approaches for handling  requests and responses.
 
 Function-Based Views (FBV):
 Definition: FBVs are views implemented as functions.
@@ -33,10 +33,9 @@ Usage: CBVs provide a more organized and reusable structure. They are suitable f
 
 -> Polymorphism
 
-Definition: Polymorphism allows objects of different classes to be treated as objects of a common base class. It enables a single interface to represent different types of objects.
-Purpose: It simplifies code and enhances flexibility. For example, a function can work with objects of different classes
+Polymorphism allows objects of different classes to be treated as objects of a common base class. It enables a single interface to represent different types of objects.
+It simplifies code and enhances flexibility. For example, a function can work with objects of different classes
 
-pause_end_stop
 -----------------------------------------------------
 
  Data Manipulation Language (DML) ->
