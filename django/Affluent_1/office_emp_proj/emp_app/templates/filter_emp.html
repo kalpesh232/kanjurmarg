@@ -15,6 +15,29 @@
   <div class="container">
     <h1>Filter an Employee</h1>
     <hr>
+    <form action="/filter_emp" method="post" novalidate>
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="f_name" class="form-label">First/Last Name</label>
+        <input type="text" class="form-control" name="f_l_name" id="f_l_name" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="dept" class="form-label">Department</label>
+        <input type="text" class="form-control" name="dept" id="dept" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <input type="text" class="form-control" name="rol" id="rol" aria-describedby="emailHelp">
+
+      </div>
+
+      <center>
+        <button type="submit" class="btn btn-secondary">Filter Employee</button>
+      </center>
+    </form>
+    <hr>
     <a class="btn btn-primary" href="\" role="button">Office Employee Management System</a>
   </div>
 </body>

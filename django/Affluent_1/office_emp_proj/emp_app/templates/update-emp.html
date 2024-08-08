@@ -21,23 +21,23 @@
         {% endfor %}
         {% endif %}
         <hr>
-        <form action="/add_emp" method="post" novalidate>
+        <form action="/update_emp/{{emp_id}}/" method="post" novalidate>
             {% csrf_token %}
             <div class="mb-3">
                 <label for="f_name" class="form-label">First Name</label>
-                <input type="text" class="form-control" name="f_name" id="f_name" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="f_name" id="f_name" value="{{first_name}}" aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
                 <label for="l_name" class="form-label">Last Name</label>
-                <input type="text" class="form-control" name="l_name"  id="l_name" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="l_name"  id="l_name" value="{{last_name}}" aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
                 <label for="dept" class="form-label">Department</label>
-
+                <input type="text" class="form-control" name="dept" id="dept" value="{{dept}}" aria-describedby="emailHelp" disabled>
                 <select name="dept" id="dept" class="form-control">
-                    <option value="#">Choose a Department</option>
+                    <option value="{{dept.id}}">Choose a Department</option>
                     {% for dept in depts %}
                     <option value="{{dept.id}}"> {{dept}}</option>
                     {% endfor %}
@@ -47,19 +47,19 @@
 
             <div class="mb-3">
                 <label for="sal" class="form-label">Salary</label>
-                <input type="number" class="form-control" name="sal" id="sal" aria-describedby="emailHelp">
+                <input type="number" class="form-control" name="sal" id="sal" value="{{salary}}"  aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
                 <label for="bonus" class="form-label">Bonus</label>
-                <input type="number" class="form-control"  name="bonus" id="bonus" aria-describedby="emailHelp">
+                <input type="number" class="form-control"  name="bonus" id="bonus"  value="{{bonus}}" aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
                 <label for="role" class="form-label">Role</label>
-
+                <input type="text" class="form-control" name="role" id="role" value="{{role}}" aria-describedby="emailHelp" disabled>
                 <select name="role" id="role" class="form-control">
-                    <option value="#">Choose a Role</option>
+                    <option value="{{role.id}}">Choose a Role</option>
                     {% for rol in rols %}
                     <option value="{{rol.id}}">{{rol}}</option>
                     {% endfor %}
@@ -69,16 +69,16 @@
 
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" name="phone" id="phone" aria-describedby="emailHelp" minlength="10"
+                <input type="tel" class="form-control" name="phone" id="phone" value="{{phone}}" aria-describedby="emailHelp" minlength="10"
                     maxlength="10">
             </div>
 
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Hire Date</label>
-                <input type="date" class="form-control" name="h_date"  id="h_date" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="h_date"  id="h_date" value="{{hire_date}}"  aria-describedby="emailHelp">
             </div>
             <center>
-                <button type="submit" class="btn btn-secondary">Add Employee</button>
+                <button type="submit" class="btn btn-secondary">Update Employee</button>
             </center>
         </form>
         <hr>
