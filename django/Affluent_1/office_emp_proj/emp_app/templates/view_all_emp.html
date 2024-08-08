@@ -24,6 +24,7 @@
                 <th scope="col">Role</th>
                 <th scope="col">Phone Number</th>
                 <th scope="col">Hire Date</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -38,6 +39,9 @@
                 <td>{{emp.role}}</td>
                 <td>{{emp.phone}}</td>
                 <td>{{emp.hire_date}}</td>
+                <td>
+                  <a href="/update_emp/{{emp.id}}" class="btn btn-warning" role="button">Update</a>
+                </td>
               </tr>
               {% endfor %}
             </tbody>
