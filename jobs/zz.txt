@@ -82,5 +82,48 @@ Used for organizing code across multiple files and subdirectories.
 ->
 Lambda functions in Python are used for concise and anonymous function definitions, often in situations where a full function is unnecessary They are especially useful for short-lived operations.
 
+11.Explain how request is processed in django?
+-
+URL Routing: Django uses URL patterns defined in urls.py to match the incoming request URL to a specific view function.
+
+View Function: The matched view function is called, which processes the request and generates a response. This may involve querying the database, processing forms, etc.
+
+Middleware: Middleware components can modify the request and response objects at various stages of processing. They execute before and after the view function.
+
+Response: The view function returns an HTTP response object. This can be a rendered HTML page, JSON data, or any other HTTP response type.
+
+Template Rendering: If the view function returns a template response, Django renders the template with context data and sends the resulting HTML back as part of the HTTP response.
+
+Response Sent: The final response is sent back to the client.
+
+12.what is the use of py manage.py makemigrations?
+-The command python manage.py makemigrations in Django is used to create new migration files based on changes you’ve made to your models.
+-It detects changes in your Django models
+- It creates migration files in the migrations directory of each app. These files contain the instructions to apply the changes to your database schema.
+
+13.what is context in django?
+-In Django, context refers to the data passed from a view to a template. This data is used to dynamically generate the HTML content that the template will render.
+
+14.q object in orm django?
+In Django's ORM (Object-Relational Mapping), the Q object is used to construct complex queries involving AND, OR, and NOT operations. It allows you to build more sophisticated queries than what you can achieve with simple filter conditions.
+
+15.get and filter in django
+-get() Method
+Retrieves a single object that matches the given query parameters.
+Returns a single instance of the model.
+Raises DoesNotExist if no objects match the query.
+Raises MultipleObjectsReturned if more than one object matches the query.
+-filter() Method
+Retrieves a queryset of objects that match the given query parameters.
+Returns a queryset containing all matching objects.
+If no objects match, it returns an empty queryset.
+
+16.python manage.py migrate
+- python manage.py migrate applies database changes based on your Django models, ensuring the database schema is up to date.
+
+17.Django ORM 
+->  Django ORM reduces the chance of mistakes compared to writing raw SQL queries by allowing you to interact with the database using Python code. It maps database tables to Python classes and handles SQL queries automatically.
+
+
 
 

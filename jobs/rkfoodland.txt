@@ -3,7 +3,7 @@ Explain MVC in Django  ->
 In Django, the Model-View-Controller (MVC) architectural pattern is implemented as Model-View-Template (MVT).
 
 Model:
-The Model in Django represents the data structure and business logic of the application.
+The Model in Django represents the data structure of the application.
 It defines the structure of the database tables, including fields and relationships.
 Models are typically defined in Django using  classes django.db.models.Model.
 

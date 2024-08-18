@@ -7,8 +7,7 @@ An abstract class in Python is a class that cannot be instantiated on its own
 It may contain abstract methods, which are methods without a body.
 Abstract base classes allow you to define a common interface for a set of subclasses.
     In Python, you cannot directly create an instance of an abstract class. Abstract classes are meant to 
-serve as blueprints for other classes. They can contain one or more abstract methods, which are methods that 
-are declared but contain no implementation.
+serve as blueprints for other classes. 
 
 -> Encapsulation 
     Encapsulation in Python is like putting data and the actions that work on that data into a box called a 
@@ -57,7 +56,7 @@ It pushes any pending changes in the session to the database, allowing you to se
 Unlike commit(), flush() doesn't end the transaction, so you can continue making changes before eventually committing.
 
 ->  Global Interpreter Lock (GIL)
-The Global Interpreter Lock (GIL) in Python is like a traffic cop for threads. It makes sure only one thread can execute Python code at a time, preventing conflicts and simplifying memory management. While it helps with simplicity, it can limit the performance of multi-threaded programs on multi-core computers.
+The Global Interpreter Lock (GIL) in Python is like a traffic cop for threads. It makes sure only one thread can execute Python code at a time, preventing conflicts and simplifying memory management.
 
 ->  Django, signals
 In Django, signals are a way for different parts of your app to talk to each other. They allow one part to send a message when something happens, and other parts can listen for that message and react to it. It helps keep different parts of your app loosely connected, making it easier to change and maintain. For example, when you save something in the database, a signal can be sent, and other parts can respond to it, like sending a notification.
@@ -89,7 +88,7 @@ Lists support various operations like appending, slicing, and more.
 The term "array" is sometimes used to refer to a list in Python. In everyday Python programming, when people talk about arrays, they often mean lists.
 In a more formal sense, an array may refer to the array module in Python, which provides a compact array of items of the same type. This is similar to a list but with a more restrictive structure.
 
--> why we use cros?
+-> why we use cros?(Cross-origin resource sharing)
 - CORS helps when your website asks another website for data, but security measures might block the request. CORS allows these requests, making it possible for your website to get the data it needs from another service.
 
 -> differeance between shallow copy and deep copy 
@@ -135,7 +134,6 @@ Caught and handled using try-except blocks.
 empty_dict = {}
 empty_dict = dict()
 
-
 -> How to create a dictionary using a list
 - Yes, you can create a dictionary using a list where the list elements become the keys of the dictionary. By default, the values for these keys can be set to None or any other default value. 
 
@@ -150,3 +148,15 @@ Flask
 Performance Good, but not async by default.
 Simple, flexible, mature ecosystem.
 Best for smaller projects or where simplicity and flexibility are preferred.
+
+-> json.dumps() and json.loads() 
+-
+json.dumps():
+Converts a Python object into a JSON-formatted string.
+json.loads():
+Converts a JSON-formatted string into a Python object.
+
+-> differeance between return and yeild?
+-
+return: Exits a function and sends back a value. The function ends and its state is lost.
+yield: Pauses a function and returns a value. The function’s state is preserved, allowing it to resume and produce multiple values over time.

@@ -23,46 +23,46 @@
 
 # ############################################### Encapsulation 
 
-class BankAccount:
-    def __init__(self, account_holder, initial_balance):
-        self._account_holder = account_holder  # Protected member
-        self.__balance = initial_balance  # Private member
+# class BankAccount:
+#     def __init__(self, account_holder, initial_balance):
+#         self._account_holder = account_holder  # Protected member
+#         self.__balance = initial_balance  # Private member
 
-    def deposit(self, amount):
-        self.__balance += amount
+#     def deposit(self, amount):
+#         self.__balance += amount
 
-    def withdraw(self, amount):
-        if amount <= self.__balance:
-            self.__balance -= amount
-        else:
-            print("Insufficient funds!")
+#     def withdraw(self, amount):
+#         if amount <= self.__balance:
+#             self.__balance -= amount
+#         else:
+#             print("Insufficient funds!")
 
-    def get_balance(self):
-        return self.__balance
+#     def get_balance(self):
+#         return self.__balance
 
-    def get_account_holder(self):
-        return self._account_holder
+#     def get_account_holder(self):
+#         return self._account_holder
 
 
-# Creating an instance of BankAccount
-account = BankAccount("John Doe", 1000)
+# # Creating an instance of BankAccount
+# account = BankAccount("John Doe", 1000)
 
-# Accessing protected and private members
-print("Account Holder:", account.get_account_holder())  # Protected member
-print("Balance:", account.get_balance())  # Private member
+# # Accessing protected and private members
+# print("Account Holder:", account.get_account_holder())  # Protected member
+# print("Balance:", account.get_balance())  # Private member
 
-# Depositing and withdrawing money
-account.deposit(500)
-print("Balance after deposit:", account.get_balance())
+# # Depositing and withdrawing money
+# account.deposit(500)
+# print("Balance after deposit:", account.get_balance())
 
-account.withdraw(200)
-print("Balance after withdrawal:", account.get_balance())
+# account.withdraw(200)
+# print("Balance after withdrawal:", account.get_balance())
 
-account.withdraw(10000)  # Insufficient funds!
+# account.withdraw(10000)  # Insufficient funds!
 
-# Trying to access private member directly (will result in an error)
-print('----', account._account_holder)
-print(account.__balance)
+# # Trying to access private member directly (will result in an error)
+# print('----', account._account_holder)
+# print(account.__balance)
 
 # ####################################### Function Overloading:
 
@@ -349,11 +349,25 @@ print(account.__balance)
 
 # ############## create a dictionary using a list 
 
-# keys = ['a', 'b', 'c']
-# dictionary = {key: None for key in keys}
-# print(dictionary)
-# # Output: {'a': None, 'b': None, 'c': None}
+abc = ['a', 'b', 'c']
+dictionary = {xyz: None for xyz in abc}
+print(dictionary)
+# Output: {'a': None, 'b': None, 'c': None}
 
+# ############ json.dumps() and json.loads()
+
+# import json
+# data = {"name": "John", "age": 30}
+# print('data type : ',  type(data))
+# json_string = json.dumps(data)
+# print('json_string type 1 : ',  type(json_string))  
+# print('json_string 1 : ',  json_string)  
+
+# json_string = '{"name": "John", "age": 30}'
+# print('json_string type : ',  type(json_string))
+# data = json.loads(json_string)
+# print('data type 1 : ',  type(data))  
+# print('data 1 : ',  data)  
 
 
 
