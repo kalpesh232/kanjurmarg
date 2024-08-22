@@ -11,6 +11,11 @@
 
 #     def fun_a(self):
 #         return 3.14 * self.radius * self.radius
+    
+# try:
+#     animal = A()  # This will raise a TypeError
+# except TypeError as e:
+#     print('Error : ',  e)
 
 # value = 5
 # a = B(value)
@@ -56,7 +61,8 @@
 # account.withdraw(10000)  # Insufficient funds!
 
 # # Trying to access private member directly (will result in an error)
-# # print(account.__balance)
+# print('----', account._account_holder)
+# print(account.__balance)
 
 # ####################################### Function Overloading:
 
@@ -340,6 +346,28 @@
 
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+
+# ############## create a dictionary using a list 
+
+abc = ['a', 'b', 'c']
+dictionary = {xyz: None for xyz in abc}
+print(dictionary)
+# Output: {'a': None, 'b': None, 'c': None}
+
+# ############ json.dumps() and json.loads()
+
+# import json
+# data = {"name": "John", "age": 30}
+# print('data type : ',  type(data))
+# json_string = json.dumps(data)
+# print('json_string type 1 : ',  type(json_string))  
+# print('json_string 1 : ',  json_string)  
+
+# json_string = '{"name": "John", "age": 30}'
+# print('json_string type : ',  type(json_string))
+# data = json.loads(json_string)
+# print('data type 1 : ',  type(data))  
+# print('data 1 : ',  data)  
 
 
 

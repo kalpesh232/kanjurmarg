@@ -30,29 +30,17 @@ It is mutable
 # from table fetch only two max sccore row of each user
 
 # context manager in python 
+- A context manager in Python is a tool that helps manage resources
 
 # which method is called when we create a object of class
+- When you create an object of a class in Python, the __init__ method is called. This method is known as the initializer or constructor. Its primary purpose is to initialize the newly created object, typically by setting initial values for its attributes.
 
 # super method in python
+- The super() method in Python is used to call methods from a parent class, allowing you to extend or modify inherited behavior.
 
 # monkey paching
-
-# encapsulation
+- Monkey patching in Python is the dynamically modifying or extending classes or modules at runtime. It allows changes to behavior without altering the original source code.
 
 # sum of list using lambda
+- You can use a lambda function with the reduce function from the functools module to compute 
 
-# l1 = [0,0,1,1,1,1,2,3,3]
-# ls = []
-# ls1 = []
-# dict = {}
-
-# for i in l1:
-#     dict[i] = i
-
-# for key, value in dict.items():
-#     print(f'key : {key} | value : {value}')
-#     ls.append(key)
-#     ls1.append(value)
-# print(dict)
-# print(ls)
-# print(ls1)
