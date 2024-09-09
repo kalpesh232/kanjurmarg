@@ -32,7 +32,7 @@ Assignment Operators
         %=: Modulus and assigns.
         **=: Exponentiates and assigns.
 Bitwise Operators
-    Operate on bits and perform bit-level operations:
+    The integers are first converted into binary and then operations are performed on each bit or corresponding pair of bits, hence the name bitwise operators.:
         & (AND): Performs a bitwise AND.
         | (OR): Performs a bitwise OR.
         ^ (XOR): Performs a bitwise XOR.
@@ -48,7 +48,7 @@ Identity Operators
         is: Returns True if two variables point to the same object.
         is not: Returns True if two variables do not point to the same object.
 
-2.JWT Tokens and Access Tokens (HS256)
+2.JWT Tokens (HS256) and Access Tokens 
 -> A JSON Web Token is a format that includes a header, payload, and signature. It can be used for authentication and data exchange, When a user signs in, the server generates a JWT with the user's information in the payload.
 -> Access Token A token used to grant access to protected resources. 
 

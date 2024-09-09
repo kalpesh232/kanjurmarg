@@ -2,35 +2,32 @@
 # def fact(value):
 #     if value == 1 :
 #         return value
-#     return value * (fact(value-1))
-# value = 3
-# result = fact(value)
-# print("result : ", result)
-
+#     else:
+#         return value * fact(value - 1)
+         
+# print('x : ', fact(7))
 #------------ Write a Python script to find the sum of the first 50 prime numbers.
 
-import time
-num = 0
-primt_ls = []
-while True:
-    print('Len : ', len(primt_ls))
-    if len(primt_ls) < 51 :
-        if num == 0 or num == 1 :
-            pass
-        else :
-            for i in range(2,num):
-                if num % i == 0 :
-                    print('not prime : ', num)
-                    break
-            else:
-                primt_ls.append(num)
-                print('prime : ', num)
-        num += 1
-        time.sleep(2)
-    else :
-        print('final list : ', primt_ls)
-        print('sum of list : ', sum(primt_ls))
-        break
+# num = 0
+# primt_ls = []
+# while True:
+#     print('Len : ', len(primt_ls))
+#     if len(primt_ls) < 51 :
+#         if num == 0 or num == 1 :
+#             pass
+#         else :
+#             for i in range(2,num):
+#                 if num % i == 0 :
+#                     print('not prime : ', num)
+#                     break
+#             else:
+#                 primt_ls.append(num)
+#                 print('prime : ', num)
+#         num += 1
+#     else :
+#         print('final list : ', primt_ls)
+#         print('sum of list : ', sum(primt_ls))
+#         break
 
 # ----------- Create a Python class representing a Book with properties such as title, author, and publication year. Include a method to display the book details.
 
@@ -70,8 +67,11 @@ while True:
 
 # try:
 #     with open(file_path, 'r') as file:
-#         print(type(file))
+#         print('file type : ', type(file))
+#         print('file : ', (file))
 #         data = json.load(file)
+#         print('data type : ', type(data))
+#         print('data : ', (data))
 #         display_formatted_data(data)
 #         print('file : ',data)
 # except FileNotFoundError:
