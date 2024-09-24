@@ -20,10 +20,14 @@ def calculate_annualized_volatility(daily_volatility, data_lenght):
 
 def analyze_index_data(file_path):
     df = pd.read_csv(file_path)
+    print(df)
     df = calculate_daily_returns(df)
+    print('calculate_daily_returns : ', calculate_daily_returns)
     daily_volatility = calculate_daily_volatility(df)
+    print('daily_volatility : ', daily_volatility)
     data_lenght = len(df)
     annualized_volatility = calculate_annualized_volatility(daily_volatility, data_lenght)
+    print('annualized_volatility : ', annualized_volatility)
     return annualized_volatility
   
    
@@ -39,7 +43,8 @@ def calculate_volatilty():
             return jsonify({'error': 'No selected file'}), 400
         
         try :
-            file_path = file.filename 
+            # file_path = file.filename 
+            file_path ='temp.csv'
             file.save(file_path)
 
             result = analyze_index_data(file_path)
