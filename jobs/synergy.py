@@ -118,15 +118,15 @@
 # myFun(**kwargs)
 
 
-def myFun(a,*args, **kwargs):
-	print('a : ', a)
-	print("args: ", args)
-	print("kwargs: ", kwargs)
+# def myFun(a,*args, **kwargs):
+# 	print('a : ', a)
+# 	print("args: ", args)
+# 	print("kwargs: ", kwargs)
 
 
-# Now we can use both *args ,**kwargs
-# to pass arguments to this function :
-myFun(1,'kalpesh', 'for', 'kalpesh', first="kalpesh", mid="for", last="kalpesh")
+# # Now we can use both *args ,**kwargs
+# # to pass arguments to this function :
+# myFun(1,'kalpesh', 'for', 'kalpesh', first="kalpesh", mid="for", last="kalpesh")
 
 # # defining car class
 # class car():

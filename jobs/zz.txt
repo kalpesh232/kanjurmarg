@@ -3,7 +3,7 @@
 
 I worked as a software developer at Software Plus Electronics for 2 years and 7 months. My responsibilities included database management, dynamic website development, backend integration, MQTT communication, and using Flask for web development. I used Cron jobs for task automation, managed CRUD operations, and worked with MySQL. I also handled debugging, generating logs, and managed project repositories on GitHub.
 
-Currently, I am working at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involves testing and debugging code, ensuring matches run correctly, managing refunds, monitoring storage memory, and working on contest cancellations using the PySpark engine.
+I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved testing and debugging code, ensuring matches ran correctly, managing refunds, monitoring storage memory, and handling contest cancellations using the PySpark engine.
 
 2.how can we secure our apis?
 -> We secure APIs by using authentication, authorization, and token validation. When a request comes, we check if it's authorized to execute the associated function by validating a token with a secret key. Input validation ensures data integrity. CORS prevents unauthorized external requests, keeping our API safe.
