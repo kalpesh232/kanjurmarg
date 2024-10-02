@@ -14,3 +14,18 @@ Combining two or more sequences (like strings, lists, arrays) end-to-end.
 Combine elements into a single string with a separator or add columns in DataFrames.
 - Merge :
 Combining two data structures based on common elements. Often used in the context of databases or Pandas DataFrames.
+
+6. Arguments in Python Functions
+-> 1. Positional Arguments:
+These are the most common type of arguments and are passed in the order they are defined.
+python
+-> 2. Keyword Arguments:
+These allow you to pass arguments using the parameter names, regardless of their order.
+-> 3. Default Arguments:
+These are used to define default values for parameters. If an argument is not provided, the default value is used.
+-> 4. Variable-Length Arguments:
+- *args: Allows you to pass a variable number of positional arguments.
+- **kwargs: Allows you to pass a variable number of keyword arguments.
+-> 5. Positional-Only and Keyword-Only Arguments:
+- Positional-Only (/): Forces some arguments to be passed positionally.
+- Keyword-Only (*): Forces some arguments to be passed by keyword.
