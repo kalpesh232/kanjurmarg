@@ -152,17 +152,71 @@
 
 # ---------- Concatenate 
 # Strings
-result = "Hello" + " " + "World"  # "Hello World"
-# Lists
-result = [1, 2] + [3, 4]  # [1, 2, 3, 4]
-# ---------- Join 
-result = "-".join(["2024", "08", "16"])  # "2024-08-16"
-# ---------- Merge 
-import pandas as pd
-df1 = pd.DataFrame({'key': [1, 2, 3], 'A': ['A1', 'A2', 'A3']})
-df2 = pd.DataFrame({'key': [1, 2, 4], 'B': ['B1', 'B2', 'B4']})
-result = pd.merge(df1, df2, on='key')
-print(result)
+# result = "Hello" + " " + "World"  # "Hello World"
+# # Lists
+# result = [1, 2] + [3, 4]  # [1, 2, 3, 4]
+# # ---------- Join 
+# result = "-".join(["2024", "08", "16"])  # "2024-08-16"
+# # ---------- Merge 
+# import pandas as pd
+# df1 = pd.DataFrame({'key': [1, 2, 3], 'A': ['A1', 'A2', 'A3']})
+# df2 = pd.DataFrame({'key': [1, 2, 4], 'B': ['B1', 'B2', 'B4']})
+# result = pd.merge(df1, df2, on='key')
+# print(result)
+
+########## Arguments in Python Functions
+#---------- Positional Arguments:
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("kalpesh", 30)
+
+#---------- Keyword Arguments:
+def greet(name, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet(age=30, name="kalpesh")
+
+#---------- Default Arguments:
+def greet(name, age=25):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("kalpesh")  # Uses default age of 25
+greet("kalpesh",30)  
+
+#---------- Variable-Length Arguments:
+def greet(*names):
+    for name in names:
+        print(f"Hello {name}")
+
+greet("kalpesh", "harishchandra", "shinde")
+
+def greet(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+greet(f_name="kalpesh", m_name='harishchandra', s_name="shinde")
+
+#---------- Positional-Only and Keyword-Only Arguments:
+def greet(name, /, age):
+    print(f"Hello {name}, you are {age} years old.")
+
+greet("Alice", 25)  # Works
+greet(name="kalpesh", age=30)  # Error
+
+# def greet(name, *, age):
+#     print(f"Hello {name}, you are {age} years old.")
+
+# greet("kalpesh", age=30)  # Works
+# greet("Alice", 25)  # Error
+
+
+
+
+
+
+
+
 
 
 

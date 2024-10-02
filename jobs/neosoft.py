@@ -248,31 +248,28 @@
 
 # #############  Global Interpreter Lock (GIL)
 
-# import threading
+import threading
+import time
 
-# # Shared counter variable
-# counter = 0
+def task(name):
+    print(f"Task {name} starting")
+    time.sleep(2)
+    print(f"Task {name} completed")
 
-# # Function to calculate the square of numbers
-# def calculate_square():
-#     global counter
-#     for _ in range(1_000_000):
-#         counter += 1  # Increment the counter
+# Create threads
+thread1 = threading.Thread(target=task, args=("A",))
+thread2 = threading.Thread(target=task, args=("B",))
 
-# # Create two threads to perform the task
-# thread1 = threading.Thread(target=calculate_square)
-# thread2 = threading.Thread(target=calculate_square)
+# Start threads
+thread1.start()
+thread2.start()
 
-# # Start the threads
-# thread1.start()
-# thread2.start()
+# Wait for threads to complete
+thread1.join()
+thread2.join()
 
-# # Wait for both threads to finish
-# thread1.join()
-# thread2.join()
+print("Both tasks are done")
 
-# # Print the final counter value
-# print("Final Counter Value:", counter)
 
 #  ##########################   Django, signals
 
