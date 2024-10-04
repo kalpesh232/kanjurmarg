@@ -20,7 +20,8 @@
 #     data = cur.fetchall()
 #     print('data : ', data)
 #     print('data : ', type(data))
-#     data1 = json.dumps(data)
+#     data_converted = [(id, name, type_id, float(amount)) for (id, name, type_id, amount) in data]
+#     data1 = json.dumps(data_converted)
 #     print('data1 : ', data1)
 #     print('data1 : ', type(data1))
 #     cur.close()
@@ -84,7 +85,7 @@
 
 # ###################### Python json.dumps(): Basic Use ############################################
 
-# import json
+import json
 # # Define a Python dictionary
 # data = {"name": "John", "age": 30}
 # print('data : ', data)
@@ -93,6 +94,7 @@
 # json_data = json.dumps(data)
 # print('json_data : ', json_data)
 # print('json_dataT : ', type(json_data))
+# data = {"name": "John", "age": 30}
 # eggs = json.loads(json_data)
 # print('json_data_loads : ', eggs)
 # print('json_data_loads T : ', type(eggs))

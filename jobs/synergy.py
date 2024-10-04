@@ -56,19 +56,19 @@
 
 # # def myFun(*argv):
 # def myFun(**argv):
-# 	print(argv)
+# 	print('argv : ',  argv)
 # 	# for arg in argv:
 # 	for arg , arg1 in argv.items():
-# 		print(arg, ' ', arg1)
+# 		print( 'arg - arg1 :  ', arg, '-', arg1)
 
 
-# # myFun('Hello', 'Welcome', 'to', 'kalpeshforkalpesh')
+# myFun('Hello', 'Welcome', 'to', 'kalpeshforkalpesh')
 # myFun(first = 'Hello', second = 'Welcome',  third =  'to', fourth = 'kalpeshforkalpesh')
-# # myFun({'first' : 'Hello', 'second' : 'Welcome',  'third' :  'to', 'fourth' : 'kalpeshforkalpesh'})
+# myFun({'first' : 'Hello', 'second' : 'Welcome',  'third' :  'to', 'fourth' : 'kalpeshforkalpesh'})
 
 # def myFun(arg1, *argv):
-	# print("First argument :", arg1)
-	# print("rest argument :", *argv)
+# 	print("First argument :", arg1)
+# 	print("rest argument :", *argv)
 # 	for arg in argv:
 # 		print("Next argument through *argv :", arg)
 
@@ -76,17 +76,18 @@
 # myFun('Hello', 'Welcome', 'to', 'kalpeshforkalpesh')
 
 # def myFun(**kwargs):            # sidha sidha 
-# # def myFun(*kwargs):
-# 	# for key, value in kwargs.items():
-#     print(kwargs)
-# 		# for i in kwargs:
-# 			# print('i :', i)
-# 		# print("%s == %s" % (key, value))
+# def myFun(*kwargs):
+	# for key, value in kwargs.items():
+    # print('kwargs : ', kwargs)
+		# for i in kwargs:
+			# print('i :', i)
+		# print("%s == %s" % (key, value))
 
 
-# # Driver code
+# Driver code
+# myFun('Hello', 'Welcome', 'to', 'kalpeshforkalpesh')
 # myFun(first='kalpesh', mid='for', last='kalpesh')
-# # myFun(1,2,3,4,5,6,7,8,9)
+# myFun(1,2,3,4,5,6,7,8,9)
 
 # def myFun(arg1, **kwargs):
 # 	print("1 :", arg1)
@@ -105,12 +106,12 @@
 # 	print("arg3:", arg3)
 
 
-# # Now we can use *args or **kwargs to
-# # pass arguments to this function :
-# args = ("kalpesh", "for", "kalpesh")
-# print(*args)
+# # # Now we can use *args or **kwargs to
+# # # pass arguments to this function :
+# # args = ("kalpesh", "for", "kalpesh")
+# # print('*args : ', *args)
 # # myFun(*args)
-# # myFun("kalpesh", "for", "kalpesh")
+# myFun("kalpesh", "for", "kalpesh")
 
 # kwargs = {"arg1": "kalpesh", "arg2": "for", "arg3": "kalpesh"}
 # # kwargs = (first='kalpesh', mid='for', last='kalpesh')
@@ -153,23 +154,23 @@
 # print(bmw.speed)
 # print(mb.price)
 
-# defining car class
-class car():
-	# args receives unlimited no. of arguments as an array
-	def __init__(self, **kwargs):
-		# access args index like array does
-		self.speed = kwargs['s']
-		self.color = kwargs['c']
+# # defining car class
+# class car():
+# 	# args receives unlimited no. of arguments as an array
+# 	def __init__(self, **kwargs):
+# 		# access args index like array does
+# 		self.speed = kwargs['s']
+# 		self.color = kwargs['c']
 
 
-# creating objects of car class
-audi = car(s=200, c='red')
-bmw = car(s=250, c='black')
-mb = car(s=190, c='white')
+# # creating objects of car class
+# audi = car(s=200, c='red')
+# bmw = car(s=250, c='black')
+# mb = car(s=190, c='white')
 
-# printing the color and speed of cars
-print(audi.color)
-print(bmw.speed)
+# # printing the color and speed of cars
+# print(audi.color)
+# print(bmw.speed)
 
 
 

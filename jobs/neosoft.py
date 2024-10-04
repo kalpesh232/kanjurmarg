@@ -11,6 +11,11 @@
 
 #     def fun_a(self):
 #         return 3.14 * self.radius * self.radius
+    
+# try:
+#     animal = A()  # This will raise a TypeError
+# except TypeError as e:
+#     print('Error : ',  e)
 
 # value = 5
 # a = B(value)
@@ -56,7 +61,8 @@
 # account.withdraw(10000)  # Insufficient funds!
 
 # # Trying to access private member directly (will result in an error)
-# # print(account.__balance)
+# print('----', account._account_holder)
+# print(account.__balance)
 
 # ####################################### Function Overloading:
 
@@ -242,31 +248,28 @@
 
 # #############  Global Interpreter Lock (GIL)
 
-# import threading
+import threading
+import time
 
-# # Shared counter variable
-# counter = 0
+def task(name):
+    print(f"Task {name} starting")
+    time.sleep(2)
+    print(f"Task {name} completed")
 
-# # Function to calculate the square of numbers
-# def calculate_square():
-#     global counter
-#     for _ in range(1_000_000):
-#         counter += 1  # Increment the counter
+# Create threads
+thread1 = threading.Thread(target=task, args=("A",))
+thread2 = threading.Thread(target=task, args=("B",))
 
-# # Create two threads to perform the task
-# thread1 = threading.Thread(target=calculate_square)
-# thread2 = threading.Thread(target=calculate_square)
+# Start threads
+thread1.start()
+thread2.start()
 
-# # Start the threads
-# thread1.start()
-# thread2.start()
+# Wait for threads to complete
+thread1.join()
+thread2.join()
 
-# # Wait for both threads to finish
-# thread1.join()
-# thread2.join()
+print("Both tasks are done")
 
-# # Print the final counter value
-# print("Final Counter Value:", counter)
 
 #  ##########################   Django, signals
 
@@ -340,6 +343,28 @@
 
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+
+# ############## create a dictionary using a list 
+
+abc = ['a', 'b', 'c']
+dictionary = {xyz: None for xyz in abc}
+print(dictionary)
+# Output: {'a': None, 'b': None, 'c': None}
+
+# ############ json.dumps() and json.loads()
+
+# import json
+# data = {"name": "John", "age": 30}
+# print('data type : ',  type(data))
+# json_string = json.dumps(data)
+# print('json_string type 1 : ',  type(json_string))  
+# print('json_string 1 : ',  json_string)  
+
+# json_string = '{"name": "John", "age": 30}'
+# print('json_string type : ',  type(json_string))
+# data = json.loads(json_string)
+# print('data type 1 : ',  type(data))  
+# print('data 1 : ',  data)  
 
 
 

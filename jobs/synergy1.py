@@ -51,19 +51,19 @@
 
 # ----------  Write a Python program to count the frequency of each element in a list.
 
-# x = [8,0,0,7,2,8,9,7,7,6]
-# x1 = {}
-# for i in x:
-#    x1[i] = 0
-# x2 = list(x1.keys())
-# count = 0
-# for i in range(len(x2)):
-#     for j in range(len(x)):
-#         if x2[i] == x[j] :
-#             count += 1
-#         x1[x2[i]] = count
-#     count = 0
-# print('frequency_count 1 : ', x1)
+# x = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
+# print('x : ', x)
+# print('x : ', len(x))
+# set_x = set(x)
+# counter = 0
+# x_dict = {}
+# for s in set_x:
+#     for i in x : 
+#         if s == i :
+#             counter += 1
+#     x_dict[s] = counter
+#     counter = 0
+# print('result : ',x_dict)
 
 # --------- Write a Python program to check if a number is prime.
 
@@ -96,31 +96,22 @@
 
 # --------- Write a Python program to find the common elements between two lists.
 
-# x = [1, 2, 3, 4, 5]
-# y = [4, 5, 6, 7, 8,1,2,3]
-# common = []
-
-# if len(x) > len(y):
-#     list_a , list_b = x  ,y
-# else:
-#     list_a , list_b = y  ,x
-
-# for i in list_a:
-#     for j in list_b:
-#         if i == j :
-#             common.append(i)
-
-# print(common)
+# x1 = [9,7,6,9,9,7,3,7,6,6]
+# x2 = [9,1,7,2,4,2,6,7,3,1]
+# print('x1 : ', x1)
+# print('x2 : ', x2)
+# c_l = []
+# for i in x2 :
+#     if i in x1:
+#         c_l.append(i)
+# print('c_l : ', set(c_l))
 
 # ----------  Write a Python program to remove duplicates from a list.
 
-# x =  [1, 2, 3, 2, 1, 3, 2, 4, 5, 4,2,7,8,5,4,1,2,5,8,9]
-# x1 = {}
-# for i in x:
-#     x1[i] = i
-# x2 = list(x1.keys())
-# print(x2)
-# print(type(x2))
+# x1 = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
+# print('x1 : ', x1)
+# set_x = set(x1)
+# print('x1 : ', list(set_x))
 
 # ---------- monkey patching in Python
 
