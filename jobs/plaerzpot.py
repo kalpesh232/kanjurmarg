@@ -32,23 +32,18 @@ print(result)
 
 # class Parent:
 #     def __init__(self, value):
-#         print('value : ', value)
 #         self.value = value
 
 #     def show(self):
-#         print('3')
 #         print('1 : ', self.value)
 
 # class Child(Parent):
 #     def __init__(self, valye, extra_value):
-#         print('valye : ',valye)
-#         print('extra_value : ',extra_value)
 #         super().__init__(valye)
 #         # self.value = valye
 #         self.extra_value = extra_value
 
 #     def show(self):
-#         print('4')
 #         super().show()
 #         print('2 : ', self.extra_value)
 

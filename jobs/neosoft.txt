@@ -1,21 +1,20 @@
 1. what is abstraction and encapsulation?
--> Abstraction
-    Abstraction is a  concept that involves hiding the complex 
-implementation details and showing only the necessary features of an object. 
-In Python, abstraction can be achieved through abstract classes and interfaces.
+-> Abstraction :
+1. Abstraction is a  concept that involves hiding the complex 
+implementation details and showing only the necessary features. 
+2. In Python, abstraction can be achieved through abstract classes and interfaces.
 An abstract class in Python is a class that cannot be instantiated on its own
 It may contain abstract methods, which are methods without a body.
-Abstract base classes allow you to define a common interface for a set of subclasses.
-    In Python, you cannot directly create an instance of an abstract class. Abstract classes are meant to 
-serve as blueprints for other classes. 
+3. Abstract base classes allow you to define a common interface for a set of subclasses.
+4. In Python, you cannot directly create an instance of an abstract class. 
 
 -> Encapsulation 
-    Encapsulation in Python is like putting data and the actions that work on that data into a box called a 
-class. This helps to organize and protect the data, keeping some parts private ( using double underscores) 
-and others protected (using a single underscore). The double underscore makes it harder to access and modify, 
-acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and 
-more organized.
-    You can't directly access private variables from outside the class, but it's not impossible. You can still
+1. Encapsulation in Python is like putting data and the actions that work on that data into a box called a 
+class. 
+2. This helps to organize and protect the data, keeping some parts private ( using double underscores) 
+and others protected (using a single underscore). 
+3. The double underscore makes it harder to access and modify, acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and more organized.
+4. You can't directly access private variables from outside the class, but it's not impossible. You can still
  access them indirectly by Creating an instance of class.
 
 -> Method Overloading
@@ -32,14 +31,13 @@ In Python, the with statement is like a helper for managing resources, such as f
 The code without with  manually opens, reads, and closes a file. The  code, using with, automatically takes care of opening and closing the file, making the code cleaner and less prone to mistakes
 
 -> Logging 
-In Flask, you can use the Python logging module to keep track of different types of events and errors in your application. There are several levels like notset, debug, info, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
 
 -> Immutable String
 Yes, in Python, strings are immutable. This means that once you create a string object, you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
 
 -> what is decoraters in python?
 - Decorators in Python let you modify a function's behavior without altering the original code. They work by wrapping the original function in another function, allowing you to add or change functionality without directly modifying the original function
-
 -> Flask blueprint
 A Flask Blueprint is a way to organize a Flask web application into smaller, reusable parts. It helps break down the code into manageable sections for better organization and maintenance. Blueprints can have their own routes, templates, and static files. They are registered with the main application to add their functionality
 
