@@ -307,15 +307,23 @@ print("Both tasks are done")
 
 # --------- Synchronous 
 
-# def task1():
-#     print("Task 1 completed")
+# import time
 
-# def task2():
-#     print("Task 2 completed")
+# def task1(a):
+#     print(f'task {a} start')
+#     time.sleep(1)
+#     print(f'task {a} end')
 
-# # Synchronous execution
-# task2()
-# task1()
+
+# def task2(b):
+#     print(f'task {b} start')
+#     time.sleep(1)
+#     print(f'task {b} end')
+
+
+# # # Synchronous execution
+# task1('A')
+# task2('B')
 
 # ---------- Asynchronous
 
