@@ -1,22 +1,3 @@
-Explain MVC in Django  ->
-
-In Django, the Model-View-Controller (MVC) architectural pattern is implemented as Model-View-Template (MVT).
-
-Model:
-The Model in Django represents the data structure of the application.
-It defines the structure of the database tables, including fields and relationships.
-Models are typically defined in Django using  classes django.db.models.Model.
-
-View:
-In Django, the View is responsible for processing user requests and returning appropriate responses.
-Views are implemented as Python functions or classes that receive  request and return  response.
-Views interact with the Model to fetch or manipulate data, and they pass the data to the Template for rendering.
-
-Template:
-The Template in Django is responsible for rendering the HTML, which is sent back to the user's browser.
-Templates receive data from the View and generate the final HTML to be displayed.
-------------------------------------------------
-
 Django, class-based views (CBVs) and function-based views (FBVs) - >
 
 In Django, class-based views (CBVs) and function-based views (FBVs) are two approaches for handling  requests and responses.
@@ -38,7 +19,7 @@ It simplifies code and enhances flexibility. For example, a function can work wi
 
 -----------------------------------------------------
 
- Data Manipulation Language (DML) ->
+Data Manipulation Language (DML) ->
 
 In MySQL, Data Manipulation Language (DML) consists of SQL commands that deal with the manipulation of data stored in a database. 
 

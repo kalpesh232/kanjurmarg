@@ -48,12 +48,12 @@ Identity Operators
         is: Returns True if two variables point to the same object.
         is not: Returns True if two variables do not point to the same object.
 
-2.JWT Tokens (HS256) and Access Tokens 
+2.JWT Tokens (HS256) (JSON Web Token)  and Access Tokens 
 -> A JSON Web Token is a format that includes a header, payload, and signature. It can be used for authentication and data exchange, When a user signs in, the server generates a JWT with the user's information in the payload.
 -> Access Token A token used to grant access to protected resources. 
 
 3.How to convert python object into string
-To convert a Python object into a string, you can use several methods depending on the type of object and the desired output format. Here are some common ways:
+To convert a Python object into a string, you can use several methods Here are some common ways:
 - Using str() Function
     Converts any Python object into its string representation.
     General-purpose conversion to a string.

@@ -24,7 +24,7 @@ In Python, you can create multiple functions with the same name but different ar
 Method overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
 
 ->  Handle Exceptions 
-You can handle exceptions using try and except blocks. If you want to prevent errors from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.
+You can handle exceptions using try and except blocks. If you want to prevent exceptions from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.
 
 -> With
 In Python, the with statement is like a helper for managing resources, such as files. It makes sure that things are set up and cleaned up properly around a block of code.
@@ -34,10 +34,11 @@ The code without with  manually opens, reads, and closes a file. The  code, usin
 In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
 
 -> Immutable String
-Yes, in Python, strings are immutable. This means that once you create a string object, you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
+Yes, in Python, strings are immutable. This means that once you create a string , you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
 
 -> what is decoraters in python?
 - Decorators in Python let you modify a function's behavior without altering the original code. They work by wrapping the original function in another function, allowing you to add or change functionality without directly modifying the original function
+
 -> Flask blueprint
 A Flask Blueprint is a way to organize a Flask web application into smaller, reusable parts. It helps break down the code into manageable sections for better organization and maintenance. Blueprints can have their own routes, templates, and static files. They are registered with the main application to add their functionality
 
@@ -50,7 +51,6 @@ It is typically used at the end of a logical unit of work or a transaction.
 
 -: session.flush():
 The flush() method is used to synchronize the session's state with the database, but it doesn't commit the transaction.
-It pushes any pending changes in the session to the database, allowing you to see the effects of those changes within the same transaction.
 Unlike commit(), flush() doesn't end the transaction, so you can continue making changes before eventually committing.
 
 ->  Global Interpreter Lock (GIL)
@@ -73,6 +73,8 @@ Example: Like waiting for your turn in a line.
 Things can happen independently, not necessarily in a specific order.
 Things happening independently, not strictly in order.
 Example: Like sending messages and doing other things while waiting for replies.
+
+pause
 
 -> "list" and "array"
 

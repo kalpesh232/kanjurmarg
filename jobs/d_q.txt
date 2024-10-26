@@ -17,7 +17,7 @@
 
 6. **What is the difference between Django project and app?**
    - A Django project is a configuration container that organizes and manages multiple apps. It includes settings, database configurations, and the main URL configuration.
-   - An app is a module within a Django project that encapsulates specific functionality. It includes models, views, and templates related to a particular feature.
+   - An app is a module within a Django project that contains specific functionality. It includes models, views, and templates related to a particular feature.
 
 7. **Which databases are supported by Django?**
    - Django supports various databases, including PostgreSQL, MySQL, SQLite, and Oracle, allowing flexibility in choosing a backend data store.
