@@ -29,3 +29,6 @@ These are used to define default values for parameters. If an argument is not pr
 -> 5. Positional-Only and Keyword-Only Arguments:
 - Positional-Only (/): Forces some arguments to be passed positionally.
 - Keyword-Only (*): Forces some arguments to be passed by keyword.
+
+----------
+select amount from salary order by amount desc limit 1 offset 2;

@@ -1,25 +1,43 @@
 # ######################################## Abstraction 
 
-# from abc import ABC , abstractmethod
+# from abc import ABC, abstractmethod
+
+# # Abstract class
 # class A(ABC):
 #     @abstractmethod
-#     def fun_a():
+#     def fun(self):
 #         pass
+
+# # Class B inherits from A and implements the abstract method
 # class B(A):
 #     def __init__(self, radius):
-#         self.radius = radius
+#         self.r = radius
 
-#     def fun_a(self):
-#         return 3.14 * self.radius * self.radius
+#     def fun(self):
+#         return 3.14 * self.r * self.r  # Area of a circle (pi * r^2)
+
+# # Class C inherits from B and overrides the method
+# class C(B):
+#     def __init__(self, radius):
+#         super().__init__(radius)  # Initialize the parent class (B)
+
+#     def fun(self):
+#         # Call fun() from class B and store the result
+#         area_of_circle = super().fun()
+#         # Compute the volume of a cube
+#         volume_of_cube = self.r * self.r * self.r
+        
+#         return f"Area of circle: {area_of_circle}, Volume of cube: {volume_of_cube}"
     
 # try:
 #     animal = A()  # This will raise a TypeError
 # except TypeError as e:
 #     print('Error : ',  e)
 
-# value = 5
-# a = B(value)
-# print(a.fun_a())
+# # Create an instance of C and call the fun method
+# b = C(5)
+# print(b.fun())
+
 
 # ############################################### Encapsulation 
 

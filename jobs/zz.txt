@@ -1,7 +1,7 @@
 1. Tell me about yourself
 -> Hello, my name is Kalpesh Harishchandra Shinde. I have 4 years of experience, with 3.5 years in Python development. I started as a PHP developer and then worked as a Python and Django trainer.
 
-I worked as a software developer at Software Plus Electronics for 2 years and 7 months. My responsibilities included database management, dynamic website development, backend integration, MQTT communication, and using Flask for web development. I used Cron jobs for task automation, managed CRUD operations, and worked with MySQL. I also handled debugging, generating logs, and managed project repositories on GitHub.
+I worked as a software developer at Software Plus Electronics for 2 years and 7 months. My responsibilities included database management, dynamic website development, backend integration, MQTT communication, and using Flask for web development. I used Schedule library for task automation, managed CRUD operations, and worked with MySQL. I also handled debugging, generating logs, and managed project repositories on GitHub.
 
 I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved testing and debugging code, ensuring matches ran correctly, managing refunds, monitoring storage memory, and handling contest cancellations using the PySpark engine.
 
