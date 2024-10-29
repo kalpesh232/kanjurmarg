@@ -74,8 +74,6 @@ Things can happen independently, not necessarily in a specific order.
 Things happening independently, not strictly in order.
 Example: Like sending messages and doing other things while waiting for replies.
 
-pause
-
 -> "list" and "array"
 
 - List:
@@ -140,11 +138,11 @@ empty_dict = dict()
 
 -> FastAPI over Flask
 -
-FastAPI
+FastAPI :-
 Performance High, with support for async operations.
 Automatic API docs, type validation.
 Best for high-performance APIs and modern Python features.
-Flask
+Flask:- 
 Performance Good, but not async by default.
 Simple, flexible, mature ecosystem.
 Best for smaller projects or where simplicity and flexibility are preferred.
