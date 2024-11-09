@@ -266,27 +266,27 @@
 
 # #############  Global Interpreter Lock (GIL)
 
-# import threading
-# import time
+import threading
+import time
 
-# def task(name):
-#     print(f"Task {name} starting")
-#     time.sleep(2)
-#     print(f"Task {name} completed")
+def task(name):
+    print(f"Task {name} starting")
+    time.sleep(2)
+    print(f"Task {name} completed")
 
-# # Create threads
-# thread1 = threading.Thread(target=task, args=("A",))
-# thread2 = threading.Thread(target=task, args=("B",))
+# Create threads
+thread1 = threading.Thread(target=task, args=("A",))
+thread2 = threading.Thread(target=task, args=("B",))
 
-# # Start threads
-# thread1.start()
-# thread2.start()
+# Start threads
+thread1.start()
+thread2.start()
 
-# # Wait for threads to complete
-# thread1.join()
-# thread2.join()
+# Wait for threads to complete
+thread1.join()
+thread2.join()
 
-# print("Both tasks are done")
+print("Both tasks are done")
 
 
 #  ##########################   Django, signals
@@ -370,23 +370,11 @@
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
 
-# ########## differeance between shallow copy and deep copy 
-import copy
-
-ls = [['kalpesh','shinde'],['hari', 'ghansham']]
-ls1 = copy.copy(ls)
-ls1[0][0] = 'shallow'
-ls2 = copy.deepcopy(ls)
-ls2[0][0] = 'deep'
-print('ls :', ls)
-print('ls1 : ', ls1)
-print('ls2 : ', ls2)
-
 # ############## create a dictionary using a list 
 
-# abc = ['a', 'b', 'c']
-# dictionary = {xyz: None for xyz in abc}
-# print(dictionary)
+abc = ['a', 'b', 'c']
+dictionary = {xyz: None for xyz in abc}
+print(dictionary)
 # Output: {'a': None, 'b': None, 'c': None}
 
 # ############ json.dumps() and json.loads()
