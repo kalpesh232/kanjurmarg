@@ -41,9 +41,6 @@ Use filter when you expect multiple results or when the result might be empty. U
 
 ----------------------------------------------X--------------------------------------------------------------
 
--> Cron Job
-A cron job is a scheduled task that runs automatically at specified time intervals without manual intervention. To implement this in Python, you can use a library like APScheduler to create a scheduler within your script. Define the task as a function or code block, add it to the scheduler, and specify when it should run using a cron-like syntax. Finally, start the scheduler to initiate the automatic execution of the scheduled task. 
-
 how to convert dict in to List
 how to merge two List
 -"- dict
@@ -62,7 +59,7 @@ git diff
 git commit -m "Revert changes from <commit_hash>"
 git push origin <branch_name>
 
-->  built function we use to for empty input feild in foem front end validation
+->  built function we use to for empty input feild in form front end validation
 
 In HTML forms, you can use the required attribute to enforce that a field must be filled out before submitting the form. 
 

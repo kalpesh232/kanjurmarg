@@ -74,11 +74,8 @@ Things can happen independently, not necessarily in a specific order.
 Things happening independently, not strictly in order.
 Example: Like sending messages and doing other things while waiting for replies.
 
-pause
-
 -> "list" and "array"
-
-- List:
+- List:(DVIO)
 In Python, a list is a built-in data type that represents a collection of items.
 Lists are versatile and can contain elements of different data types.
 Elements in a list are accessed by their index.
@@ -103,7 +100,7 @@ In a more formal sense, an array may refer to the array module in Python, which 
 -> git fetch vs pull
 - git fetch gets changes from the remote repository but doesn't merge them into your local branch. git pull gets changes and immediately merges them into your current branch.
 
--> Differences and Applications of List, Tuple, Set and Dictionary in Python
+-> Differences and Applications of List, Tuple, Set and Dictionary in Python(RDCMOAP)
 -
 Represented: []                 | ()      | {}       | {key: value}
 Duplicate:   Yes                | Yes     | No       | Keys are unique

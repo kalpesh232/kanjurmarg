@@ -1,32 +1,3 @@
-List vs Tuple: Difference Between List and Tuple
-
-List:
-It is mutable
-
-# decoraters in python
-
-# {
-#   "users": [
-#     {
-#       "name": "John Doe",
-#       "age": 28
-#     },
-#     {
-#       "name": "Jane Smith",
-#       "age": 35
-#     },
-#     {
-#       "name": "Bob Johnson",
-#       "age": 22
-#     },
-#     {
-#       "name": "Alice Williams",
-#       "age": 30
-#     }
-#   ]
-# }
-
-
 # from table fetch only two max sccore row of each user
 
 # context manager in python 
