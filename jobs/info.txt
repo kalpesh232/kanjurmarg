@@ -3,8 +3,6 @@
 The data is stored as key-value pairs using a Python dictionary.
 This data structure is mutable
 The components of dictionary were made using keys and values.
-Keys must only have one component.
-Values can be of any type, including integer, list, and tuple.
 key should be unique where value can be repeat  
 
 ---------x---------

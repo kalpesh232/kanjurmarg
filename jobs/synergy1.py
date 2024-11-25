@@ -1,3 +1,5 @@
+
+
 # ----- modify string 
 # x = "kalpesh"
 # x1 = list(x)
@@ -112,19 +114,6 @@
 # print('x1 : ', x1)
 # set_x = set(x1)
 # print('x1 : ', list(set_x))
-
-# ---------- monkey patching in Python
-
-# class monkey():
-#     def patch(self):
-#         print("patch() being called")
-
-# def monk_p(self):
-#     print("monk_p being called ")
-
-# obj = monkey()
-# monkey.patch = monk_p
-# obj.patch()
 
 # ---------- difference between merge, join and concatenate
 
