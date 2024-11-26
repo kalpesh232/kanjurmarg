@@ -2,4 +2,6 @@ myenv/
 jobs/neosoft.log
 jobs/__pycache__/
 shark/temp.csv
+django/
+python/
 
