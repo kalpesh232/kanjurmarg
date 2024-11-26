@@ -41,7 +41,7 @@ def hello_world():
             sell = float(open) + avg_high
             print('Ideally buy this at price RS. : ',  buy)
             print('Ideally sell this at price RS. : ',  sell)
-    return render_template('calculate_volatilty.html')
+    return render_template('x.html')
 
 # main driver function
 if __name__ == '__main__':
