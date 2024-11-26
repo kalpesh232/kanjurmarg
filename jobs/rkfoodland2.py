@@ -1,17 +1,13 @@
 #---------- Write a Python function that calculates the factorial of a given number.
-
-# def fact(num):
-#     if num == 1:
-#         return num
+# def fact(value):
+#     if value == 1 :
+#         return value
 #     else:
-#         return num * fact(num-1)
-# num = int(input('Enter Number : '))
-# result = fact(num)
-# print(f'Factorial of  {num} is {result} ')
-
+#         return value * fact(value - 1)
+         
+# print('x : ', fact(7))
 #------------ Write a Python script to find the sum of the first 50 prime numbers.
 
-# import time
 # num = 0
 # primt_ls = []
 # while True:
@@ -28,7 +24,6 @@
 #                 primt_ls.append(num)
 #                 print('prime : ', num)
 #         num += 1
-#         time.sleep(2)
 #     else :
 #         print('final list : ', primt_ls)
 #         print('sum of list : ', sum(primt_ls))
@@ -72,8 +67,11 @@
 
 # try:
 #     with open(file_path, 'r') as file:
-#         print(type(file))
+#         print('file type : ', type(file))
+#         print('file : ', (file))
 #         data = json.load(file)
+#         print('data type : ', type(data))
+#         print('data : ', (data))
 #         display_formatted_data(data)
 #         print('file : ',data)
 # except FileNotFoundError:

@@ -1,30 +1,38 @@
-# from flask import Flask, render_template, request, jsonify
-# from flask_mysqldb import MySQL
-# import json
+from flask import Flask, render_template, request, jsonify, json
+import mysql.connector
+#  pip install Flask mysql-connector-python
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
-# # MySQL Configuration
-# app.config['MYSQL_HOST'] = 'localhost'
-# app.config['MYSQL_USER'] = 'root'
-# app.config['MYSQL_PASSWORD'] = 'root'
-# app.config['MYSQL_DB'] = 'dummydb'
+# MySQL Configuration
+db = {
+    'user' : 'root' ,
+    'password' : 'root' ,
+    'host' : 'localhost' ,
+    'database' : 'dummydb',
+}
 
 # mysql = MySQL(app)
+def db_connection():
+    connection = mysql.connector.connect(**db)
+    return connection
 
-# # API endpoint to render HTML form
-# @app.route('/')
-# def index():
-#     cur = mysql.connection.cursor()
-#     cur.execute("SELECT * FROM employees")
-#     data = cur.fetchall()
-#     print('data : ', data)
-#     print('data : ', type(data))
-#     data1 = json.dumps(data)
-#     print('data1 : ', data1)
-#     print('data1 : ', type(data1))
-#     cur.close()
-#     return 'true'
+# API endpoint to render HTML form
+@app.route('/')
+def index():
+    # cur = mysql.connection.cursor()
+    connect = db_connection()
+    cur = connect.cursor()
+    cur.execute("SELECT * FROM employees")
+    data = cur.fetchall()
+    print('data : ', data)
+    print('data : ', type(data))
+    data_converted = [(id, name, type_id, float(amount)) for (id, name, type_id, amount) in data]
+    data1 = json.dumps(data_converted)
+    print('data1 : ', data1)
+    print('data1 : ', type(data1))
+    cur.close()
+    return 'true'
 # # API endpoint to handle form submission
 # @app.route('/add_data', methods=['POST'])
 # def add_data():
@@ -79,12 +87,12 @@
 #         return jsonify({"error": str(e)})
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
 
 # ###################### Python json.dumps(): Basic Use ############################################
 
-# import json
+import json
 # # Define a Python dictionary
 # data = {"name": "John", "age": 30}
 # print('data : ', data)
@@ -93,6 +101,7 @@
 # json_data = json.dumps(data)
 # print('json_data : ', json_data)
 # print('json_dataT : ', type(json_data))
+# data = {"name": "John", "age": 30}
 # eggs = json.loads(json_data)
 # print('json_data_loads : ', eggs)
 # print('json_data_loads T : ', type(eggs))

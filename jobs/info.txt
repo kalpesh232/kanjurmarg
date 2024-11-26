@@ -1,0 +1,18 @@
+1. What is dictionary? is this accept duplicate or not?
+-
+The data is stored as key-value pairs using a Python dictionary.
+This data structure is mutable
+The components of dictionary were made using keys and values.
+key should be unique where value can be repeat  
+
+---------x---------
+
+1. Software Development Life Cycle (SDLC):
+- The Software Development Life Cycle (SDLC) is a process used to design, develop, test, and deploy software systems.
+-Planning : Defining the project goals, scope, and resources required.
+-Requirements Analysis : Gathering and analyzing the software requirements from stakeholders.
+-Design : Creating a blueprint of the software architecture and system components.
+-Development : Writing the actual code based on the design documents.
+-Testing : Ensuring the software works as intended by identifying and fixing bugs.
+-Deployment : Releasing the software to users or production environments.
+-Maintenance : Addressing issues, making updates, and ensuring smooth operation post-deployment. 
