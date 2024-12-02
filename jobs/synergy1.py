@@ -1,35 +1,35 @@
 
 
 # ----- modify string 
-# x = "kalpesh"
-# x1 = list(x)
-# x1[3] = 'x'
-# y = str(x1)
-# print("".join(x1))
+# mystr = "kalpesh"
+# ls_str = list(mystr)
+# ls_str[3] = 'xxx'
+# result = (''.join(ls_str))
+# print('ls_str : ', result)
 
 # ----------    Write a Python program to check if a string is a palindrome.
 
-# x = "shinde"
-# x1 = list(x)
-# x2 = x1[::-1]
-# if x1 == x2 :
+# x = "level"
+# x2 = x[::-1]
+# if x == x2 :
 #     print('x1 and x2 are palindrom')
 # else:
 #     print('x1 and x2 are not palindrom')
 
-# print(x1)
 # print(x2)
 
 
 # ------------ Write a Python program to find the factorial of a number.
 
 # def fact(n):
-#     if n < 2 :
-#         return n
-#     else :
-#         return fact(n-1) * n
+#     if n <= 1:
+#         return 1
+#     else:
+#         return fact(n - 1) * n
+
 # x = fact(8)
 # print(x)
+
 
 # ---------- Write a Python program to find the largest element in a list.
 
@@ -54,19 +54,14 @@
 # ----------  Write a Python program to count the frequency of each element in a list.
 
 # x = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
-# print('x : ', x)
-# print('x : ', len(x))
-# set_x = set(x)
-# counter = 0
 # x_dict = {}
-# for s in set_x:
-#     for i in x : 
-#         if s == i :
-#             counter += 1
-#     x_dict[s] = counter
-#     counter = 0
-# print('result : ',x_dict)
+# for item in x:
+#     if item in x_dict:
+#         x_dict[item] += 1
+#     else:
+#         x_dict[item] = 1
 
+# print('Result:', x_dict)
 # --------- Write a Python program to check if a number is prime.
 
 # primt_list = []
@@ -98,21 +93,21 @@
 
 # --------- Write a Python program to find the common elements between two lists.
 
-# x1 = [9,7,6,9,9,7,3,7,6,6]
-# x2 = [9,1,7,2,4,2,6,7,3,1]
-# print('x1 : ', x1)
-# print('x2 : ', x2)
-# c_l = []
-# for i in x2 :
-#     if i in x1:
-#         c_l.append(i)
-# print('c_l : ', set(c_l))
+# x1 = [9, 7, 6, 9, 9, 7, 3, 7, 6, 6]
+# x2 = [9, 1, 7, 2, 4, 2, 6, 7, 3, 1]
+
+# # Using set intersection to find common elements efficiently
+# common_elements = set(x1) & set(x2)
+
+# print('Common elements:', common_elements)
+
 
 # ----------  Write a Python program to remove duplicates from a list.
 
 # x1 = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
 # print('x1 : ', x1)
 # set_x = set(x1)
+# set_x = list(dict.fromkeys(x1))
 # print('x1 : ', list(set_x))
 
 # ---------- difference between merge, join and concatenate
@@ -189,15 +184,15 @@
 
 # --------- class representing a Book with properties such as title, author, and publication year. Include a method to display the book details.
 
-class book():
-    def __init__(self, title, author, year):
-        self.title = title
-        self.author = author
-        self.year = year
-    def display(self):
-        return f"Book Title : {self.title} | Author : {self.author} | Publish Year : {self.year}"
-b = book('myBook', 'kalpesh','2024')
-result = b.display()
-print(result)
+# class book():
+#     def __init__(self, title, author, year):
+#         self.title = title
+#         self.author = author
+#         self.year = year
+#     def display(self):
+#         return f"Book Title : {self.title} | Author : {self.author} | Publish Year : {self.year}"
+# b = book('myBook', 'kalpesh','2024')
+# result = b.display()
+# print(result)
 
 

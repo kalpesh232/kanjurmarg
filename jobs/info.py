@@ -11,6 +11,25 @@
 # flatten_list(data)
 # print(flat_ls)
 
+import numpy as np
+
+# Sample sensor data (temperature and humidity readings)
+temperature = np.array([25.5, 26.1, 25.8, 26.0, 25.9])
+humidity = np.array([60.2, 59.8, 60.5, 60.1, 59.9])
+
+# Calculate real-time statistics
+avg_temp = np.mean(temperature)  # Average temperature
+min_temp = np.min(temperature)   # Minimum temperature
+max_temp = np.max(temperature)   # Maximum temperature
+
+avg_humidity = np.mean(humidity)  # Average humidity
+min_humidity = np.min(humidity)   # Minimum humidity
+max_humidity = np.max(humidity)   # Maximum humidity
+
+print(f"Temperature -> Avg: {avg_temp}, Min: {min_temp}, Max: {max_temp}")
+print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity}")
+
+
 # ------------- X -------------
 # myls = []
 # counter = 1
@@ -144,19 +163,19 @@
 # x = lambda x,y : x+y 
 # print(x(10,20))
 
-mychar = 'kalpeshharishchandrashinde'
-myls = []
-mylen = []
-mystr = ''
-for i in mychar:
-    if i not in mystr:
-        mystr += i
-    else:
-        myls.append(mystr)
-        mylen.append(len(mystr))
-        mystr = i
-myls.append(mystr)
-mylen.append(len(mystr))
-mydict = {i:len(i)  for i in myls if len(i) == max(mylen)}
-print('mydict : ', (mydict))
+# mychar = 'kalpeshharishchandrashinde'
+# myls = []
+# mylen = []
+# mystr = ''
+# for i in mychar:
+#     if i not in mystr:
+#         mystr += i
+#     else:
+#         myls.append(mystr)
+#         mylen.append(len(mystr))
+#         mystr = i
+# myls.append(mystr)
+# mylen.append(len(mystr))
+# mydict = {i:len(i)  for i in myls if len(i) == max(mylen)}
+# print('mydict : ', (mydict))
 

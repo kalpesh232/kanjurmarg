@@ -145,13 +145,23 @@
 # finally:
 #     print('Resource Closed')
 
-# user define exception
+# Define the user-defined exception outside the loop
 # class MyException(Exception):
 #     pass
 
-# c = 25
-# if c > 5 :
-#     raise MyException("somrting went wrong")
+# while True:
+#     try:
+#         c = int(input('Enter number: '))
+#         if c < 15:
+#             raise MyException('User not allowed')
+#         else:
+#             print('User allowed')
+#             # break  # Exit the loop if input is valid
+#     except MyException as e:
+#         print(e)  # Print the custom error message
+#     except ValueError:
+#         print("Please enter a valid number.")  # Handle non-integer input
+
 
 # ###################### with in pyhton 
 

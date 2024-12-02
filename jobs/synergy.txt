@@ -59,8 +59,7 @@ git diff
 git commit -m "Revert changes from <commit_hash>"
 git push origin <branch_name>
 
-->  built function we use to for empty input feild in form front end validation
-
+->  inbuilt function we use to for empty input feild in form front end validation
 In HTML forms, you can use the required attribute to enforce that a field must be filled out before submitting the form. 
 
 -> To find the employee with the highest salary in a SQL database
@@ -81,6 +80,12 @@ CREATE TABLE exam (
     FOREIGN KEY (rollno) REFERENCES student(rollno)
 );
 
+-> difference between merge, join and concatenate
+### Corrected Explanation:
+
+- **Merge**: Combines DataFrames based on common columns or indices. By default, it returns only matching rows (inner join).  
+- **Join**: Combines DataFrames based on index. Can specify left, right, or inner join.  
+- **Concatenate**: Stacks DataFrames vertically or horizontally. Fills missing values with NaN.  
 
 option method
 linux 
