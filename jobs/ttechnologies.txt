@@ -55,7 +55,7 @@ Tuple: Defined with parentheses ().
 2. 0.031
 3. 0.016
 
----------- Process If a query takes much longer than expected to execute
+---------- Process If a query takes much longer than expected to execute (A O S L)
 1. Analyze the Query Plan: Use EXPLAIN to understand how the query is being executed.
 2. Optimize Indexes: Ensure proper indexing on relevant columns.
 3. Simplify the Query: Break down complex queries or use temp tables.
@@ -75,12 +75,12 @@ Yes, you can perform join operations using Object-Relational Mapping (ORM) frame
 3. Workers: Background workers execute the queued tasks asynchronously.
 4. Delayed Tasks: Tasks are executed outside the main Django request/response cycle.
 
----------- primary keys and unique keys(U N S I F)
+---------- primary keys and unique keys(U N I I F)
 Primary Key :-
 1. Uniqueness: A primary key uniquely identifies each record in a table. No two rows can have the same primary key value.
 2 Non-nullable: Primary key columns cannot contain NULL values. Every record must have a valid primary key.
-3. Single Instance: A table can have only one primary key, which may consist of a single column or a combination of multiple columns (composite key).
-4. Indexing: Primary keys automatically create a unique index on the column(s), which helps speed up query performance.
+3. Indexing: Primary keys automatically create a unique index on the column(s), which helps speed up query performance.
+4. Single Instance: A table can have only one primary key, which may consist of a single column or a combination of multiple columns (composite key).
 5. Referential Integrity: Primary keys are often used in foreign key relationships, allowing other tables to reference the primary key for establishing relationships.
 
 Unique Key:-
@@ -92,14 +92,14 @@ Unique Key:-
 
 ---------- Foreign Key(R I N M C)
 1. Relationship: 
-A foreign key is a column in one table that refers to the primary key in another table. It establishes a relationship between the two tables.
+- A foreign key is a column in one table that refers to the primary key in another table. It establishes a relationship between the two tables.
 2. Referential Integrity: 
-Foreign keys ensure that the value in the foreign key column matches a value in the referenced primary key column, maintaining data integrity between related tables.
+- Foreign keys ensure that the value in the foreign key column matches a value in the referenced primary key column, maintaining data integrity between related tables.
 3. Nullable: 
-Foreign key columns can contain NULL values if the relationship is optional, meaning the row doesn’t necessarily have to reference a row in the other table.
+- Foreign key columns can contain NULL values if the relationship is optional, meaning the row doesn’t necessarily have to reference a row in the other table.
 4. Multiple Foreign Keys: 
-A table can have multiple foreign keys, each establishing a relationship with different tables.
+- A table can have multiple foreign keys, each establishing a relationship with different tables.
 5. Cascading Actions: 
-if a record in the primary key table is deleted, related records in the foreign key table can be deleted as well (called cascading delete).
+- if a record in the primary key table is deleted, related records in the foreign key table can be deleted as well (called cascading delete).
 
 
