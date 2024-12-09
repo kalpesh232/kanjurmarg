@@ -1,4 +1,4 @@
-1. Python supports a variety of operators 
+1. Python supports a variety of operators (A C L A I B M) 
 Arithmetic Operators
     Used for mathematical operations:
         + (Addition): Adds two values.
