@@ -1,38 +1,38 @@
-from flask import Flask, render_template, request, jsonify, json
-import mysql.connector
-#  pip install Flask mysql-connector-python
+# from flask import Flask, render_template, request, jsonify, json
+# import mysql.connector
+# #  pip install Flask mysql-connector-python
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-# MySQL Configuration
-db = {
-    'user' : 'root' ,
-    'password' : 'root' ,
-    'host' : 'localhost' ,
-    'database' : 'dummydb',
-}
+# # MySQL Configuration
+# db = {
+#     'user' : 'root' ,
+#     'password' : 'root' ,
+#     'host' : 'localhost' ,
+#     'database' : 'dummydb',
+# }
 
-# mysql = MySQL(app)
-def db_connection():
-    connection = mysql.connector.connect(**db)
-    return connection
+# # mysql = MySQL(app)
+# def db_connection():
+#     connection = mysql.connector.connect(**db)
+#     return connection
 
-# API endpoint to render HTML form
-@app.route('/')
-def index():
-    # cur = mysql.connection.cursor()
-    connect = db_connection()
-    cur = connect.cursor()
-    cur.execute("SELECT * FROM employees")
-    data = cur.fetchall()
-    print('data : ', data)
-    print('data : ', type(data))
-    data_converted = [(id, name, type_id, float(amount)) for (id, name, type_id, amount) in data]
-    data1 = json.dumps(data_converted)
-    print('data1 : ', data1)
-    print('data1 : ', type(data1))
-    cur.close()
-    return 'true'
+# # API endpoint to render HTML form
+# @app.route('/')
+# def index():
+#     # cur = mysql.connection.cursor()
+#     connect = db_connection()
+#     cur = connect.cursor()
+#     cur.execute("SELECT * FROM employees")
+#     data = cur.fetchall()
+#     print('data : ', data)
+#     print('data : ', type(data))
+#     data_converted = [(id, name, type_id, float(amount)) for (id, name, type_id, amount) in data]
+#     data1 = json.dumps(data_converted)
+#     print('data1 : ', data1)
+#     print('data1 : ', type(data1))
+#     cur.close()
+#     return 'true'
 # # API endpoint to handle form submission
 # @app.route('/add_data', methods=['POST'])
 # def add_data():
@@ -87,23 +87,23 @@ def index():
 #         return jsonify({"error": str(e)})
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
 
 # ###################### Python json.dumps(): Basic Use ############################################
 
 import json
 # # Define a Python dictionary
-# data = {"name": "John", "age": 30}
-# print('data : ', data)
+data = {"name": "John", "age": 30}
+print('data : ', data)
 # print('dataT : ', type(data))
 # # Use json.dumps() to convert the dictionary into a JSON string
-# json_data = json.dumps(data)
-# print('json_data : ', json_data)
+json_data = json.dumps(data)
+print('json_data : ', json_data)
 # print('json_dataT : ', type(json_data))
 # data = {"name": "John", "age": 30}
-# eggs = json.loads(json_data)
-# print('json_data_loads : ', eggs)
+eggs = json.loads(json_data)
+print('json_data_loads : ', eggs)
 # print('json_data_loads T : ', type(eggs))
 
 # if data == json_data :
@@ -136,13 +136,19 @@ import json
 # ############### Writing JSON to Files with json.dump() #######################
 
 # # Define a Python dictionary
-# dump_data = {'name': 'John', 'age': 30}
+dump_data = {'name': 'kalpesh', 'age': 31}
 # # Use json.dump() to write the dictionary into a JSON file
 # with open('bondsindia.json', 'w') as f:
 #     json.dump(dump_data, f)
 # # Verify the contents of the file
 # with open('bondsindia.json', 'r') as f:
 #     print('dump : ', f.read())
+
+with open('bondsindia.json', 'a') as f :
+    json.dump(dump_data,f)
+
+with open('bondsindia.json', 'r') as f:
+    print('_____', f.read())
 
 ############### Handling Non-Serializable Types ################
 

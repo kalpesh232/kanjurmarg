@@ -4,8 +4,7 @@ FROM (
     SELECT
         user,
         score,
-        ROW_NUMBER() OVER (PARTITION BY user ORDER BY score DESC) AS rank
-    FROM my_table
+        ROW_NUMBER() OVER (PARTITION BY user ORDER BY score DESC) AS rank FROM my_table
 ) ranked_scores
 WHERE rank <= 2
 ORDER BY user, rank;

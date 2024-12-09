@@ -44,13 +44,24 @@
 
 # ---------- Write a Python function that checks if a given string is a palindrome
 
-# name = 'level'
-# name_ls = list(name)
-# rev_name_ls = name_ls[::-1]
-# if name_ls == rev_name_ls :
-#     print( f'{name_ls } palindrome' )
+# name = 'kalpesh'
+# if name == name[::-1] :
+#     print( f'{name } palindrome' )
 # else:
-#      print( f'{name_ls } Not palindrome' )
+#      print( f'{name } Not palindrome' )
+
+# num = 1223
+# stor = num
+# temp = 0
+# while num > 0 :
+#     last_digit = num % 10
+#     temp = last_digit + temp * 10
+#     num //= 10
+#     # print(temp)
+# if temp == stor:
+#     print( f'{stor } palindrome' )
+# else:
+#      print( f'{stor } Not palindrome' )
 
 # --------- Create a Python script that reads data from a JSON file and displays it in a formatted way.
 

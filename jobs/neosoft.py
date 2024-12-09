@@ -95,6 +95,14 @@
 
 # a.sum(56,56,56)
 
+# class Add:
+#     def sum(self, *args):
+#         print(sum(args))
+
+# a = Add()
+# a.sum(10,20)
+# a.sum(10,20,30)
+
 
 # ######################## Method Overriding
 
@@ -176,7 +184,7 @@
 # @app.route('/')
 # def index():
 #     app.logger.debug('This is a debug message')
-    # app.logger.info('This is an info message')
+#     app.logger.info('This is an info message')
 #     app.logger.warning('This is a warning message')
 #     app.logger.error('This is an error message')
 #     app.logger.critical('This is a critical message')
@@ -276,27 +284,27 @@
 
 # #############  Global Interpreter Lock (GIL)
 
-import threading
-import time
+# import threading
+# import time
 
-def task(name):
-    print(f"Task {name} starting")
-    time.sleep(2)
-    print(f"Task {name} completed")
+# def task(name):
+#     print(f"Task {name} starting")
+#     time.sleep(2)
+#     print(f"Task {name} completed")
 
-# Create threads
-thread1 = threading.Thread(target=task, args=("A",))
-thread2 = threading.Thread(target=task, args=("B",))
+# # Create threads
+# thread1 = threading.Thread(target=task, args=("A",))
+# thread2 = threading.Thread(target=task, args=("B",))
 
-# Start threads
-thread1.start()
-thread2.start()
+# # Start threads
+# thread1.start()
+# thread2.start()
 
-# Wait for threads to complete
-thread1.join()
-thread2.join()
+# # Wait for threads to complete
+# thread1.join()
+# thread2.join()
 
-print("Both tasks are done")
+# print("Both tasks are done")
 
 
 #  ##########################   Django, signals
@@ -380,11 +388,23 @@ print("Both tasks are done")
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
 
+# import numpy as np
+
+# float_array = np.array([1.1, 2.2, 3.3, 4.4], dtype=float)
+# print(float_array)  # Output: [1.1 2.2 3.3 4.4]
+
+# string_array = np.array(["apple", "banana", "cherry"])
+# print(string_array)  # Output: ['apple' 'banana' 'cherry']
+
+# mixed_array = np.array([42, "hello", 3.14], dtype=object)
+# print(mixed_array)
+
+
 # ############## create a dictionary using a list 
 
-abc = ['a', 'b', 'c']
-dictionary = {xyz: None for xyz in abc}
-print(dictionary)
+# abc = ['a', 'b', 'c']
+# dictionary = {xyz: None for xyz in abc}
+# print(dictionary)
 # Output: {'a': None, 'b': None, 'c': None}
 
 # ############ json.dumps() and json.loads()
