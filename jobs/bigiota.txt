@@ -12,6 +12,10 @@
 - UPDATE****: updates data in a table
 - DELETE****: deletes database table records
 
+data query language - select
+data transsaction language - commit, rollback, save-point 
+data control language - grant, revoke
+
 3. differences between DDL and DML
 - DDL statements define a database’s structure, whereas DML is used to add and modify the data within the 
   database

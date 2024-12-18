@@ -8,9 +8,6 @@ I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved
 2.how can we secure our apis?
 -> We secure APIs by using authentication, authorization, and token validation. When a request comes, we check if it's authorized to execute the associated function by validating a token with a secret key. Input validation ensures data integrity. CORS prevents unauthorized external requests, keeping our API safe.
 
-3.indexing in sql
--> Indexing in SQL is like a book's index page, making data retrieval faster. Instead of scanning all pages, it jumps directly to the desired information, optimizing database performance
-
 4.what is inheritance in python?
 -> In Python, inheritance lets a class to inherit properties and methods from another class. There are five types: single level, multi-level, multiple, hybrid, and hierarchical. It helps reuse and extend code by utilizing properties and methods from other classes.
 
@@ -59,12 +56,14 @@ Operates on an instance of the class.
 Can access and modify the instance's attributes.
 Defined using the def keyword inside the class, with self as the first parameter.
 Called on an instance of the class: instance.method().
+Instance attributes are accessed using self inside the class.
 
 Class Method:
 Operates on the class itself, rather than an instance.
 Cannot access or modify instance-specific attributes.
 Defined using the @classmethod decorator, with cls as the first parameter.
 Called on the class: Class.method().
+Class attributes are accessed directly using the class name .
 
 9.What is the difference between a module and a package in Python?
 ->
