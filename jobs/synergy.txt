@@ -19,26 +19,6 @@ Database Handling:
 1. Flask doesn't have built-in database operations, giving developers the flexibility to choose databases.
 2. Developers can also use SQLAlchemy, or Database operations can be performed using traditional methods, like manually writing SQL queries.
 
-##########  Difference between filter and get in django
-filter:
-Usage: filter is used to retrieve a queryset containing multiple objects that match the specified filter criteria.
-Example: If you use filter to find users with a specific email, it might return multiple users (if there are multiple users with the same email).
-python
-Copy code
-users = UserRegister.objects.filter(Email=email)
-
-get:
-Usage: get is used when you expect only one result from the query, and it retrieves a single object that matches the specified filter criteria.
-Example: If you use get to find a user with a specific email, it assumes there is only one user with that email, and it returns that single user.
-python
-Copy code
-user = UserRegister.objects.get(Email=email)
-Key Differences:
-
-filter returns a queryset (which can contain multiple objects), while get returns a single object.
-If filter doesn't find any matching objects, it returns an empty queryset. If get doesn't find any matching object or finds more than one, it raises an exception (DoesNotExist or MultipleObjectsReturned).
-Use filter when you expect multiple results or when the result might be empty. Use get when you expect a single result, and an exception should be raised if there are zero or multiple results.
-
 ----------------------------------------------X--------------------------------------------------------------
 
 how to convert dict in to List

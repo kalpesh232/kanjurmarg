@@ -31,4 +31,8 @@ These are used to define default values for parameters. If an argument is not pr
 - Keyword-Only (*): Forces some arguments to be passed by keyword.
 
 ----------
-select amount from salary order by amount desc limit 1 offset 2;
+7. select amount from salary order by amount desc limit 1 offset 2;
+
+8. RESTful APIs
+“Yes, I have worked with RESTful APIs. I used HTTP methods like GET for retrieving data and POST for creating data. I also understand RESTful principles, like working with resources, statelessness, and using appropriate status codes.”
+
