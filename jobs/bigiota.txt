@@ -74,3 +74,5 @@ data control language - grant, revoke
 - RIGHT OUTER JOIN: Includes all rows from the right table, matched rows from the left table, and NULLs for 
   unmatched left table rows.
 - FULL OUTER JOIN: Includes all rows from both tables, with NULLs where there are no matches.
+
+kalpesh Harishchandra Shinde
