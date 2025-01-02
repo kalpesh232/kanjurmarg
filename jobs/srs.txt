@@ -1,6 +1,5 @@
 
-public variable and class atribute both are same 
-public variable, protected variable, private variable
+rferance or value 
 
 1. COUNT function
 -> The COUNT function in SQL is used to return the number of rows in a table or the number of non-NULL values in a specified column.
@@ -80,7 +79,7 @@ Migrations in Python are a way to manage changes to the database schema in a con
 3. **Execute Changes**:  
    These migration files are executed to apply changes to the actual database.
 4. **Version Control**:  
-   Migrations are versioned, allowing you to keep track of changes and revert them if needed.
+   Migrations are allowing you to keep track of changes and revert them if needed.
 
 ### **Key Commands in Django**:
 1. **Create a Migration**:  
@@ -122,10 +121,6 @@ CREATE TABLE Orders (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
-
-7.  polymorphism in programming has types
-1. Compile-time Polymorphism (Static Polymorphism)- Method Overloading
-2. Run-time Polymorphism (Dynamic Polymorphism) - Method Overriding
 
 8. Memory Management in Python
 There are two types of memories in Python: **heap memory** and **stack memory**.  

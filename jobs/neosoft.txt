@@ -18,10 +18,10 @@ and others protected (using a single underscore).
  access them indirectly by Creating an instance of class.
 
 -> Method Overloading
-In Python, you can create multiple functions with the same name but different arguments or numbers, a concept known as function overloading.  it's not supported in Python. This limitation exists because Python is an interpreted language.
+In Python, you can create multiple functions with the same name but different arguments or numbers, a concept known as method overloading.  it's not supported in Python. This limitation exists because Python is an interpreted language.
 
 -> Method overriding
-Method overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+Method overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.The method in the child class overrides the method in the base class.
 
 ->  Handle Exceptions 
 You can handle exceptions using try and except blocks. If you want to prevent exceptions from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.

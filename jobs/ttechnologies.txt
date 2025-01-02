@@ -65,7 +65,7 @@ Tuple: Defined with parentheses ().
 Yes, you can perform join operations using Object-Relational Mapping (ORM) frameworks in Python, such as SQLAlchemy or Django ORM.
 
 ---------- Middleware 
-1.In Django, middleware is a framework of hooks that allows you to process requests and responses globally. It can modify requests before they reach the view and responses before they are sent back to the client. Middleware can handle tasks like authentication, logging.
+1.In Django, middleware allows you to process requests and responses globally. It can modify requests before they reach the view and responses before they are sent back to the client. Middleware can handle tasks like authentication.
 2. To create custom middleware, define a class with methods like  process_request, and process_response, and add it to the MIDDLEWARE list in settings.py.
 
 ---------- Celery 
