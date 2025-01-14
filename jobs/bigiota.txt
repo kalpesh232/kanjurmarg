@@ -1,6 +1,6 @@
 ----------------------------------- pre ----------------------------------------------
 1.  DDL (data definition language)?
--  use to define the database schema and creates, deletes, and alters database objects.
+- use to define the database schema and creates, deletes, and alters database objects.
 - CREATE****: Developers use this command to create database objects
 - DROP****: SQL engineers use the drop command to delete database objects
 - ALTER****: Developers use this command to change the database structure
@@ -75,4 +75,3 @@ data control language - grant, revoke
   unmatched left table rows.
 - FULL OUTER JOIN: Includes all rows from both tables, with NULLs where there are no matches.
 
-kalpesh Harishchandra Shinde
