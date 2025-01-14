@@ -76,10 +76,9 @@ print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity
 
 # car = []
 # def Cartesian(data):
-#     hol_ls_1 = [[i] for i in data[0]]
-#     for i in hol_ls_1:
+#     for i in data[0]:
 #         for j in data[1]:
-#             car.append(i + [j])
+#             car.append([i] + [j])
 #     return car
 # data = [[1, 2], [3, 4]]
 # result = Cartesian(data)
@@ -103,21 +102,21 @@ print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity
 # print('result : ', result)
 
 # def fib(num):
-#     if num == 0 :
-#         return 0
+#     a , b = 0,1
+#     if num < 0:
+#         print("Invalid input: Fibonacci sequence is not defined for negative numbers.")
+#         return
+#     elif  num == 0:
+#         c = 0
 #     elif num == 1 :
-#         return 1
+#          c = 1
 #     else:
-#         a = 0
-#         b = 1
-#         for i in range(2,num+1):
-#             c = a + b
-#             a = b
-#             b = c
-#         return c
-# num = int(input('emter number : '))
-# result =  fib(num)
-# print('result : ', result)
+#         for _ in range(2,num+1):
+#             c = a+b
+#             a ,b = b,c
+#     print(c)
+# num = int(input('Enter Number : '))
+# fib(num)
 
 
 # prime_ls = []
@@ -163,19 +162,17 @@ print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity
 # x = lambda x,y : x+y 
 # print(x(10,20))
 
-# mychar = 'kalpeshharishchandrashinde'
-# myls = []
-# mylen = []
-# mystr = ''
-# for i in mychar:
-#     if i not in mystr:
-#         mystr += i
-#     else:
-#         myls.append(mystr)
-#         mylen.append(len(mystr))
-#         mystr = i
-# myls.append(mystr)
-# mylen.append(len(mystr))
-# mydict = {i:len(i)  for i in myls if len(i) == max(mylen)}
-# print('mydict : ', (mydict))
+mychar = 'kalpeshharishchandrashinde'
+ls1 = []
+str1 = ''
+for i in mychar:
+    if i not in str1:
+        str1 += i
+    else:
+        ls1.append(str1)
+        str1 = i
+ls1.append(str1)
+dict1 = {j : len(j) for j in ls1}
+result = {k : v for k,v in dict1.items() if v == (max(dict1.values()))}
+print(result)
 
