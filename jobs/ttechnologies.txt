@@ -55,12 +55,6 @@ Tuple: Defined with parentheses ().
 2. 0.031
 3. 0.016
 
----------- Process If a query takes much longer than expected to execute (A O S L)
-1. Analyze the Query Plan: Use EXPLAIN to understand how the query is being executed.
-2. Optimize Indexes: Ensure proper indexing on relevant columns.
-3. Simplify the Query: Break down complex queries or use temp tables.
-4. Limit Data: Reduce result size or columns selected.
-
 ---------- Join operations using Object-Relational Mapping (ORM) 
 Yes, you can perform join operations using Object-Relational Mapping (ORM) frameworks in Python, such as SQLAlchemy or Django ORM.
 
