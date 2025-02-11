@@ -20,24 +20,6 @@ It simplifies code and enhances flexibility. For example, a function can work wi
 1. Compile-time Polymorphism (Static Polymorphism)- Method Overloading
 2. Run-time Polymorphism (Dynamic Polymorphism) - Method Overriding
 
------------------------------------------------------
-
-Data Manipulation Language (DML) ->
-
-In MySQL, Data Manipulation Language (DML) consists of SQL commands that deal with the manipulation of data stored in a database. 
-
-SELECT:
-Purpose: Retrieves data from one or more tables.
-
-INSERT:
-Purpose: Adds new rows of data into a table.
-
-UPDATE:
-Purpose: Modifies existing data in a table.
-
-DELETE:
-Purpose: Removes rows from a table based on a specified condition.
-
 ------------------------------------------------------
 
 Different Types of JOINS in MySQL

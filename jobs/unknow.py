@@ -323,10 +323,12 @@
 # cat.speak()  # Inherited from Animal
 # cat.meow()   # Defined in Cat
 
+# -------- Reverse a String
 # Input = "Python"
 # output = Input[::-1]
 # print(output)
 
+# -------- Count Occurrences of a Character in a String
 # Input= "hello world"
 # x = 'o'
 # counter = 0
@@ -335,6 +337,7 @@
 #         counter += 1
 # print(counter)
 
+# -------- First Non-Repeating Character in a String
 # x = "swiss"
 # from collections import Counter
 # r = Counter(x)
@@ -343,22 +346,27 @@
 #         print('r : ', i, 'j : ', j)
 #         break
 
+# -------- Capitalize First Letter of Each Word
 # Input= "hello world"
 # print(Input.title())
 
+# -------- Remove Duplicate Characters from a String
 # Input = "programming"
 # mystr = ''.join(dict.fromkeys(Input))
 # print(mystr)
 
+# -------- Check if Two Strings are Anagrams
 # String_1= "listenlpw"
 # String_2 = "silentlpr"
 # print(sorted(String_1) == sorted(String_2))
 
-
+# -------- Replace Spaces with '%20' in a String
 # Input= "hello world"
 # x = Input.replace(' ', '%20')
 # print(x)
 
+# -------- Find Longest Common Prefix in a List of Strings
+# Longest common same words
 # Input= ["flooer", "floo", "flooht"]
 # main_str = ''
 # for i in zip(*Input):
@@ -366,6 +374,7 @@
 #         main_str += i[0]
 # print(main_str)
 
+# -------- Check if All Characters in a String are Unique
 # Input = "abcde"
 # st = set(Input)
 # if len(Input) == len(st):
@@ -373,6 +382,7 @@
 # else:
 #     print('false')
 
+# -------- Find the Most Frequent Character in a String
 # Input = "bwanwanwaxwxxw"
 # from collections import Counter
 # x = Counter(Input)
@@ -380,12 +390,14 @@
 #     if v == max(x.values()):
 #         print(k, ':', v)
 
+# -------- Rotate a String by 'n' Characters
 # Input =  "abcdef"
 # result = ''
 # x = 3
 # result +=  Input[x:] + Input[:x]
 # print(result)
 
+# -------- Sum of All Numbers in a Mixed Alphanumeric String
 # Input = "abc123xyz45"
 # num = ['7','8','9','4','5','6','1','2','3','0']
 # ls = []
@@ -405,6 +417,7 @@
 # ls.append(x1)
 # print((sum(ls)))
 
+# -------- Run-Length Encoding (RLE) Compression
 # Input =  "aaabbc"
 # from collections import Counter
 # mystr = ''
@@ -413,21 +426,21 @@
 #     mystr += i + str(j)
 # print(mystr)
 
-# Input = "abc"
-# s = []
-# for i in range(len(Input)):
-#     for j in range(i,len(Input)):
-#         s.append(Input[i:j+1])
-# print(s)
-
-# temmp = None
-# for i in range(len(s)):
-#     for j in range(len(s)):
-#         if len(s[i]) < len(s[j]):
-#             temmp = s[i]
-#             s[i] = s[j]
-#             s[j] = temmp
-# print(s)
+# -------- Generate and Sort All Substrings of a String
+Input = "abc"
+s = []
+for i in range(len(Input)):
+    for j in range(i,len(Input)):
+        s.append(Input[i:j+1])
+print(s)
+temmp = None
+for i in range(len(s)):
+    for j in range(len(s)):
+        if len(s[i]) < len(s[j]):
+            temmp = s[i]
+            s[i] = s[j]
+            s[j] = temmp
+print(s)
 
 
 

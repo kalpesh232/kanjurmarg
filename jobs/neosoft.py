@@ -2,74 +2,74 @@
 
 # from abc import ABC, abstractmethod
 
-# # Abstract class
 # class A(ABC):
 #     @abstractmethod
 #     def fun(self):
 #         pass
 
-# # Class B inherits from A and implements the abstract method
 # class B(A):
-#     def __init__(self, radius):
-#         self.r = radius
+#     def __init__(self, value1):
+#         self.v1 = value1
 
 #     def fun(self):
-#         return 3.14 * self.r * self.r  # Area of a circle (pi * r^2)
-
-# # Class C inherits from B and overrides the method
+#         return self.v1 ** 3
+    
 # class C(B):
-#     def __init__(self, radius):
-#         super().__init__(radius)  # Initialize the parent class (B)
+#     def __init__(self, value1, value2, value3):
+#         super().__init__(value1)
+#         self.v2 = value2
+#         self.v3 = value3
 
 #     def fun(self):
-#         # Call fun() from class B and store the result
-#         area_of_circle = super().fun()
-#         # Compute the volume of a cube
-#         volume_of_cube = self.r * self.r * self.r
-        
-#         return f"Area of circle: {area_of_circle}, Volume of cube: {volume_of_cube}"
+#         cube = super().fun()
+#         rectangle = self.v2 * self.v3
+#         return f"Area of rectangle: {rectangle}, Volume of cube: {cube}"
     
 # try:
-#     animal = A()  # This will raise a TypeError
-# except TypeError as e:
-#     print('Error : ',  e)
+#     a = A()  # This will raise an error
+# except Exception as e:
+#     print('Error:', e)
 
-# # Create an instance of C and call the fun method
-# b = C(5)
-# print(b.fun())
+# b = C(3, 10, 20)
+# print('Result:', b.fun())
 
 
 # ############################################### Encapsulation 
 
 # class BankAccount:
-#     def __init__(self, account_holder, initial_balance):
-#         self._account_holder = account_holder  # Protected member
-#         self.__balance = initial_balance  # Private member
+#     def __init__(self, account_holder, initial_balance, account_number):
+#         self.account_number = account_number       # Public member
+#         self._account_holder = account_holder      # Protected member
+#         self.__balance = initial_balance           # Private member
 
+#     # Public method to deposit
 #     def deposit(self, amount):
 #         self.__balance += amount
 
+#     # Public method to withdraw
 #     def withdraw(self, amount):
 #         if amount <= self.__balance:
 #             self.__balance -= amount
 #         else:
 #             print("Insufficient funds!")
 
+#     # Getter for private balance
 #     def get_balance(self):
 #         return self.__balance
 
+#     # Getter for protected account holder
 #     def get_account_holder(self):
 #         return self._account_holder
 
+# # Creating an instance
+# account = BankAccount("John Doe", 1000, "1234567890")
 
-# # Creating an instance of BankAccount
-# account = BankAccount("John Doe", 1000)
+# # Accessing Public, Protected, and Private Members
+# print("Account Number (Public):", account.account_number)  # Public member
+# print("Account Holder (Protected):", account.get_account_holder())  # Protected via getter
+# print("Balance (Private):", account.get_balance())  # Private via getter
 
-# # Accessing protected and private members
-# print("Account Holder:", account.get_account_holder())  # Protected member
-# print("Balance:", account.get_balance())  # Private member
-
-# # Depositing and withdrawing money
+# # Depositing and Withdrawing Money
 # account.deposit(500)
 # print("Balance after deposit:", account.get_balance())
 
@@ -77,10 +77,16 @@
 # print("Balance after withdrawal:", account.get_balance())
 
 # account.withdraw(10000)  # Insufficient funds!
+# print('----------')
+# # Direct Access to Members
+# print("Direct Public Access:", account.account_number)          # ✅ Works
+# print("Direct Protected Access:", account._account_holder)      # ⚠️ Works, but not recommended
+# try:
+#     print("Direct Private Access:", account.__balance)          # ❌ Will raise an error
+# except Exception as e:
+#     print('Error:', e)
 
-# # Trying to access private member directly (will result in an error)
-# print('----', account._account_holder)
-# print(account.__balance)
+
 
 # ####################################### Function Overloading:
 
@@ -127,6 +133,8 @@
 # # generic_animal.make_sound()  # Output: Generic animal sound
 # # my_dog.make_sound()         # Output: Woof! Woof!
 # my_cat.make_sound()         # Output: Meow!
+
+# ➡️ Same method name + redefined in child + called via child object = Method Overriding. ✅
 
 ################################################  Handle Exceptions
 
@@ -183,11 +191,11 @@
 # logging.basicConfig(filename='neosoft.log', level=logging.CRITICAL)
 # @app.route('/')
 # def index():
-#     app.logger.debug('This is a debug message')
-#     app.logger.info('This is an info message')
-#     app.logger.warning('This is a warning message')
-#     app.logger.error('This is an error message')
-#     app.logger.critical('This is a critical message')
+    # app.logger.debug('This is a debug message')
+    # app.logger.info('This is an info message')
+    # app.logger.warning('This is a warning message')
+    # app.logger.error('This is an error message')
+    # app.logger.critical('This is a critical message')
 #     return 'Hello World !!'
 # if '__main__' == __name__:
 #     app.run(host='0.0.0.0', debug=True)

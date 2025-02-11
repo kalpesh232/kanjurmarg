@@ -9,7 +9,7 @@ I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved
 -> We secure APIs by using authentication, authorization, and token validation. When a request comes, we check if it's authorized to execute the associated function by validating a token with a secret key. Input validation ensures data integrity. CORS prevents unauthorized external requests, keeping our API safe.
 
 4.what is inheritance in python?
--> In Python, inheritance lets a class to inherit properties and methods from another class. It helps to reuse and extend code by utilizing properties and methods from other classes.There are five types: single level, multi-level, multiple, hybrid, and hierarchical.
+-> In Python, inheritance lets a class to inherit properties and methods from another class. It helps to reuse and extend code by utilizing properties and methods from other classes.There are  single level, multi-level, multiple, hybrid, and hierarchical.
 
 5.join
 -> Select * from table1 join table2 on table1.column = table2.column where table1.column = 'something'
@@ -17,7 +17,7 @@ I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved
 6.how can or in how many tpe we defin e a url in  flask python?
 -> In Flask, you define URLs using route decorators. There are two types: static (with fixed paths) and dynamic (with variable parts). Syntax-wise, you can use @app.route for decorators or app.add_url_rule method to create URLs. Both ways help  map URLs to functions in your Flask application.
 
-7.which  libraries are you using in python?
+7.which  libraries are you using in python?(N P M D F R T S O R)
 ->
 NumPy:
 Example: Used for array operations, mathematical functions.
@@ -81,7 +81,7 @@ Used for organizing code across multiple files and subdirectories.
 ->
 Lambda functions in Python are used for concise and anonymous function definitions, often in situations where a full function is unnecessary They are especially useful for short-lived operations.
 
-11.Explain how request is processed in django? (P V M R T F)
+11.Explain how request is processed in django? (U V M H T F)
 - Django uses URL patterns, defined in urls.py to match the incoming request URL to a specific view function.
 - Matching view function is called, which processes the request and generates a response. This may involve querying the database, processing forms, etc.
 - Middleware allows you to process requests and responses globally. It can modify requests before they reach the view and responses before they are sent back to the client. Middleware can handle tasks like authentication.
