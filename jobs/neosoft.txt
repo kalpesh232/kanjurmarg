@@ -2,8 +2,7 @@
 -> Abstraction :
 1. Abstraction is a  concept that involves hiding the complex 
 implementation details and showing only the necessary features. 
-2. In Python, abstraction can be achieved through abstract classes and interfaces.
-An abstract class in Python is a class that cannot be instantiated on its own
+2. An abstract class in Python is a class that cannot be instantiated on its own
 It may contain abstract methods, which are methods without a body.
 3. Abstract base classes allow you to define a common interface for a set of subclasses.
 4. In Python, you cannot directly create an instance of an abstract class. 

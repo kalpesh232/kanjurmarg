@@ -51,20 +51,15 @@ c.show()
 
 
 # ########## monkey paching
-class greeting:
-    def __init__(self):
-        print("hello all")
-
+class Greeting:
     def greet(self):
         print("Original greeting")
 
-# Monkey patch the greet method to change its behavior
 def new_fun(self):
-    print("hi all")
+    print("Hi all")
 
-# Apply the patch to the class
-greeting.greet = new_fun
+Greeting.greet = new_fun  # Monkey patching
 
-# Now create an instance of greeting and call the greet method
-g = greeting()
-g.greet()  # This will now call new_fun instead of the original greet method
+g = Greeting()
+g.greet()  # Calls new_fun instead of the original greet method
+

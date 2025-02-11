@@ -14,7 +14,7 @@
 );
 - -- Create an index on the Department column
 CREATE INDEX idx_department ON Employees(Department);
-- Types of Indexes:
+- Types of Indexes: (P U C F C N)
 Primary Index: Created automatically for primary keys.
 Unique Index: Ensures all values in the indexed column are unique.
 Composite Index: Indexes multiple columns together.
@@ -30,8 +30,8 @@ Non-Clustered Index: A separate structure that points to the table's data.
 - Analyze Execution Plan: Use EXPLAIN to debug.
 - Choose Proper Data Types: Smaller types improve performance.
 
-4. Normalization in SQL
-- Normalization in SQL is organizing tables to reduce redundancy and improve data integrity
+4. Normalization in SQL (D P T)
+- Normalization in SQL means organizing tables to avoid duplicate data and keep data accurate.
 
 - 1. First Normal Form (1NF):
 Eliminate duplicate columns from a table.

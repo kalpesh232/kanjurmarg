@@ -1,20 +1,22 @@
 ----------------------------------- pre ----------------------------------------------
-1.  DDL (data definition language)?
+1.  DDL (data definition language)? (C D A T)
 - use to define the database schema and creates, deletes, and alters database objects.
 - CREATE****: Developers use this command to create database objects
 - DROP****: SQL engineers use the drop command to delete database objects
 - ALTER****: Developers use this command to change the database structure
 - TRUNCATE****: SQL developers use this command to remove all records from the table
 
-2.  DML (data manipulation language)?
+2.  DML (data manipulation language)? (I U D)
 - use to manipulate data in a database.
 - INSERT****: inserts data into a table
 - UPDATE****: updates data in a table
 - DELETE****: deletes database table records
 
-data query language - select
-data transsaction language - commit, rollback, save-point 
-data control language - grant, revoke
+DQL (data query language) - select
+DTL (data transsaction language) - commit, rollback, save-point 
+DCL (data control language) - grant, revoke
+
+------------------------------------ X ----------------------------------------------
 
 3. differences between DDL and DML
 - DDL statements define a database’s structure, whereas DML is used to add and modify the data within the 
@@ -67,11 +69,3 @@ data control language - grant, revoke
 
 10. Could you give us a definition of an inner join in SQL?
 - selects records with matching values in two tables and joins two tables based on their common column.
-
-11.  Can you give us a definition of an outer join in SQL?
-- LEFT OUTER JOIN: Includes all rows from the left table, matched rows from the right table, and NULLs for 
-  unmatched right table rows.
-- RIGHT OUTER JOIN: Includes all rows from the right table, matched rows from the left table, and NULLs for 
-  unmatched left table rows.
-- FULL OUTER JOIN: Includes all rows from both tables, with NULLs where there are no matches.
-

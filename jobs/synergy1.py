@@ -106,7 +106,6 @@
 
 # x1 = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
 # print('x1 : ', x1)
-# set_x = set(x1)
 # set_x = list(dict.fromkeys(x1))
 # print('x1 : ', list(set_x))
 

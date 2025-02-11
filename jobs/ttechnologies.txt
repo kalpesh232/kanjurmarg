@@ -51,9 +51,9 @@ Tuple: Defined with parentheses ().
 - Yes, in Python, you can use a float value as a key in a dictionary. In Python, dictionary keys can be of any  data type, including integers, strings, tuples, and floats.
 
 ---------- The average execution time of an SQL query
-1. 0.047
-2. 0.031
-3. 0.016
+1. 0.047 sec
+2. 0.031 sec
+3. 0.016 sec
 
 ---------- Join operations using Object-Relational Mapping (ORM) 
 Yes, you can perform join operations using Object-Relational Mapping (ORM) frameworks in Python, such as SQLAlchemy or Django ORM.

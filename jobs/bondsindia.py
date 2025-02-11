@@ -92,18 +92,18 @@
 
 # ###################### Python json.dumps(): Basic Use ############################################
 
-import json
+# import json
 # # Define a Python dictionary
-data = {"name": "John", "age": 30}
-print('data : ', data)
+# data = {"name": "John", "age": 30}
+# print('data : ', data)
 # print('dataT : ', type(data))
 # # Use json.dumps() to convert the dictionary into a JSON string
-json_data = json.dumps(data)
-print('json_data : ', json_data)
+# json_data = json.dumps(data)
+# print('json_data : ', json_data)
 # print('json_dataT : ', type(json_data))
 # data = {"name": "John", "age": 30}
-eggs = json.loads(json_data)
-print('json_data_loads : ', eggs)
+# eggs = json.loads(json_data)
+# print('json_data_loads : ', eggs)
 # print('json_data_loads T : ', type(eggs))
 
 # if data == json_data :
@@ -136,7 +136,7 @@ print('json_data_loads : ', eggs)
 # ############### Writing JSON to Files with json.dump() #######################
 
 # # Define a Python dictionary
-dump_data = {'name': 'kalpesh', 'age': 31}
+# dump_data = {'name': 'kalpesh', 'age': 31}
 # # Use json.dump() to write the dictionary into a JSON file
 # with open('bondsindia.json', 'w') as f:
 #     json.dump(dump_data, f)
@@ -144,11 +144,11 @@ dump_data = {'name': 'kalpesh', 'age': 31}
 # with open('bondsindia.json', 'r') as f:
 #     print('dump : ', f.read())
 
-with open('bondsindia.json', 'a') as f :
-    json.dump(dump_data,f)
+# with open('bondsindia.json', 'a') as f :
+    # json.dump(dump_data,f)
 
-with open('bondsindia.json', 'r') as f:
-    print('_____', f.read())
+# with open('bondsindia.json', 'r') as f:
+    # print('_____', f.read())
 
 ############### Handling Non-Serializable Types ################
 

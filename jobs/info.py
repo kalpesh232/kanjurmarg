@@ -11,23 +11,23 @@
 # flatten_list(data)
 # print(flat_ls)
 
-import numpy as np
+# import numpy as np
 
-# Sample sensor data (temperature and humidity readings)
-temperature = np.array([25.5, 26.1, 25.8, 26.0, 25.9])
-humidity = np.array([60.2, 59.8, 60.5, 60.1, 59.9])
+# # Sample sensor data (temperature and humidity readings)
+# temperature = np.array([25.5, 26.1, 25.8, 26.0, 25.9])
+# humidity = np.array([60.2, 59.8, 60.5, 60.1, 59.9])
 
-# Calculate real-time statistics
-avg_temp = np.mean(temperature)  # Average temperature
-min_temp = np.min(temperature)   # Minimum temperature
-max_temp = np.max(temperature)   # Maximum temperature
+# # Calculate real-time statistics
+# avg_temp = np.mean(temperature)  # Average temperature
+# min_temp = np.min(temperature)   # Minimum temperature
+# max_temp = np.max(temperature)   # Maximum temperature
 
-avg_humidity = np.mean(humidity)  # Average humidity
-min_humidity = np.min(humidity)   # Minimum humidity
-max_humidity = np.max(humidity)   # Maximum humidity
+# avg_humidity = np.mean(humidity)  # Average humidity
+# min_humidity = np.min(humidity)   # Minimum humidity
+# max_humidity = np.max(humidity)   # Maximum humidity
 
-print(f"Temperature -> Avg: {avg_temp}, Min: {min_temp}, Max: {max_temp}")
-print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity}")
+# print(f"Temperature -> Avg: {avg_temp}, Min: {min_temp}, Max: {max_temp}")
+# print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity}")
 
 
 # ------------- X -------------
@@ -162,17 +162,17 @@ print(f"Humidity -> Avg: {avg_humidity}, Min: {min_humidity}, Max: {max_humidity
 # x = lambda x,y : x+y 
 # print(x(10,20))
 
-mychar = 'kalpeshharishchandrashinde'
-ls1 = []
-str1 = ''
-for i in mychar:
-    if i not in str1:
-        str1 += i
-    else:
-        ls1.append(str1)
-        str1 = i
-ls1.append(str1)
-dict1 = {j : len(j) for j in ls1}
-result = {k : v for k,v in dict1.items() if v == (max(dict1.values()))}
-print(result)
+# mychar = 'kalpeshharishchandrashinde'
+# ls1 = []
+# str1 = ''
+# for i in mychar:
+#     if i not in str1:
+#         str1 += i
+#     else:
+#         ls1.append(str1)
+#         str1 = i
+# ls1.append(str1)
+# dict1 = {j : len(j) for j in ls1}
+# result = {k : v for k,v in dict1.items() if v == (max(dict1.values()))}
+# print(result)
 
