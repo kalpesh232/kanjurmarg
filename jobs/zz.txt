@@ -98,7 +98,7 @@ Lambda functions in Python are used for concise and anonymous function definitio
 -In Django, context refers to the data passed from a view to a template. This data is used to dynamically generate the HTML content that the template will render.
 
 14.q object in orm django?
-In Django's ORM (Object-Relational Mapping), the Q object is used to construct complex queries involving AND, OR, and NOT operations. It allows you to build more sophisticated queries than what you can achieve with simple filter conditions.
+In Django's ORM (Object-Relational Mapping), the Q object is used to construct complex queries involving AND, OR, and NOT operations. It allows you to build more sophisticated queries.
 
 15.get and filter in django
 -get() Method
