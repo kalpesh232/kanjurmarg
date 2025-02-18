@@ -1,0 +1,71 @@
+----------------------------------- pre ----------------------------------------------
+1.  DDL (data definition language)? (C D A T)
+- use to define the database schema and creates, deletes, and alters database objects.
+- CREATE****: Developers use this command to create database objects
+- DROP****: SQL engineers use the drop command to delete database objects
+- ALTER****: Developers use this command to change the database structure
+- TRUNCATE****: SQL developers use this command to remove all records from the table
+
+2.  DML (data manipulation language)? (I U D)
+- use to manipulate data in a database.
+- INSERT****: inserts data into a table
+- UPDATE****: updates data in a table
+- DELETE****: deletes database table records
+
+DQL (data query language) - select
+DTL (data transsaction language) - commit, rollback, save-point 
+DCL (data control language) - grant, revoke
+
+------------------------------------ X ----------------------------------------------
+
+3. differences between DDL and DML
+- DDL statements define a database’s structure, whereas DML is used to add and modify the data within the 
+  database
+- DDL commands affect the whole database, whereas DML statements affect specific rows or sets of data within 
+  database tables
+- The WHERE clause is used more commonly in DML statements than in DDL 
+
+4. ACID properties in SQL ensure the reliability of database transactions:
+- Atomicity: If any part fails, the entire transaction is rolled back.
+- Consistency: Transactions bring the database from one valid state to another, maintaining data integrity.
+- Isolation: Transactions are independent; the intermediate state of one transaction is invisible to others.
+- Durability: Once a transaction is committed, the changes are permanent, even in case of a system failure.
+
+5.  Which query would you write to find every duplicate in a table?
+- Using the GROUP BY command to group the table’s rows by target columns and check for duplicates
+- Using the HAVING command and COUNT function to determine if any group has multiple entries
+- SELECT email, COUNT(*) FROM employees GROUP BY email HAVING COUNT(*) > 1;
+
+6. Could you explain what a clustered index is?
+- Developers use clustered indexes to define the order in which they store data in a table. There is only one 
+  clustered index per table because there is only one way to store the records.
+- CREATE CLUSTERED INDEX idx_customer_id ON customers (customer_id);
+
+7. Could you give us a definition of a non-clustered index?
+- A non-clustered index is a type of index that does not physically sort data rows in a table. A non-clustered 
+  index’s structure is separate from the data rows. It uses a key-value structure in which the key contains 
+  the column values.
+- This type of index can help developers find data more efficiently by speeding up data retrieval.
+- CREATE NONCLUSTERED INDEX idx_last_name ON employees (last_name);
+
+8. Could you explain the difference between clustered and non-clustered indexes?
+- Clustered indexes are faster than non-clustered indexes
+- Clustered indexes require less memory than non-clustered ones
+- Tables can only have only one clustered index but multiple non-clustered ones
+- Clustered indexes define the order of data within a table, whereas non-clustered indexes define the order of 
+  data within an index
+-  If you have a clustered index on employee_id, the rows in the employees table are physically ordered by 
+   employee_id.
+- If you create a non-clustered index on last_name, the index will be sorted by last_name, but the actual 
+  table data will not be physically ordered by last_name.
+
+9. What do you understand about denormalization?
+- Denormalization is when developers intentionally add redundancy to normalized relational databases. The 
+  purpose of denormalization is to improve the database’s read performance in cases in which query speed is 
+  more important than a consistent data structure or space optimization. conduct denormalization
+- Adding additional columns to store more information
+- Adding a new table
+- Creating individual rows or records within a table.
+
+10. Could you give us a definition of an inner join in SQL?
+- selects records with matching values in two tables and joins two tables based on their common column.

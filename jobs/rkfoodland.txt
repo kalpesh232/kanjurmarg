@@ -1,0 +1,45 @@
+Django, class-based views (CBVs) and function-based views (FBVs) - >
+
+In Django, class-based views (CBVs) and function-based views (FBVs) are two approaches for handling  requests and responses.
+
+Function-Based Views (FBV):
+Definition: FBVs are views implemented as functions.
+Usage: FBVs are straightforward and concise, suitable for simpler views.
+
+Class-Based Views (CBV):
+Definition: CBVs are views implemented as classes.
+Usage: CBVs provide a more organized and reusable structure. They are suitable for complex views
+
+---------------------------------------------------
+
+-> Polymorphism
+
+- Polymorphism allows objects of different classes to be treated as objects of a common base class. It enables a single interface to represent different types of objects.
+It simplifies code and enhances flexibility. For example, a function can work with objects of different classes
+- polymorphism in programming has types
+1. Compile-time Polymorphism (Static Polymorphism)- Method Overloading
+2. Run-time Polymorphism (Dynamic Polymorphism) - Method Overriding
+
+------------------------------------------------------
+
+Different Types of JOINS in MySQL
+
+In MySQL, joins are used to retrieve data from multiple tables based on a common column between them.
+
+INNER JOIN:
+Description: Returns only the rows where there is a match in both tables based on the specified condition
+
+LEFT JOIN (or LEFT OUTER JOIN):
+Description: Returns all rows from the left table (table1) and the matching rows from the right table 
+(table2). If there is no match, NULL values are returned for columns from the right table.
+
+RIGHT JOIN (or RIGHT OUTER JOIN):
+Description: Returns all rows from the right table (table2) and the matching rows from the left table (table1). If there is no match, NULL values are returned for columns from the left table.
+
+FULL JOIN (or FULL OUTER JOIN):
+Description: Returns all rows when there is a match in either the left or right table. If there is no match, NULL values are returned for columns from the table without a match.
+
+CROSS JOIN:
+Description: Returns the Cartesian product of both tables, meaning every row from the first table is combined with every row from the second table. There is no explicit condition for matching.
+
+
