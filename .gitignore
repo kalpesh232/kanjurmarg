@@ -1,9 +1,5 @@
+django/django_project/
+jobs/
 myenv/
-django/django_project/app/
-django/django_project/myapp/migrations/
-jobs/neosoft.log
-jobs/__pycache__/
-shark/temp.csv
-django/
-python/
-
+python/__pycache__/
+shark/
