@@ -5,7 +5,9 @@ I worked as a software developer at Software Plus Electronics for 2 years and 7 
 
 I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved testing and debugging code, ensuring matches ran correctly, managing refunds, monitoring storage memory, and handling contest cancellations using the PySpark engine.
 
-2.how can we secure our apis?
+2.Strength & Weakness: I am hardworking and committed to learning. While I may not be an expert in everything, I put in extra effort, even beyond office hours, to improve and complete tasks. My weakness is spending extra time on challenges, but it helps me grow and deliver quality work.
+
+3.how can we secure our apis?
 -> We secure APIs by using authentication, authorization, and token validation. When a request comes, we check if it's authorized to execute the associated function by validating a token with a secret key. Input validation ensures data integrity. CORS prevents unauthorized external requests, keeping our API safe.
 
 4.what is inheritance in python?
@@ -117,43 +119,9 @@ If no objects match, it returns an empty queryset.
 17.Django ORM 
 ->  Django ORM reduces the chance of mistakes compared to writing raw SQL queries by allowing you to interact with the database using Python code. It maps database tables to Python classes and handles SQL queries automatically.
 
-18. To fix the situation and ensure your changes are applied to the correct branch (`jobs`), follow these steps:  
 
-### Step 1: Undo the commit and staged changes in `invstg` branch
-1. **Reset the commit**:  
-   Undo the last commit and keep the changes in your working directory:  
-   git reset HEAD~1
-   This removes the commit but retains your changes as unstaged.
 
-2. **Stash the changes**:  
-   Save your changes temporarily to apply them to the correct branch:  
-   git stash
 
-### Step 2: Switch to the `jobs` branch
-1. Ensure you have no active changes in the `invstg` branch:  
-   git status
-   If clean, proceed to the next step.  
-
-2. Switch to the `jobs` branch:  
-   git checkout jobs
-
-### Step 3: Apply the changes to `jobs` branch
-1. **Retrieve your stashed changes**:  
-   git stash apply
-
-2. **Stage, commit, and push the changes**:  
-   git add .
-   git commit -m "Updated code for jobs branch"
-   git push
-
-### Step 4: Clean up the stash (optional)
-If the stash was applied successfully, clear it to avoid clutter:  
-git stash drop
-
-### Step 5: Verify `invstg` branch is unchanged
-1. Switch back to `invstg` to confirm:  
-   git checkout invstg
-   git status
 
 
 
