@@ -1,4 +1,4 @@
----------- Python has several built-in data types(N N B S S M)
+---------- Python has several built-in data types(N B N S M S)
 1. Numeric Types:
 int: Whole numbers, e.g., 5, -10
 float: Decimal numbers, e.g., 3.14, -0.001
@@ -23,17 +23,18 @@ set: Unordered collection of unique elements, e.g., {1, 2, 3}
 dict: Key-value pairs, e.g., {"name": "John", "age": 25}
 
 ----------  Differences between a list and a tuple(M M M U P S)
-1.Mutability:
-List: Mutable (you can change, add, or remove elements after creation).
-Tuple: Immutable (once created, the elements cannot be changed).
 
-2.Memory Usage:
+1.Memory Usage:
 List: Takes more memory as it needs to accommodate changes in size.
 Tuple: Uses less memory because it's fixed-size and immutable.
 
-3.Methods:
+2.Methods:
 List: Has more built-in methods like append(), remove(), pop(), etc.
 Tuple: Has fewer methods, mainly count() and index().
+
+3.Mutability:
+List: Mutable (you can change, add, or remove elements after creation).
+Tuple: Immutable (once created, the elements cannot be changed).
 
 4.Use Cases:
 List: Used when you need a collection of items that can change dynamically (e.g., adding, removing, or modifying elements).
@@ -64,36 +65,30 @@ Yes, you can perform join operations using Object-Relational Mapping (ORM) frame
 
 ---------- Celery 
 - CELERY IS ASYNCRONISE TASK TUBE / JOB TUBE THAT ALLOW YOU TO RUN BACKGROND TASK IN DJANGO.IT WIDLY USE FOR TASK LIKE SENDING MAIL , PRCESSING DATA AND SCHEDULING TASK
-1. Task Queue: You define tasks (functions) that are put in a queue.
-2. Message Broker: Uses a broker (like Redis or RabbitMQ) to manage task distribution.
-3. Workers: Background workers execute the queued tasks asynchronously.
-4. Delayed Tasks: Tasks are executed outside the main Django request/response cycle.
+1. You define tasks (functions) that are put in a queue.
+2. Uses a broker (like Redis or RabbitMQ) to manage task distribution.
+3. Background workers execute the queued tasks asynchronously.
+4. Tasks are executed outside the main Django request/response cycle.
 
----------- primary keys and unique keys(U N I I F)
+---------- primary keys and unique keys(U I F I)
 Primary Key :-
-1. Uniqueness: A primary key uniquely identifies each record in a table. No two rows can have the same primary key value.
-2 Non-nullable: Primary key columns cannot contain NULL values. Every record must have a valid primary key.
-3. Indexing: Primary keys automatically create a unique index on the column(s), which helps speed up query performance.
-4. Single Instance: A table can have only one primary key, which may consist of a single column or a combination of multiple columns (composite key).
-5. Referential Integrity: Primary keys are often used in foreign key relationships, allowing other tables to reference the primary key for establishing relationships.
+Ensures uniqueness and cannot be NULL.
+Automatically indexed for faster queries.
+Used to maintain relationships (foreign keys).
+Only one per table (single or composite).
 
 Unique Key:-
-1. Uniqueness: A unique key also enforces uniqueness across a column or a set of columns, ensuring that no two rows can have the same value in the unique key column(s).
-2. Nullable Values: Unlike primary keys, unique key columns can contain NULL values. Multiple NULLs are allowed because NULL is considered a distinct value.
-3. Multiple Instances: A table can have multiple unique keys. This allows you to enforce uniqueness across several columns in a single table.
-4. Indexing: Unique keys also create a unique index, which can improve query performance.
-5. Referential Integrity: Unique keys can be referenced by foreign keys, but they are not as commonly used for this purpose as primary keys.
+Ensures uniqueness but allows NULL values.
+Automatically indexed like a primary key.
+Can be used as a foreign key, but rarely.
+Multiple unique keys can exist in a table.
 
----------- Foreign Key(R I N M C)
-1. Relationship: 
-- A foreign key is a column in one table that refers to the primary key in another table. It establishes a relationship between the two tables.
-2. Referential Integrity: 
-- Foreign keys ensure that the value in the foreign key column matches a value in the referenced primary key column, maintaining data integrity between related tables.
-3. Nullable: 
-- Foreign key columns can contain NULL values if the relationship is optional, meaning the row doesn’t necessarily have to reference a row in the other table.
-4. Multiple Foreign Keys: 
-- A table can have multiple foreign keys, each establishing a relationship with different tables.
-5. Cascading Actions: 
-- if a record in the primary key table is deleted, related records in the foreign key table can be deleted as well (called cascading delete).
+
+---------- Foreign Key(C R I M N)
+Relationship: Connects two tables by referring to the primary key of another table.
+Referential Integrity: Ensures foreign key values match existing primary key values in the related table.
+Nullable: Can be NULL if linking to another table is optional.
+Multiple Foreign Keys: A table can have multiple foreign keys linking to different tables.
+Cascading Actions: Changes in the primary key table can affect related records (e.g., cascading delete).
 
 

@@ -14,7 +14,7 @@
 );
 - -- Create an index on the Department column
 CREATE INDEX idx_department ON Employees(Department);
-- Types of Indexes: (P U C F C N)
+- Types of Indexes: (P U N C T C)
 Primary Index: Created automatically for primary keys.
 Unique Index: Ensures all values in the indexed column are unique.
 Composite Index: Indexes multiple columns together.
@@ -22,7 +22,7 @@ Full-Text Index: Optimized for text searches.
 Clustered Index: Physically sorts rows in the table based on the key values.
 Non-Clustered Index: A separate structure that points to the table's data.
 
-3. To optimize an SQL query: ( S L I P E D )
+3. To optimize an SQL query: (S P I L E D )
 - Avoid SELECT *: Select only required columns.
 - Limit Results: Use LIMIT to fetch only required rows.
 - Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.
@@ -66,17 +66,13 @@ Departments Table: | DepartmentID | DepartmentName |
 Migrations in Python are a way to manage changes to the database schema in a controlled, and versioned manner.
 
 #### **Purpose**:
-- When building applications, you often need to add new features or update the database. Migrations help track these changes and apply them to the database easily.
+- When we building applications, we often need to add new features or update the database. Migrations help to track these changes and apply them to the database easily.
 
-### **How Migrations Work** (D M E V):
-1. **Detect Changes**:  
-   Migrations detect changes made to your database models.
-2. **Migration Files**:  
-   Migration files are created to describe the changes in code.
-3. **Execute Changes**:  
-   These migration files are executed to apply changes to the actual database.
-4. **Version Control**:  
-   Migrations are allowing you to keep track of changes and revert them if needed.
+### **How Migrations Work** (D M E T):
+1. Migrations detect changes made to your database models.
+2. Migration files are created to describe the changes in code.
+3. These migration files are executed to apply changes to the actual database.
+4. Migrations are allowing you to keep track of changes and revert them if needed.
 
 ### **Key Commands in Django**:
 1. **Create a Migration**:  
@@ -133,11 +129,6 @@ If a variable does not reference any object, Python's garbage collector removes 
 9. self
 self is a special keyword in Python used in instance methods of a class to refer to the current object (instance) on which the method is being called. It is always the first parameter of instance methods and ensures that the method operates on the current instance when multiple instances of the class exist.
 self acts as a reference (or pointer) to the current instance, allowing access to its attributes and other methods.
-
-10. Public Variable, Protected Variable, Private Variable 
-1. Public Variable: Accessible anywhere. Example: obj.var
-2. Protected Variable: Meant for class and subclasses. Prefix with _. Example: obj._var
-3. Private Variable:  Accessible only inside the class. Prefix with __. Example: obj.__var
 
 11. Explain sessions and cookie in flask python
 - Cookies

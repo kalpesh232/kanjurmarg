@@ -102,57 +102,50 @@
 # print('result : ', result)
 
 # def fib(num):
-#     a , b = 0,1
-#     if num < 0:
-#         print("Invalid input: Fibonacci sequence is not defined for negative numbers.")
-#         return
-#     elif  num == 0:
-#         c = 0
-#     elif num == 1 :
-#          c = 1
-#     else:
-#         for _ in range(2,num+1):
-#             c = a+b
-#             a ,b = b,c
-#     print(c)
-# num = int(input('Enter Number : '))
-# fib(num)
+#     f = []
+#     a,b = 0,1
+    
+#     for _ in range(num):
+#         f.append(a)
+#         a,b = b,a+b
+#     return f
 
+# num = int(input("Enter Number : "))
+# result = fib(num)
+# print('result : ', result)
 
+# ##### list of the first 50 prime numbers:
 # prime_ls = []
-# num = 0
-# while True:
-#     if num == 0 or num == 1:
+# counter = 0
+# while len(prime_ls) < 50:
+#     if counter <= 1 :
 #         pass
-#     elif num == 2 :
-#         prime_ls.append(num)
+#     elif counter == 2 :
+#         prime_ls.append(counter)
 #     else:
-#         for i in range(2, num):
-#             if num %  i == 0 :
-#                 # print(f'{num} is not a prime number')
+#         for i in range(2,counter):
+#             if counter % i == 0 :
+#                 print(f'{counter } Not Prime')
 #                 break
 #         else:
-#             print(f'{num} is  a prime number')
-#             prime_ls.append(num)
-#     num += 1
-#     if len(prime_ls) == 50 :
-#         print(prime_ls)
-#         sum_ls = sum(prime_ls)
-#         print('sum of list : ', sum_ls)
-#         break
+#             prime_ls.append(counter)
+#     counter += 1
 
-# num = int(input('enter number : '))
-# stor = num
-# temp = 0
-# while num > 0 :
-#     last_digit = num % 10
-#     mul_10 = (temp * 10) 
-#     temp =  mul_10 + last_digit
-#     num //= 10
-# if temp == stor:
-#     print(f'{stor} is palindroman')
-# else:
-#     print(f'{stor} is not palindroman')
+# print(prime_ls)
+# print(sum(prime_ls))
+
+num = 123
+stor = num
+reminder = 0
+while num > 0:
+    last_digit = num % 10
+    reminder = last_digit+ reminder * 10
+    num //= 10
+if reminder == stor:
+    print(f'{stor} is palindroman')
+else:
+    print(f'{stor} is not palindroman')
+# if str(num) == str(num)[::-1]:
 
 # from functools import reduce
 # ls = [9,7,6,9,9,7,3,7,6,6]

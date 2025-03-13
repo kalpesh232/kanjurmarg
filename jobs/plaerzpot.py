@@ -20,13 +20,6 @@ ORDER BY user, rank;
 # # Creating an object of MyClass
 # obj = MyClass(10)
 
-# ########### lambda
-
-from functools import reduce
-numbers = [1, 2, 3, 4, 5]
-result = reduce(lambda x,y : x+y , numbers)
-print(result)
-
 # ########## super method in python
 class Parent:
     def __init__(self, value1):
