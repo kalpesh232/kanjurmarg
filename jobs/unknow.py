@@ -356,7 +356,7 @@
 # print(mystr)
 
 # -------- Check if Two Strings are Anagrams
-# String_1= "listenlpw"
+# String_1=  "listenlpw"
 # String_2 = "silentlpr"
 # print(sorted(String_1) == sorted(String_2))
 
@@ -427,20 +427,20 @@
 # print(mystr)
 
 # -------- Generate and Sort All Substrings of a String
-Input = "abc"
-s = []
-for i in range(len(Input)):
-    for j in range(i,len(Input)):
-        s.append(Input[i:j+1])
-print(s)
-temmp = None
-for i in range(len(s)):
-    for j in range(len(s)):
-        if len(s[i]) < len(s[j]):
-            temmp = s[i]
-            s[i] = s[j]
-            s[j] = temmp
-print(s)
+# Input = "abc"
+# s = []
+# for i in range(len(Input)):
+#     for j in range(i,len(Input)):
+#         s.append(Input[i:j+1])
+# print(s)
+# temmp = None
+# for i in range(len(s)):
+#     for j in range(len(s)):
+#         if len(s[i]) < len(s[j]):
+#             temmp = s[i]
+#             s[i] = s[j]
+#             s[j] = temmp
+# print(s)
 
 
 

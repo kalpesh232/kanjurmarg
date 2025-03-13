@@ -407,6 +407,16 @@
 # mixed_array = np.array([42, "hello", 3.14], dtype=object)
 # print(mixed_array)
 
+# ########## shallow copy and deep copy 
+
+# import copy
+# original = [[1, 2, 3], [4, 5, 6]]
+# print('original 1 : ', original)
+# d = copy.deepcopy(original)
+# print('d 1 : ',d)
+# d[0][1] = 9
+# print('original 2 : ', original)
+# print('d 2 : ',d)
 
 # ############## create a dictionary using a list 
 
@@ -415,20 +425,60 @@
 # print(dictionary)
 # Output: {'a': None, 'b': None, 'c': None}
 
-# ############ json.dumps() and json.loads()
 
-# import json
-# data = {"name": "John", "age": 30}
-# print('data type : ',  type(data))
-# json_string = json.dumps(data)
-# print('json_string type 1 : ',  type(json_string))  
-# print('json_string 1 : ',  json_string)  
+# ----- In Python, class methods and instance methods are called in different ways.
+##### 1. Instance Method:
+class MyClass:
+    def instance_method(self):
+        print("This is an instance method.")
 
-# json_string = '{"name": "John", "age": 30}'
-# print('json_string type : ',  type(json_string))
-# data = json.loads(json_string)
-# print('data type 1 : ',  type(data))  
-# print('data 1 : ',  data)  
+obj = MyClass()
+obj.instance_method()  
+
+##### 2. Class Method:
+class MyClass:
+    @classmethod
+    def class_method(cls):
+        print("This is a class method.")
+
+MyClass.class_method()  
+
+# #####  Static Method  #####
+class Demo:
+    @staticmethod
+    def static_method():
+        print('Tish is Static Method  ')
+Demo.static_method()
+
+# Difference Between APIView and ViewSet in Django REST Framework (DRF)
+
+# ------- APIView ---------
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+class ExampleAPIView(APIView):
+    def get(self, request):
+        return Response({"message" : "Hello From APIView"})
+
+# -------- ViewSet --------
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+
+class ExampleViewSet(ViewSet):
+    def list(self, request):
+        return Response({"massage" : "Hello From ViewSet"})
+    
+# #########
+names = ["Kalpesh", "Shinde", "Address"]
+ls = []
+for i in names:
+    ls.append(i[0])
+x = '-'.join(map(str,ls))
+print(x)
+
+
+
+ 
 
 
 
