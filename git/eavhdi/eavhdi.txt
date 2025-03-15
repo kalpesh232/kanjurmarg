@@ -1,0 +1,13 @@
+---------15-03-2025------
+>> Here is the **step-by-step** method to accurately find the **original branch** where a folder was created in Git.
+git log --diff-filter=A -- folder_name
+git branch --contains <commit-hash>
+git reflog --all | findstr <commit-hash>
+git log --pretty=format:"%h %d %s" <branch_name> -- folder_name
+
+>>  Check if the branch contains independent code:
+git log checkout --not flask python django mysql invstg git jobs javascript --oneline --
+
+>> Delete the checkout branch:
+git branch -D checkout  # Force delete locally
+git push origin --delete checkout  # Delete from remote if needed
