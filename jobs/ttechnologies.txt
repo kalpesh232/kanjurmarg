@@ -1,0 +1,94 @@
+---------- Python has several built-in data types(N B N S M S)
+1. Numeric Types:
+int: Whole numbers, e.g., 5, -10
+float: Decimal numbers, e.g., 3.14, -0.001
+complex: Complex numbers with real and imaginary parts, e.g., 1 + 2j
+
+2. None Type:
+NoneType: Represents the absence of a value, e.g., None
+
+3. Boolean Type:
+bool: Represents True or False
+
+4. Sequence Types:
+str: Strings, a sequence of characters, e.g., "Hello", "Python"
+list: Ordered, mutable sequence of items, e.g., [1, 2, 3]
+tuple: Ordered, immutable sequence of items, e.g., (1, 2, 3)
+range: Sequence of numbers, often used in loops, e.g., range(0, 10)
+
+5. Set Types:
+set: Unordered collection of unique elements, e.g., {1, 2, 3}
+
+6. Mapping Type:
+dict: Key-value pairs, e.g., {"name": "John", "age": 25}
+
+----------  Differences between a list and a tuple(M M M U P S)
+
+1.Memory Usage:
+List: Takes more memory as it needs to accommodate changes in size.
+Tuple: Uses less memory because it's fixed-size and immutable.
+
+2.Methods:
+List: Has more built-in methods like append(), remove(), pop(), etc.
+Tuple: Has fewer methods, mainly count() and index().
+
+3.Mutability:
+List: Mutable (you can change, add, or remove elements after creation).
+Tuple: Immutable (once created, the elements cannot be changed).
+
+4.Use Cases:
+List: Used when you need a collection of items that can change dynamically (e.g., adding, removing, or modifying elements).
+Tuple: Used when you need a fixed collection of items that won’t change, often to represent a constant set of values.
+
+5.Performance:
+List: Slower due to its mutable nature.
+Tuple: Faster because of its immutability, which allows Python to optimize it better.
+
+6.Syntax:
+List: Defined with square brackets [].
+Tuple: Defined with parentheses ().
+
+---------- Can use a float value as a key in a dictionary
+- Yes, in Python, you can use a float value as a key in a dictionary. In Python, dictionary keys can be of any  data type, including integers, strings, tuples, and floats.
+
+---------- The average execution time of an SQL query
+1. 0.047 sec
+2. 0.031 sec
+3. 0.016 sec
+
+---------- Join operations using Object-Relational Mapping (ORM) 
+Yes, you can perform join operations using Object-Relational Mapping (ORM) frameworks in Python, such as SQLAlchemy or Django ORM.
+
+---------- Middleware 
+1.In Django, middleware allows you to process requests and responses globally. It can modify requests before they reach the view and responses before they are sent back to the client. Middleware can handle tasks like authentication.
+2. To create custom middleware, define a class with methods like  process_request, and process_response, and add it to the MIDDLEWARE list in settings.py.
+
+---------- Celery 
+- CELERY IS ASYNCRONISE TASK TUBE / JOB TUBE THAT ALLOW YOU TO RUN BACKGROND TASK IN DJANGO.IT WIDLY USE FOR TASK LIKE SENDING MAIL , PRCESSING DATA AND SCHEDULING TASK
+1. You define tasks (functions) that are put in a queue.
+2. Uses a broker (like Redis or RabbitMQ) to manage task distribution.
+3. Background workers execute the queued tasks asynchronously.
+4. Tasks are executed outside the main Django request/response cycle.
+
+---------- primary keys and unique keys(U I F I)
+Primary Key :-
+Ensures uniqueness and cannot be NULL.
+Automatically indexed for faster queries.
+Used to maintain relationships (foreign keys).
+Only one per table (single or composite).
+
+Unique Key:-
+Ensures uniqueness but allows NULL values.
+Automatically indexed like a primary key.
+Can be used as a foreign key, but rarely.
+Multiple unique keys can exist in a table.
+
+
+---------- Foreign Key(C R I M N)
+Relationship: Connects two tables by referring to the primary key of another table.
+Referential Integrity: Ensures foreign key values match existing primary key values in the related table.
+Nullable: Can be NULL if linking to another table is optional.
+Multiple Foreign Keys: A table can have multiple foreign keys linking to different tables.
+Cascading Actions: Changes in the primary key table can affect related records (e.g., cascading delete).
+
+

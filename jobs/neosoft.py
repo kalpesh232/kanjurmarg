@@ -1,53 +1,75 @@
 # ######################################## Abstraction 
 
-# from abc import ABC , abstractmethod
+# from abc import ABC, abstractmethod
+
 # class A(ABC):
-#     @classmethod
-#     def fun_a():
+#     @abstractmethod
+#     def fun(self):
 #         pass
+
 # class B(A):
-#     def __init__(self, radius):
-#         self.radius = radius
+#     def __init__(self, value1):
+#         self.v1 = value1
 
-#     def fun_a(self):
-#         return 3.14 * self.radius * self.radius
+#     def fun(self):
+#         return self.v1 ** 3
+    
+# class C(B):
+#     def __init__(self, value1, value2, value3):
+#         super().__init__(value1)
+#         self.v2 = value2
+#         self.v3 = value3
 
-# value = 5
-# a = B(value)
-# print(a.fun_a())
+#     def fun(self):
+#         cube = super().fun()
+#         rectangle = self.v2 * self.v3
+#         return f"Area of rectangle: {rectangle}, Volume of cube: {cube}"
+    
+# try:
+#     a = A()  # This will raise an error
+# except Exception as e:
+#     print('Error:', e)
+
+# b = C(3, 10, 20)
+# print('Result:', b.fun())
 
 
 # ############################################### Encapsulation 
 
 # class BankAccount:
-#     def __init__(self, account_holder, initial_balance):
-#         self._account_holder = account_holder  # Protected member
-#         self.__balance = initial_balance  # Private member
+#     def __init__(self, account_holder, initial_balance, account_number):
+#         self.account_number = account_number       # Public member
+#         self._account_holder = account_holder      # Protected member
+#         self.__balance = initial_balance           # Private member
 
+#     # Public method to deposit
 #     def deposit(self, amount):
 #         self.__balance += amount
 
+#     # Public method to withdraw
 #     def withdraw(self, amount):
 #         if amount <= self.__balance:
 #             self.__balance -= amount
 #         else:
 #             print("Insufficient funds!")
 
+#     # Getter for private balance
 #     def get_balance(self):
 #         return self.__balance
 
+#     # Getter for protected account holder
 #     def get_account_holder(self):
 #         return self._account_holder
 
+# # Creating an instance
+# account = BankAccount("John Doe", 1000, "1234567890")
 
-# # Creating an instance of BankAccount
-# account = BankAccount("John Doe", 1000)
+# # Accessing Public, Protected, and Private Members
+# print("Account Number (Public):", account.account_number)  # Public member
+# print("Account Holder (Protected):", account.get_account_holder())  # Protected via getter
+# print("Balance (Private):", account.get_balance())  # Private via getter
 
-# # Accessing protected and private members
-# print("Account Holder:", account.get_account_holder())  # Protected member
-# print("Balance:", account.get_balance())  # Private member
-
-# # Depositing and withdrawing money
+# # Depositing and Withdrawing Money
 # account.deposit(500)
 # print("Balance after deposit:", account.get_balance())
 
@@ -55,9 +77,16 @@
 # print("Balance after withdrawal:", account.get_balance())
 
 # account.withdraw(10000)  # Insufficient funds!
+# print('----------')
+# # Direct Access to Members
+# print("Direct Public Access:", account.account_number)          # ✅ Works
+# print("Direct Protected Access:", account._account_holder)      # ⚠️ Works, but not recommended
+# try:
+#     print("Direct Private Access:", account.__balance)          # ❌ Will raise an error
+# except Exception as e:
+#     print('Error:', e)
 
-# # Trying to access private member directly (will result in an error)
-# # print(account.__balance)
+
 
 # ####################################### Function Overloading:
 
@@ -69,7 +98,17 @@
 #         print(a+b+c)
 
 # a = Add()
-# a.sum(89,45,12)
+
+# a.sum(56,56,56)
+
+# class Add:
+#     def sum(self, *args):
+#         print(sum(args))
+
+# a = Add()
+# a.sum(10,20)
+# a.sum(10,20,30)
+
 
 # ######################## Method Overriding
 
@@ -94,6 +133,8 @@
 # # generic_animal.make_sound()  # Output: Generic animal sound
 # # my_dog.make_sound()         # Output: Woof! Woof!
 # my_cat.make_sound()         # Output: Meow!
+
+# ➡️ Same method name + redefined in child + called via child object = Method Overriding. ✅
 
 ################################################  Handle Exceptions
 
@@ -120,13 +161,23 @@
 # finally:
 #     print('Resource Closed')
 
-# user define exception
+# Define the user-defined exception outside the loop
 # class MyException(Exception):
 #     pass
 
-# c = 25
-# if c > 5 :
-#     raise MyException("somrting went wrong")
+# while True:
+#     try:
+#         c = int(input('Enter number: '))
+#         if c < 15:
+#             raise MyException('User not allowed')
+#         else:
+#             print('User allowed')
+#             # break  # Exit the loop if input is valid
+#     except MyException as e:
+#         print(e)  # Print the custom error message
+#     except ValueError:
+#         print("Please enter a valid number.")  # Handle non-integer input
+
 
 # ###################### with in pyhton 
 
@@ -140,11 +191,11 @@
 # logging.basicConfig(filename='neosoft.log', level=logging.CRITICAL)
 # @app.route('/')
 # def index():
-#     app.logger.debug('This is a debug message')
+    # app.logger.debug('This is a debug message')
     # app.logger.info('This is an info message')
-#     app.logger.warning('This is a warning message')
-#     app.logger.error('This is an error message')
-#     app.logger.critical('This is a critical message')
+    # app.logger.warning('This is a warning message')
+    # app.logger.error('This is an error message')
+    # app.logger.critical('This is a critical message')
 #     return 'Hello World !!'
 # if '__main__' == __name__:
 #     app.run(host='0.0.0.0', debug=True)
@@ -242,30 +293,27 @@
 # #############  Global Interpreter Lock (GIL)
 
 # import threading
+# import time
 
-# # Shared counter variable
-# counter = 0
+# def task(name):
+#     print(f"Task {name} starting")
+#     time.sleep(2)
+#     print(f"Task {name} completed")
 
-# # Function to calculate the square of numbers
-# def calculate_square():
-#     global counter
-#     for _ in range(1_000_000):
-#         counter += 1  # Increment the counter
+# # Create threads
+# thread1 = threading.Thread(target=task, args=("A",))
+# thread2 = threading.Thread(target=task, args=("B",))
 
-# # Create two threads to perform the task
-# thread1 = threading.Thread(target=calculate_square)
-# thread2 = threading.Thread(target=calculate_square)
-
-# # Start the threads
+# # Start threads
 # thread1.start()
 # thread2.start()
 
-# # Wait for both threads to finish
+# # Wait for threads to complete
 # thread1.join()
 # thread2.join()
 
-# # Print the final counter value
-# print("Final Counter Value:", counter)
+# print("Both tasks are done")
+
 
 #  ##########################   Django, signals
 
@@ -303,15 +351,23 @@
 
 # --------- Synchronous 
 
-# def task1():
-#     print("Task 1 completed")
+# import time
 
-# def task2():
-#     print("Task 2 completed")
+# def task1(a):
+#     print(f'task {a} start')
+#     time.sleep(1)
+#     print(f'task {a} end')
 
-# # Synchronous execution
-# task2()
-# task1()
+
+# def task2(b):
+#     print(f'task {b} start')
+#     time.sleep(1)
+#     print(f'task {b} end')
+
+
+# # # Synchronous execution
+# task1('A')
+# task2('B')
 
 # ---------- Asynchronous
 
@@ -339,6 +395,90 @@
 
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+
+# import numpy as np
+
+# float_array = np.array([1.1, 2.2, 3.3, 4.4], dtype=float)
+# print(float_array)  # Output: [1.1 2.2 3.3 4.4]
+
+# string_array = np.array(["apple", "banana", "cherry"])
+# print(string_array)  # Output: ['apple' 'banana' 'cherry']
+
+# mixed_array = np.array([42, "hello", 3.14], dtype=object)
+# print(mixed_array)
+
+# ########## shallow copy and deep copy 
+
+# import copy
+# original = [[1, 2, 3], [4, 5, 6]]
+# print('original 1 : ', original)
+# d = copy.deepcopy(original)
+# print('d 1 : ',d)
+# d[0][1] = 9
+# print('original 2 : ', original)
+# print('d 2 : ',d)
+
+# ############## create a dictionary using a list 
+
+# abc = ['a', 'b', 'c']
+# dictionary = {xyz: None for xyz in abc}
+# print(dictionary)
+# Output: {'a': None, 'b': None, 'c': None}
+
+
+# ----- In Python, class methods and instance methods are called in different ways.
+##### 1. Instance Method:
+class MyClass:
+    def instance_method(self):
+        print("This is an instance method.")
+
+obj = MyClass()
+obj.instance_method()  
+
+##### 2. Class Method:
+class MyClass:
+    @classmethod
+    def class_method(cls):
+        print("This is a class method.")
+
+MyClass.class_method()  
+
+# #####  Static Method  #####
+class Demo:
+    @staticmethod
+    def static_method():
+        print('Tish is Static Method  ')
+Demo.static_method()
+
+# Difference Between APIView and ViewSet in Django REST Framework (DRF)
+
+# ------- APIView ---------
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+class ExampleAPIView(APIView):
+    def get(self, request):
+        return Response({"message" : "Hello From APIView"})
+
+# -------- ViewSet --------
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+
+class ExampleViewSet(ViewSet):
+    def list(self, request):
+        return Response({"massage" : "Hello From ViewSet"})
+    
+# #########
+names = ["Kalpesh", "Shinde", "Address"]
+ls = []
+for i in names:
+    ls.append(i[0])
+x = '-'.join(map(str,ls))
+print(x)
+
+
+
+ 
 
 
 

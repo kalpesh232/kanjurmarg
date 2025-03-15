@@ -2,6 +2,6 @@ from flask import Blueprint
 print(__name__)
 neosoft_blueprint = Blueprint('neosoft_blueprint1', __name__)
 
-@neosoft_blueprint.route('/')
+@neosoft_blueprint.route('/blue')
 def home():
     return "This is an example home blueprint"

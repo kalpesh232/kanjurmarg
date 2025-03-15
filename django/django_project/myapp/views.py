@@ -68,17 +68,20 @@ def LoginUser(request):
         if user:
            if user.password == password:
                request.session['id'] = user.id
+               print('----------->', request.session['id'])
                request.session['role'] = user.role
                request.session['email'] = user.email
-               if account_type == 'Candidate':
+               print('account_type : ', account_type)
+               if account_type == 'candidate':
                    can = myCandidate.objects.get(user_id=user)
                    request.session['firstname'] = can.firstname
                    request.session['lastname'] = can.lastname
+                   return redirect('index_page')
                else:
                    com = myCompany.objects.get(user_id=user)
                    request.session['firstname'] = com.firstname
                    request.session['lastname'] = com.lastname 
-               return redirect('index_page')
+                   return redirect('company_index')
            else:
             message = "Passwaord Not Registred"
             return render(request, 'login.html',{'msg' : message})
@@ -92,6 +95,7 @@ def LoginUser(request):
 def profile_update(request, pk):
     user = myUserMaster.objects.get(pk=pk)
     role = request.session['role']
+    print('role : ', role)
     if role == 'candidate' :
         can_com = myCandidate.objects.get(id=pk)
     else:
@@ -126,3 +130,66 @@ def profile_update(request, pk):
 
     else:
         return render(request, 'profile.html',{'user' : user, 'can_com' :can_com })
+    
+# ########### comapny side ##########################
+    
+def companyAdmin(request):
+    return render(request, 'company_index.html')
+
+def CompanyProfile(request,pk):
+    xxxxx = myUserMaster.objects.get(pk=pk)
+    print('comapny_user : ', xxxxx.email)
+    comapny_role = request.session['role']
+    if comapny_role == 'company':
+        user = myCompany.objects.get(user_id_id = pk)
+        return render(request, 'company_register.html',{'xxxxx': xxxxx , 'user' : user})
+    
+    return render(request, 'company_register.html')
+
+def CompanyProfileUpdate(request,pk):
+    print('pk----------->', pk)
+    compUser = myUserMaster.objects.get(pk=pk)
+    print('compUser------------>', compUser.role)
+    if compUser.role ==  "company" :
+        comp = myCompany.objects.get(user_id = pk)
+        comp.firstname = request.POST['fname']
+        comp.lastname = request.POST['lname']
+        comp.state = request.POST['state']
+        comp.city = request.POST['city']
+        comp.contact = request.POST['contact']
+        comp.logo_pic = request.FILES['img']
+        comp.save()
+        url = f"/company_profile/{pk}"
+        return redirect(url)
+    
+def jobPostPage(request):
+    return render(request, 'jobpost.html')
+
+def JobDetailsSubmit(request):
+    user = myUserMaster.objects.get(id=request.session['id'])
+    print('request------>', user.role)
+    if user.role == "company":
+        comp = myCompany.objects.get(user_id=user)
+        jobname = request.POST['jobname']
+        companyname = request.POST['companyname']
+        address = request.POST['companyaddress']
+        jobdescription = request.POST['jobdescription']
+        qulification = request.POST['qulification']
+        responsibility = request.POST['responsibilities']
+        location = request.POST['location']
+        website = request.POST['companywebsite']
+        companycontact = request.POST['comapnycontact']
+        salary = request.POST['salarypackage']
+        companyemail = request.POST['companyemail']
+        experience = request.POST['experiance']
+        
+        logo = request.FILES['logo']
+
+        newjob = jobPosted.objects.create(
+            company_id=comp,jobname=jobname,companyname=companyname,companyaddress=address,jobdescription=jobdescription,qulification=qulification,responsibilities=responsibility,location=location,salarypackage=salary,experiance=experience,companywebsite=website,companyemail=companyemail,comapnycontact=companycontact,logo=logo)
+        
+        message = "Job Post SuccessFully"
+        return render(request, 'jobpost.html', {'message':message})
+
+def Logout(request):
+    return render(request, 'login.html')

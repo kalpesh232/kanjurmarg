@@ -1,0 +1,52 @@
+how to convert dict in to List
+how to merge two List
+-"- dict
+unit test in flask
+def display(**kargs)
+if age < 15 throw user  not allow
+how we use venv
+if one of my collegue commit a changes that i don't want so how can i revert back
+
+-> revert in a version-controlled system (such as Git)
+
+git branch
+git checkout <branch_name>
+git log --oneline   # Get commit hash
+git revert <commit_hash>
+git diff
+git commit -m "Revert changes from <commit_hash>"
+git push origin <branch_name>
+
+
+->  inbuilt function we use to for empty input feild in form front end validation
+In HTML forms, you can use the required attribute to enforce that a field must be filled out before submitting the form. 
+
+-> To find the employee with the highest salary in a SQL database
+SELECT *
+FROM employees
+ORDER BY salary DESC
+LIMIT 1;
+
+-> SELECT rollno.rollno, rollno.name, exam.exam_id, exam.score
+FROM rollno
+LEFT JOIN exam ON rollno.rollno = exam.rollno;
+
+CREATE TABLE exam (
+    rollno INT,
+    s_code INT PRIMARY KEY,
+    marks INT,
+    p_code INT,
+    FOREIGN KEY (rollno) REFERENCES student(rollno)
+);
+
+-> difference between merge, join and concatenate
+### Corrected Explanation:
+
+- **Merge**: Combines DataFrames based on common columns or indices. By default, it returns only matching rows (inner join).  
+- **Join**: Combines DataFrames based on index. Can specify left, right, or inner join.  
+- **Concatenate**: Stacks DataFrames vertically or horizontally. Fills missing values with NaN.  
+
+option method
+linux 
+docker
+
