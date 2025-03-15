@@ -109,7 +109,7 @@ In a more formal sense, an array may refer to the array module in Python, which 
 -> git fetch vs pull
 - git fetch gets changes from the remote repository but doesn't merge them into your local branch. git pull gets changes and immediately merges them into your current branch.
 
--> Differences and Applications of List, Tuple, Set and Dictionary in Python(C M R R O A D)
+-> Differences and Applications of List, Tuple, Set, frozenset and Dictionary in Python(C M R R O A D)
 -
 | Feature        | List (`[]`)            | Tuple (`()`)        | Set (`{}`)         | Frozenset (`frozenset()`) | Dictionary (`{key: value}`) |
 |-------------- |----------------------|-------------------|-----------------|-------------------------|-------------------------|
