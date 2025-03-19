@@ -3,3 +3,4 @@ jobs/
 myenv/
 python/__pycache__/
 shark/
+fastapi/eavhdi/__pycache__/
