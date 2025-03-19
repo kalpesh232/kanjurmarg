@@ -11,3 +11,6 @@ git log checkout --not flask python django mysql invstg git jobs javascript --on
 >> Delete the checkout branch:
 git branch -D checkout  # Force delete locally
 git push origin --delete checkout  # Delete from remote if needed
+
+>> Remove the file from Git tracking
+git rm --cached fastapi/eavhdi/__pycache__/techwithtim.cpython-311.pyc
