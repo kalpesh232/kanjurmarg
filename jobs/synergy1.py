@@ -7,29 +7,6 @@
 # result = (''.join(ls_str))
 # print('ls_str : ', result)
 
-# ----------    Write a Python program to check if a string is a palindrome.
-
-# x = "level"
-# x2 = x[::-1]
-# if x == x2 :
-#     print('x1 and x2 are palindrom')
-# else:
-#     print('x1 and x2 are not palindrom')
-
-# print(x2)
-
-
-# ------------ Write a Python program to find the factorial of a number.
-
-# def fact(n):
-#     if n <= 1:
-#         return 1
-#     else:
-#         return fact(n - 1) * n
-
-# x = fact(8)
-# print(x)
-
 
 # ---------- Write a Python program to find the largest element in a list.
 
@@ -62,34 +39,6 @@
 #         x_dict[item] = 1
 
 # print('Result:', x_dict)
-# --------- Write a Python program to check if a number is prime.
-
-# primt_list = []
-
-# def is_prime(x):
-#     if x < 2:
-#         print(f'{x} is not a Prime Number')
-#         return False
-#     for i in range(2, x):
-#         if x % i == 0 :
-#             print(f'{x} is Not  a Prime Number')
-#             return False
-#             break
-#     else:
-#         print(f'{x} is  a Prime Number')
-#         return True
-        
-
-# # x = int(input('Enter Number : '))
-# # is_prime(x)
-# countter = 1
-# while len(primt_list) < 50 :
-#     result = is_prime(countter)
-#     if result :
-#         primt_list.append(countter)
-#     countter += 1
-# print(len(primt_list))
-# print(sum(primt_list))
 
 # --------- Write a Python program to find the common elements between two lists.
 
@@ -193,5 +142,7 @@
 # b = book('myBook', 'kalpesh','2024')
 # result = b.display()
 # print(result)
+
+
 
 

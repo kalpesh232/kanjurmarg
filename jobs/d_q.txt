@@ -9,8 +9,8 @@
    - View represents the backend, where server-side logic is implemented. Views control the interaction between models and templates, handling requests and generating responses. 
    - Template stands for the frontend, where the user interface is designed.
 
-4. **What is Django ORM?**
-   - Django ORM (Object-Relational Mapping) provides methods like `get`, `filter`, `create`, `save`, and `delete` to interact with the database. It allows developers to perform database operations using Python code instead of raw SQL queries.
+4. **What is the use of the session framework in Django?**
+   - The session framework in Django is used to handle user activity, such as determining if a user is logged in. It allows the storage and retrieval of data across multiple pages on the server side, providing a secure way to manage user sessions.
 
 5. **What are Django URLs?**
    - Django URLs are responsible for mapping user requests to specific functions (views) in the application. They define the routing mechanism within a Django project.
@@ -22,5 +22,3 @@
 7. **Which databases are supported by Django?**
    - Django supports various databases, including PostgreSQL, MySQL, SQLite, and Oracle, allowing flexibility in choosing a backend data store.
 
-8. **What is the use of the session framework in Django?**
-   - The session framework in Django is used to handle user activity, such as determining if a user is logged in. It allows the storage and retrieval of data across multiple pages on the server side, providing a secure way to manage user sessions.

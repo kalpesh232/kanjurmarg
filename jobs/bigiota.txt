@@ -29,7 +29,7 @@ DCL (data control language) - grant, revoke
 - Atomicity: If any part fails, the entire transaction is rolled back.
 - Consistency: Transactions bring the database from one valid state to another, maintaining data integrity.
 - Isolation: Transactions are independent; the intermediate state of one transaction is invisible to others.
-- Durability: Once a transaction is committed, the changes are permanent, even in case of a system failure.
+- Durability: Once a transaction is committed, the changes are permanent.
 
 5.  Which query would you write to find every duplicate in a table?
 - Using the GROUP BY command to group the table’s rows by target columns and check for duplicates
