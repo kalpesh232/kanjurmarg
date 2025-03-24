@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 1. Python supports a variety of operators  (C L A I M A B ) [7]
+=======
+1. Python supports a variety of operators7 (C L A A M B I) 
+>>>>>>> Stashed changes
 Arithmetic Operators
     Used for mathematical operations:
         + (Addition): Adds two values.
