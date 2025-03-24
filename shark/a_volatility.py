@@ -33,6 +33,7 @@ def analyze_index_data(file_path):
    
 @app.route('/', methods=['GET','POST'])
 def calculate_volatilty():
+    print('='* 153)
     if request.method == 'POST':
         if 'file' not in request.files:
             return jsonify({'error': 'No file provided'}), 400

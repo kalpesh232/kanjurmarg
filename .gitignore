@@ -1,9 +1,8 @@
+django/django_project/
+jobs/
 myenv/
-django/django_project
-jobs/neosoft.log
-jobs/__pycache__/
-shark/temp.csv
 python/__pycache__/
+shark/
 fastapi/eavhdi/
 
 
