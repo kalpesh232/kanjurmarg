@@ -6,8 +6,8 @@ update query with join table
 -> UPDATE 
 employees JOIN departments 
 ON employees.department_id = departments.department_id
-SET employees.salary = employees.salary * 1.1
-WHERE departments.department_name = 'Engineering';
+SET employees.salary = employeent_nas.salary * 1.1
+WHERE departments.departmeme = 'Engineering';
 
 
 json.dump
