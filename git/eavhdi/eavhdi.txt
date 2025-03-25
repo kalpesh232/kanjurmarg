@@ -14,3 +14,6 @@ git push origin --delete checkout  # Delete from remote if needed
 
 >> Remove the file from Git tracking
 git rm --cached fastapi/eavhdi/__pycache__/techwithtim.cpython-311.pyc
+
+>> rename your branch
+git branch -m redis
