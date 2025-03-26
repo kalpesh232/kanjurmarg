@@ -1,0 +1,53 @@
+Here are some frequently used **SQL `ALTER` commands** for modifying database tables:
+
+### **1. Add a Column**
+```sql
+ALTER TABLE customers ADD COLUMN age INT;
+```
+
+### **2. Add Multiple Columns**
+```sql
+ALTER TABLE customers ADD COLUMN gender VARCHAR(10), ADD COLUMN dob DATE;
+```
+
+### **3. Modify a Column (Change Data Type)**
+```sql
+ALTER TABLE customers MODIFY COLUMN phone VARCHAR(20);
+```
+
+### **4. Rename a Column**
+```sql
+ALTER TABLE customers CHANGE COLUMN phone contact_number VARCHAR(20);
+```
+
+### **5. Drop a Column**
+```sql
+ALTER TABLE customers DROP COLUMN age;
+```
+
+### **6. Rename a Table**
+```sql
+ALTER TABLE customers RENAME TO client_data;
+```
+
+### **7. Add a Constraint (e.g., UNIQUE, NOT NULL)**
+```sql
+ALTER TABLE customers MODIFY COLUMN email VARCHAR(50) UNIQUE NOT NULL;
+```
+
+### **8. Drop a Constraint**
+```sql
+ALTER TABLE customers DROP INDEX email;  -- For UNIQUE constraint
+```
+
+### **9. Add a Foreign Key**
+```sql
+ALTER TABLE orders ADD CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id);
+```
+
+### **10. Remove a Foreign Key**
+```sql
+ALTER TABLE orders DROP FOREIGN KEY fk_customer;
+```
+
+These `ALTER` commands help modify table structures dynamically. 🚀
