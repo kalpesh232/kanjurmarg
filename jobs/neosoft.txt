@@ -33,7 +33,7 @@ In Python, the with statement is like a helper for managing resources, such as f
 The code without with  manually opens, reads, and closes a file. The  code, using with, automatically takes care of opening and closing the file, making the code cleaner and less prone to mistakes
 
 -> Logging 
-In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info,wrapping, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
 Logging Level	Value
 NOTSET	0
 DEBUG	10
@@ -172,6 +172,7 @@ yield: Pauses a function and returns a value. The function’s state is preserve
 
 -> What is the difference between a class method and an instance method and static method in Python?
 ->(O M D C A)
+
 Instance Method:
 Operates on an instance of the class.
 Can access and modify the instance's attributes.
@@ -192,7 +193,7 @@ Defined using @staticmethod.
 Used for utility/helper functions.
 Called using Class.method() or instance.method().- (F U M D U)
 
--> Difference Between APIView and ViewSet in Django REST Framework (DRF)
+-> Difference Between APIView and ViewSet in Django REST Framework (DRF) [D F M U U]
 | Feature        | APIView                                      | ViewSet                                        |
 |---------------|--------------------------------------------|----------------------------------------------|
 | Definition    | A class-based view for handling API requests. | A set of views that automatically handles CRUD operations. |
