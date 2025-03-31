@@ -185,19 +185,26 @@
 #     print(file.read())
 
 # ############################### Logging
-# from flask import Flask
 # import logging
+# from flask import Flask
+
+# logging.basicConfig(filename='x.log', level=logging.ERROR)
+
 # app = Flask(__name__)
-# logging.basicConfig(filename='neosoft.log', level=logging.CRITICAL)
-# @app.route('/')
+
+# # Set Flask logger to ERROR level explicitly
+# app.logger.setLevel(logging.ERROR)
+
+# @app.route("/")
 # def index():
-    # app.logger.debug('This is a debug message')
-    # app.logger.info('This is an info message')
-    # app.logger.warning('This is a warning message')
-    # app.logger.error('This is an error message')
-    # app.logger.critical('This is a critical message')
-#     return 'Hello World !!'
-# if '__main__' == __name__:
+#     app.logger.debug("_______ debug")     # ❌ Not logged
+#     app.logger.info("_______ info")       # ❌ Not logged
+#     app.logger.warning("_______ warning") # ❌ Not logged
+#     app.logger.error("_______ error")     # ✅ Logged
+#     app.logger.critical("_______ critical") # ✅ Logged
+#     return 'True'
+
+# if __name__ == '__main__':
 #     app.run(host='0.0.0.0', debug=True)
 
 # ########################## Immutable String
@@ -215,28 +222,28 @@
 
 # ######################## Multiple Decorators
 
-# def div(a,b):
-#     print('in div')
-#     print(a/b)
-
-# def swapping(fuc):
-#     def wrapper1(a,b):
-#         if a < b :
-#             a,b = b ,a
-#         return fuc(a,b)
-#     return wrapper1
-    
-# def multiple(fuc):
-#     def wrapper(a,b):
-#         a *= 5
-#         b *= 5
-#         return fuc(a,b)
+# def swapping(fun):
+#     def wrapper(a, b):
+#         if a < b:
+#             a, b = b, a
+#         return fun(a, b)
 #     return wrapper
 
-# div = swapping(div)
-# if div.__name__ == 'wrapper1':
-#     div = multiple(div)
-# div(2,4)
+# def mul(fun):
+#     def wrapper(a, b):
+#         a += 5
+#         b += 5
+#         return fun(a, b)
+#     return wrapper
+
+# @swapping  # Executes after @mul
+# @mul       # Executes first
+# def div(a, b):
+#     print(a / b)
+
+# div(3, 9) 
+# div(9, 3) 
+
 
 # ############################### Flask Blueprint
 
@@ -395,6 +402,9 @@
 
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+# float_array = array('f', [1.1, 2.2, 3.3])  # Floating-point
+# char_array = array('u', ['a', 'b', 'c'])   # Unicode characters
+# short_array = array('h', [100, 200, 300])  # Signed short integer
 
 # import numpy as np
 
