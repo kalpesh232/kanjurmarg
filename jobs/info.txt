@@ -7,7 +7,7 @@ key should be unique where value can be repeat
 
 ---------x---------
 
-1. Software Development Life Cycle (SDLC):(P R D D T D M)
+1. Software Development Life Cycle (SDLC):(P R D D T D M) [7]
 - The Software Development Life Cycle (SDLC) is a process used to design, develop, test, and deploy software systems.
 -Planning : Defining the project goals, scope, and resources required.
 -Requirements Analysis : Gathering and analyzing the software requirements from stakeholders.

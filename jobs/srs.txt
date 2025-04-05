@@ -22,7 +22,7 @@ Full-Text Index: Optimized for text searches.
 Clustered Index: Physically sorts rows in the table based on the key values.
 Non-Clustered Index: A separate structure that points to the table's data.
 
-3. To optimize an SQL query: (S P I L E D )
+3. To optimize an SQL query: (I D S L E P )
 - Avoid SELECT *: Select only required columns.
 - Limit Results: Use LIMIT to fetch only required rows.
 - Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.

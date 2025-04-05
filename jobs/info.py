@@ -83,6 +83,7 @@
 # data = [[1, 2], [3, 4]]
 # result = Cartesian(data)
 # print('result : ', result)
+# [list(item) for item in product(*prices)]
 
 # mydict = {}
 # def Flatten(data, main_key=''):
@@ -134,17 +135,17 @@
 # print(prime_ls)
 # print(sum(prime_ls))
 
-num = 123
-stor = num
-reminder = 0
-while num > 0:
-    last_digit = num % 10
-    reminder = last_digit+ reminder * 10
-    num //= 10
-if reminder == stor:
-    print(f'{stor} is palindroman')
-else:
-    print(f'{stor} is not palindroman')
+# num = 123
+# stor = num
+# reminder = 0
+# while num > 0:
+#     last_digit = num % 10
+#     reminder = last_digit+ reminder * 10
+#     num //= 10
+# if reminder == stor:
+#     print(f'{stor} is palindroman')
+# else:
+#     print(f'{stor} is not palindroman')
 # if str(num) == str(num)[::-1]:
 
 # from functools import reduce
@@ -155,17 +156,14 @@ else:
 # x = lambda x,y : x+y 
 # print(x(10,20))
 
-# mychar = 'kalpeshharishchandrashinde'
-# ls1 = []
-# str1 = ''
-# for i in mychar:
-#     if i not in str1:
-#         str1 += i
-#     else:
-#         ls1.append(str1)
-#         str1 = i
-# ls1.append(str1)
-# dict1 = {j : len(j) for j in ls1}
-# result = {k : v for k,v in dict1.items() if v == (max(dict1.values()))}
-# print(result)
+mychar = 'kalpeshharishchandrashinde'
+mystr , mylst= '',  []
+for i in mychar:
+    if i in mystr:
+        mylst.append(mystr)
+        mystr = ''
+    mystr += i
+mylst.append(mystr)
+mydict = {i: len(i) for i in mylst if len(i) == max(map(len, mylst)) } # applies the len function to each element in mylst
+print(mydict)
 

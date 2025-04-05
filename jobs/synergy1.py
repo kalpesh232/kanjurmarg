@@ -94,19 +94,20 @@
 # dict = {
 #     'id' : [1,4,np.nan, 9],
 #     'age' : [30,45,90, 55],
-#     'score' : [130, 140, np.nan, 198]
+#     'score' : [130,  np.nan, 140, 198]
 # }
 
 # df = pd.DataFrame(dict)
-
+# print(df)
+# print('')
 # # print(df.isnull().sum())
 # # drop missing values
-# # df.dropna(axis = 1, how = 'all')
-
+# # output = df.dropna(axis = 1, how = 'all')
+# # print(output)
 # # x = df.dropna()
 # # x = df.fillna(00.00)
 # # x = df.replace(to_replace=30, value=999)
-# x = df.interpolate(method='slinear', limit_direction='both')
+
 
 # print(x)
 
