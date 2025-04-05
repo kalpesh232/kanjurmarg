@@ -8,6 +8,6 @@ def max_profit(prices):
 
     return max_profit if max_profit > 0 else "No Profit"
 
-prices = [2, 5]
+prices = [9,7,6,3,8,5,2]
 result = max_profit(prices)
 print(result)  # Output: 3

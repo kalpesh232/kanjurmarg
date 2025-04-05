@@ -83,12 +83,14 @@ Automatically indexed like a primary key.
 Can be used as a foreign key, but rarely.
 Multiple unique keys can exist in a table.
 
-
----------- Foreign Key(C R I M N)
+---------- Foreign Key(C M N C M)
 Relationship: Connects two tables by referring to the primary key of another table.
-Referential Integrity: Ensures foreign key values match existing primary key values in the related table.
-Nullable: Can be NULL if linking to another table is optional.
 Multiple Foreign Keys: A table can have multiple foreign keys linking to different tables.
+Nullable: Can be NULL if linking to another table is optional.
 Cascading Actions: Changes in the primary key table can affect related records (e.g., cascading delete).
+Referential Integrity: Ensures foreign key values match existing primary key values in the related table.
+
+
+
 
 

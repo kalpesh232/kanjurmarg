@@ -19,7 +19,7 @@ I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved
 6.how can or in how many tpe we defin e a url in  flask python?
 -> In Flask, you define URLs using route decorators. There are two types: static (with fixed paths) and dynamic (with variable parts). Syntax-wise, you can use @app.route for decorators or app.add_url_rule method to create URLs. Both ways help  map URLs to functions in your Flask application.
 
-7.which  libraries are you using in python?(N P M D F R T S O R)
+7.which  libraries are you using in python?(D R F O R P M N T S )
 ->
 NumPy:
 Example: Used for array operations, mathematical functions.
@@ -52,8 +52,7 @@ OS:
 Example: Used for file operations, directory manipulation, etc.
 
 8.Describe a challenging technical problem you encountered in a previous project and how you solved it. 
-In my Toshiba project, sensor data received via MQTT was inconsistent, causing incorrect machine status updates. To resolve this, I implemented data validation, adjusted MQTT QoS settings for reliable delivery, and applied smoothing techniques to stabilize readings. This ensured accurate system updates and improved reliability.
-
+In my Toshiba project, sensor data received via MQTT was inconsistent, causing incorrect machine status updates. To resolve this, I implemented data validation, and applied smoothing techniques to stabilize readings. This ensured accurate system updates and improved reliability.
 
 9.What is the difference between a module and a package in Python?
 ->

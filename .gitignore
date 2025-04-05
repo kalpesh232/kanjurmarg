@@ -4,5 +4,6 @@ myenv/
 python/__pycache__/
 shark/
 fastapi/eavhdi/
+react/
 
 

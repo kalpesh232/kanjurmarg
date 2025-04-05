@@ -399,23 +399,16 @@
 
 # -------- Sum of All Numbers in a Mixed Alphanumeric String
 # Input = "abc123xyz45"
-# num = ['7','8','9','4','5','6','1','2','3','0']
-# ls = []
-# x1 = ''
+# mystr = ''
+# myls = []
 # for i in Input:
-#     # print('i : ', i)
-#     if i in num:
-#         x1 += i
-#     else:
-#         if x1 != '':
-#             x1 = int(x1)
-#             ls.append(x1)
-#         x1 = ''
-#     # print('x : ', ls)
-#     # x1 = ''
-# x1 = int(x1)
-# ls.append(x1)
-# print((sum(ls)))
+#    if i.isdigit():
+#       mystr += i
+#    elif mystr != '' :
+#         myls.append(int(mystr))
+#         mystr = ''
+# myls.append(int(mystr))
+# print(sum(myls))
 
 # -------- Run-Length Encoding (RLE) Compression
 # Input =  "aaabbc"
