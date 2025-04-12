@@ -42,15 +42,52 @@
 #     # Shut down the scheduler gracefully on interruption
 #     scheduler.shutdown()
 
-# ----------- dict to list
-# thisdict = {
-#   "brand": "Ford",
-#   "model": "Mustang",
-#   "year": 1964
-# }
+# -----  Convert dictionary into a flat list (keys and values)
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# l = [item for pair in my_dict.items() for item in pair ]
+# print(l)
 
-# myList = list(thisdict.items())
-# print(myList[1])
+# -------------- merge (concatenate) two lists 
+# list1 = [1, 2, 3]
+# list2 = [4, 5, 6]
+
+# list1.extend(list2)
+# print(list1)
+
+# ----------------------- merge (combine) two dictionaries in Python
+
+# dict1 = {'a': 1, 'b': 2}
+# dict2 = {'b': 3, 'c': 4}
+
+# dict1.update(dict2)
+# print(dict1)
+
+# dict1 = {'a': 1, 'b': 2}
+# dict2 = {'b': 3, 'c': 4}
+
+# merged_dict = {**dict1, **dict2}
+# print(merged_dict)
+
+# ---------- unit test in python
+# import unittest
+
+# def add(a, b):
+#     return a + b
+
+# # Unit test class
+# class TestAddFunction(unittest.TestCase):
+#     def test_add_positive_numbers(self):
+#         self.assertEqual(add(2, 3), 5)
+
+#     def test_add_negative_numbers(self):
+#         self.assertEqual(add(-2, -3), -5)
+
+#     def test_add_negative_numbers1(self):
+#         self.assertEqual(add(-2, 3), 1)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
 
 # ---------- veriable lenght argument 
 
@@ -171,33 +208,4 @@
 # # printing the color and speed of cars
 # print(audi.color)
 # print(bmw.speed)
-
-
-
-
-
-
-
-
-
-# -------------- merge (concatenate) two lists 
-# list1 = [1, 2, 3]
-# list2 = [4, 5, 6]
-
-# list1.extend(list2)
-# print(list1)
-
-# ----------------------- merge (combine) two dictionaries in Python
-
-# dict1 = {'a': 1, 'b': 2}
-# dict2 = {'b': 3, 'c': 4}
-
-# dict1.update(dict2)
-# print(dict1)
-
-# dict1 = {'a': 1, 'b': 2}
-# dict2 = {'b': 3, 'c': 4}
-
-# merged_dict = {**dict1, **dict2}
-# print(merged_dict)
 

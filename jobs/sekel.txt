@@ -1,0 +1,26 @@
+-> Difference Between Low-Level Design (LLD) and High-Level Design (HLD) (D F U I L)
++----------------------+--------------------------------+--------------------------------+
+| Feature              | High-Level Design (HLD)       | Low-Level Design (LLD)        |
++----------------------+--------------------------------+--------------------------------+
+| Definition           | Overview of system architecture and major components | Detailed implementation of components, classes, and methods |
+| Focus               | Defines modules, technologies, and database structure | Defines classes, methods, logic, and data flow |
+| Level of Detail     | Abstract, system-wide design  | Detailed, component-level design |
+| Used By             | Architects & Senior Developers | Developers & Engineers |
+| Includes            | System architecture, modules, technology stack, APIs | Class diagrams, database schema, function-level details |
++----------------------+--------------------------------+--------------------------------+
+
+-> Other uses of Redis and RabbitMQ in short:
+Redis
+Caching: Store frequently accessed data  for fast retrieval.
+Rate Limiting: Track and limit user requests.
+RabbitMQ
+Work Queues: Distribute tasks across multiple workers.
+Pub/Sub Messaging: Broadcast messages to multiple subscribers.
+
+-> API optimization (D Q P D A) 
+API optimization involves improving the performance, scalability, and efficiency of an API.
+1. Choose the Efficient data structures for API logic and Avoid nested loops or inefficient algorithms.
+2. Use batch queries or bulk operations instead of multiple individual queries.
+3. Return data in chunks using pagination to reduce response size and improve performance.
+5. Reuse database connections instead of creating new ones for each request.
+7. Use asynchronous libraries like asyncio to handle multiple requests concurrently.
