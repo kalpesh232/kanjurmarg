@@ -185,19 +185,26 @@
 #     print(file.read())
 
 # ############################### Logging
-# from flask import Flask
 # import logging
+# from flask import Flask
+
+# logging.basicConfig(filename='x.log', level=logging.ERROR)
+
 # app = Flask(__name__)
-# logging.basicConfig(filename='neosoft.log', level=logging.CRITICAL)
-# @app.route('/')
+
+# # Set Flask logger to ERROR level explicitly
+# app.logger.setLevel(logging.ERROR)
+
+# @app.route("/")
 # def index():
-    # app.logger.debug('This is a debug message')
-    # app.logger.info('This is an info message')
-    # app.logger.warning('This is a warning message')
-    # app.logger.error('This is an error message')
-    # app.logger.critical('This is a critical message')
-#     return 'Hello World !!'
-# if '__main__' == __name__:
+#     app.logger.debug("_______ debug")     # ❌ Not logged
+#     app.logger.info("_______ info")       # ❌ Not logged
+#     app.logger.warning("_______ warning") # ❌ Not logged
+#     app.logger.error("_______ error")     # ✅ Logged
+#     app.logger.critical("_______ critical") # ✅ Logged
+#     return 'True'
+
+# if __name__ == '__main__':
 #     app.run(host='0.0.0.0', debug=True)
 
 # ########################## Immutable String
@@ -215,28 +222,28 @@
 
 # ######################## Multiple Decorators
 
-# def div(a,b):
-#     print('in div')
-#     print(a/b)
-
-# def swapping(fuc):
-#     def wrapper1(a,b):
-#         if a < b :
-#             a,b = b ,a
-#         return fuc(a,b)
-#     return wrapper1
-    
-# def multiple(fuc):
-#     def wrapper(a,b):
-#         a *= 5
-#         b *= 5
-#         return fuc(a,b)
+# def swapping(fun):
+#     def wrapper(a, b):
+#         if a < b:
+#             a, b = b, a
+#         return fun(a, b)
 #     return wrapper
 
-# div = swapping(div)
-# if div.__name__ == 'wrapper1':
-#     div = multiple(div)
-# div(2,4)
+# def mul(fun):
+#     def wrapper(a, b):
+#         a += 5
+#         b += 5
+#         return fun(a, b)
+#     return wrapper
+
+# @swapping  # Executes after @mul
+# @mul       # Executes first
+# def div(a, b):
+#     print(a / b)
+
+# div(3, 9) 
+# div(9, 3) 
+
 
 # ############################### Flask Blueprint
 
@@ -395,6 +402,9 @@
 
 # from array import array
 # my_array = array('i', [1, 2, 3, 4, 5])  # 'i' represents integer type
+# float_array = array('f', [1.1, 2.2, 3.3])  # Floating-point
+# char_array = array('u', ['a', 'b', 'c'])   # Unicode characters
+# short_array = array('h', [100, 200, 300])  # Signed short integer
 
 # import numpy as np
 
@@ -407,6 +417,16 @@
 # mixed_array = np.array([42, "hello", 3.14], dtype=object)
 # print(mixed_array)
 
+# ########## shallow copy and deep copy 
+
+# import copy
+# original = [[1, 2, 3], [4, 5, 6]]
+# print('original 1 : ', original)
+# d = copy.deepcopy(original)
+# print('d 1 : ',d)
+# d[0][1] = 9
+# print('original 2 : ', original)
+# print('d 2 : ',d)
 
 # ############## create a dictionary using a list 
 
@@ -415,20 +435,60 @@
 # print(dictionary)
 # Output: {'a': None, 'b': None, 'c': None}
 
-# ############ json.dumps() and json.loads()
 
-# import json
-# data = {"name": "John", "age": 30}
-# print('data type : ',  type(data))
-# json_string = json.dumps(data)
-# print('json_string type 1 : ',  type(json_string))  
-# print('json_string 1 : ',  json_string)  
+# ----- In Python, class methods and instance methods are called in different ways.
+##### 1. Instance Method:
+class MyClass:
+    def instance_method(self):
+        print("This is an instance method.")
 
-# json_string = '{"name": "John", "age": 30}'
-# print('json_string type : ',  type(json_string))
-# data = json.loads(json_string)
-# print('data type 1 : ',  type(data))  
-# print('data 1 : ',  data)  
+obj = MyClass()
+obj.instance_method()  
+
+##### 2. Class Method:
+class MyClass:
+    @classmethod
+    def class_method(cls):
+        print("This is a class method.")
+
+MyClass.class_method()  
+
+# #####  Static Method  #####
+class Demo:
+    @staticmethod
+    def static_method():
+        print('Tish is Static Method  ')
+Demo.static_method()
+
+# Difference Between APIView and ViewSet in Django REST Framework (DRF)
+
+# ------- APIView ---------
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+class ExampleAPIView(APIView):
+    def get(self, request):
+        return Response({"message" : "Hello From APIView"})
+
+# -------- ViewSet --------
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+
+class ExampleViewSet(ViewSet):
+    def list(self, request):
+        return Response({"massage" : "Hello From ViewSet"})
+    
+# #########
+names = ["Kalpesh", "Shinde", "Address"]
+ls = []
+for i in names:
+    ls.append(i[0])
+x = '-'.join(map(str,ls))
+print(x)
+
+
+
+ 
 
 
 

@@ -19,7 +19,7 @@ I worked at PlayerzPot Media Pvt Ltd, a fantasy gaming company. My role involved
 6.how can or in how many tpe we defin e a url in  flask python?
 -> In Flask, you define URLs using route decorators. There are two types: static (with fixed paths) and dynamic (with variable parts). Syntax-wise, you can use @app.route for decorators or app.add_url_rule method to create URLs. Both ways help  map URLs to functions in your Flask application.
 
-7.which  libraries are you using in python?(N P M D F R T S O R)
+7.which  libraries are you using in python?(D R F O R P M N T S )
 ->
 NumPy:
 Example: Used for array operations, mathematical functions.
@@ -51,21 +51,8 @@ Example: Used for measuring execution time or introducing delays.
 OS:
 Example: Used for file operations, directory manipulation, etc.
 
-8.What is the difference between a class method and an instance method in Python?
-->
-Instance Method:
-Operates on an instance of the class.
-Can access and modify the instance's attributes.
-Defined using the def keyword inside the class, with self as the first parameter.
-Called on an instance of the class: instance.method().
-Instance attributes are accessed using self inside the class.
-
-Class Method:
-Operates on the class itself, rather than an instance.
-Cannot access or modify instance-specific attributes.
-Defined using the @classmethod decorator, with cls as the first parameter.
-Called on the class: Class.method().
-Class attributes are accessed directly using the class name .
+8.Describe a challenging technical problem you encountered in a previous project and how you solved it. 
+In my Toshiba project, sensor data received via MQTT was inconsistent, causing incorrect machine status updates. To resolve this, I implemented data validation, and applied smoothing techniques to stabilize readings. This ensured accurate system updates and improved reliability.
 
 9.What is the difference between a module and a package in Python?
 ->
@@ -84,17 +71,15 @@ Used for organizing code across multiple files and subdirectories.
 Lambda functions in Python are used for concise and anonymous function definitions, often in situations where a full function is unnecessary They are especially useful for short-lived operations.
 
 11.Explain how request is processed in django? (U V M H T F)
-- Django uses URL patterns, defined in urls.py to match the incoming request URL to a specific view function.
+- Django URLs are responsible for mapping user requests to specific functions (views) in the application. They    define the routing mechanism within a Django project.
 - Matching view function is called, which processes the request and generates a response. This may involve querying the database, processing forms, etc.
 - Middleware allows you to process requests and responses globally. It can modify requests before they reach the view and responses before they are sent back to the client. Middleware can handle tasks like authentication.
 - The view function returns an HTTP response object. This can be a rendered HTML page, JSON data.
 - If the view function returns a template response, Django renders the template with context data and sends the resulting HTML back as part of the HTTP response.
 - The final response is sent back to the client.
 
-12.what is the use of py manage.py makemigrations?
--The command python manage.py makemigrations in Django is used to create new migration files based on changes you’ve made to your models.
--It detects changes in your Django models
-- It creates migration files in the migrations directory of each app. These files contain the instructions to apply the changes to your database schema.
+12.Django ORM 
+-> Django ORM (Object-Relational Mapping) allows developers to interact with the database using Python code instead of raw SQL queries, reducing the chances of mistakes. It maps database tables to Python classes and provides built-in methods like get, filter, create, save, and delete to handle database operations automatically. This makes database management easier and more efficient.
 
 13.what is context in django?
 -In Django, context refers to the data passed from a view to a template. This data is used to dynamically generate the HTML content that the template will render.
@@ -116,8 +101,8 @@ If no objects match, it returns an empty queryset.
 16.python manage.py migrate
 - python manage.py migrate applies database changes based on your Django models, ensuring the database schema is up to date.
 
-17.Django ORM 
-->  Django ORM reduces the chance of mistakes compared to writing raw SQL queries by allowing you to interact with the database using Python code. It maps database tables to Python classes and handles SQL queries automatically.
+
+
 
 
 

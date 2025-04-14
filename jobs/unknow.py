@@ -356,7 +356,7 @@
 # print(mystr)
 
 # -------- Check if Two Strings are Anagrams
-# String_1= "listenlpw"
+# String_1=  "listenlpw"
 # String_2 = "silentlpr"
 # print(sorted(String_1) == sorted(String_2))
 
@@ -399,23 +399,16 @@
 
 # -------- Sum of All Numbers in a Mixed Alphanumeric String
 # Input = "abc123xyz45"
-# num = ['7','8','9','4','5','6','1','2','3','0']
-# ls = []
-# x1 = ''
+# mystr = ''
+# myls = []
 # for i in Input:
-#     # print('i : ', i)
-#     if i in num:
-#         x1 += i
-#     else:
-#         if x1 != '':
-#             x1 = int(x1)
-#             ls.append(x1)
-#         x1 = ''
-#     # print('x : ', ls)
-#     # x1 = ''
-# x1 = int(x1)
-# ls.append(x1)
-# print((sum(ls)))
+#    if i.isdigit():
+#       mystr += i
+#    elif mystr != '' :
+#         myls.append(int(mystr))
+#         mystr = ''
+# myls.append(int(mystr))
+# print(sum(myls))
 
 # -------- Run-Length Encoding (RLE) Compression
 # Input =  "aaabbc"
@@ -427,20 +420,20 @@
 # print(mystr)
 
 # -------- Generate and Sort All Substrings of a String
-Input = "abc"
-s = []
-for i in range(len(Input)):
-    for j in range(i,len(Input)):
-        s.append(Input[i:j+1])
-print(s)
-temmp = None
-for i in range(len(s)):
-    for j in range(len(s)):
-        if len(s[i]) < len(s[j]):
-            temmp = s[i]
-            s[i] = s[j]
-            s[j] = temmp
-print(s)
+# Input = "abc"
+# s = []
+# for i in range(len(Input)):
+#     for j in range(i,len(Input)):
+#         s.append(Input[i:j+1])
+# print(s)
+# temmp = None
+# for i in range(len(s)):
+#     for j in range(len(s)):
+#         if len(s[i]) < len(s[j]):
+#             temmp = s[i]
+#             s[i] = s[j]
+#             s[j] = temmp
+# print(s)
 
 
 

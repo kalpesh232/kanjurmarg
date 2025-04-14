@@ -6,28 +6,6 @@
 #         return value * fact(value - 1)
          
 # print('x : ', fact(7))
-#------------ Write a Python script to find the sum of the first 50 prime numbers.
-
-# num = 0
-# primt_ls = []
-# while True:
-#     print('Len : ', len(primt_ls))
-#     if len(primt_ls) < 51 :
-#         if num == 0 or num == 1 :
-#             pass
-#         else :
-#             for i in range(2,num):
-#                 if num % i == 0 :
-#                     print('not prime : ', num)
-#                     break
-#             else:
-#                 primt_ls.append(num)
-#                 print('prime : ', num)
-#         num += 1
-#     else :
-#         print('final list : ', primt_ls)
-#         print('sum of list : ', sum(primt_ls))
-#         break
 
 # ----------- Create a Python class representing a Book with properties such as title, author, and publication year. Include a method to display the book details.
 
@@ -41,27 +19,6 @@
 
 # book =  Book('myBooktittle',' kalpesh shinde', '22-12-2023')
 # print(book.book_details())
-
-# ---------- Write a Python function that checks if a given string is a palindrome
-
-# name = 'kalpesh'
-# if name == name[::-1] :
-#     print( f'{name } palindrome' )
-# else:
-#      print( f'{name } Not palindrome' )
-
-# num = 1223
-# stor = num
-# temp = 0
-# while num > 0 :
-#     last_digit = num % 10
-#     temp = last_digit + temp * 10
-#     num //= 10
-#     # print(temp)
-# if temp == stor:
-#     print( f'{stor } palindrome' )
-# else:
-#      print( f'{stor } Not palindrome' )
 
 # --------- Create a Python script that reads data from a JSON file and displays it in a formatted way.
 

@@ -71,7 +71,7 @@
 # base.metadata.create_all(engine)
 # Session = sessionmaker(bind=engine)
 # session = Session()
-
+# outerjoin
 # result = session.query(Parent).join(Child).all()
 
 # print('result : ', result)
