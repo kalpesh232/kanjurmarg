@@ -1,33 +1,52 @@
 1. what is abstraction and encapsulation?
--> Abstraction
-Abstraction is a fundamental concept in object-oriented programming (OOP) that involves hiding the complex 
-implementation details and showing only the necessary features of an object. 
-In Python, abstraction can be achieved through abstract classes and interfaces.
-An abstract class in Python is a class that cannot be instantiated on its own
+-> Abstraction :
+1. Abstraction is a  concept that involves hiding the complex 
+implementation details and showing only the necessary features. 
+2. An abstract class in Python is a class that cannot be instantiated on its own
 It may contain abstract methods, which are methods without a body.
-Abstract base classes allow you to define a common interface for a set of subclasses.
+3. Abstract base classes allow you to define a common interface for a set of subclasses.
+4. In Python, you cannot directly create an instance of an abstract class. 
 
 -> Encapsulation 
-Encapsulation in Python is like putting data and the actions that work on that data into a box called a class. This helps to organize and protect the data, keeping some parts private (like a secret, using double underscores) and others protected (handle with care, using a single underscore). The double underscore makes it harder to access and modify, acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and more organized.
+1. Encapsulation in Python is like putting data and the actions that work on that data into a box called a 
+class. 
+2. This helps to organize and protect the data, keeping some parts private ( using double underscores) 
+and others protected (using a single underscore). 
+3. The double underscore makes it harder to access and modify, acting as a stronger form of protection. It stops accidental messing up of data, making our code safer and more organized.
+4. You can't directly access private variables from outside the class, but it's not impossible. You can still
+ access them indirectly by Creating an instance of class. 
+A. Public Variable: Accessible anywhere. Example: obj.var
+B. Protected Variable: Meant for class and subclasses. Prefix with _. Example: obj._var
+C. Private Variable:  Accessible only inside the class. Prefix with __. Example: obj.__var
 
 -> Method Overloading
-In Python, you can create multiple functions with the same name but different arguments or numbers, a concept known as function overloading.  it's not supported in Python. This limitation exists because Python is an interpreted language.
+In Python, you can create multiple functions with the same name but different arguments or numbers, a concept known as method overloading.  it's not supported in Python. This limitation exists because Python is an interpreted language.
 
 -> Method overriding
-Method overriding is an ability of any object-oriented programming language that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.
+Method overriding allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its super-classes or parent classes.The method in the child class overrides the method in the base class.
 
 ->  Handle Exceptions 
-you can handle exceptions using try and except blocks. If you want to prevent errors from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.
+You can handle exceptions using try and except blocks. If you want to prevent exceptions from disrupting your program flow or hide them from clients, wrap the code in a try block. If an error occurs, the except block will be executed, allowing you to customize a response or perform other actions.
 
 -> With
 In Python, the with statement is like a helper for managing resources, such as files. It makes sure that things are set up and cleaned up properly around a block of code.
 The code without with  manually opens, reads, and closes a file. The  code, using with, automatically takes care of opening and closing the file, making the code cleaner and less prone to mistakes
 
 -> Logging 
-In Flask, you can use the Python logging module to keep track of different types of events and errors in your application. There are several levels like notset, debug, info, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info,wrapping, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+Logging Level	Value
+NOTSET	0
+DEBUG	10
+INFO	20
+WARNING	30
+ERROR	40
+CRITICAL	50
 
 -> Immutable String
-Yes, in Python, strings are immutable. This means that once you create a string object, you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
+Yes, in Python, strings are immutable. This means that once you create a string , you cannot change its content. If you want to modify a string, you need to create a new string with the desired changes.
+
+-> what is decoraters in python?
+- Decorators in Python let you modify a function's behavior without altering the original code. They work by wrapping the original function in another function, allowing you to add or change functionality without directly modifying the original function
 
 -> Flask blueprint
 A Flask Blueprint is a way to organize a Flask web application into smaller, reusable parts. It helps break down the code into manageable sections for better organization and maintenance. Blueprints can have their own routes, templates, and static files. They are registered with the main application to add their functionality
@@ -37,15 +56,14 @@ A Flask Blueprint is a way to organize a Flask web application into smaller, reu
 -: session.commit():
 The commit() method is used to save any changes made during the current session to the database.
 When you add, update, or delete objects within a session, those changes are not immediately reflected in the database. Committing the session makes those changes permanent.
-It is typically used at the end of a logical unit of work or a transaction.
+It is typically used at the end of a logical unit .
 
 -: session.flush():
-The flush() method is used to synchronize the session's state with the database, but it doesn't commit the transaction.
-It pushes any pending changes in the session to the database, allowing you to see the effects of those changes within the same transaction.
+The flush() method is used to update the session's state with the database, but it doesn't commit the transaction.
 Unlike commit(), flush() doesn't end the transaction, so you can continue making changes before eventually committing.
 
 ->  Global Interpreter Lock (GIL)
-The Global Interpreter Lock (GIL) in Python is like a traffic cop for threads. It makes sure only one thread can execute Python code at a time, preventing conflicts and simplifying certain aspects of memory management. While it helps with simplicity, it can limit the performance of multi-threaded programs on multi-core computers.
+The Global Interpreter Lock (GIL) in Python is like a traffic cop for threads. It makes sure only one thread can execute Python code at a time, preventing conflicts and simplifying the management.
 
 ->  Django, signals
 In Django, signals are a way for different parts of your app to talk to each other. They allow one part to send a message when something happens, and other parts can listen for that message and react to it. It helps keep different parts of your app loosely connected, making it easier to change and maintain. For example, when you save something in the database, a signal can be sent, and other parts can respond to it, like sending a notification.
@@ -66,8 +84,7 @@ Things happening independently, not strictly in order.
 Example: Like sending messages and doing other things while waiting for replies.
 
 -> "list" and "array"
-
-- List:
+- List:(DVIO)
 In Python, a list is a built-in data type that represents a collection of items.
 Lists are versatile and can contain elements of different data types.
 Elements in a list are accessed by their index.
@@ -76,3 +93,111 @@ Lists support various operations like appending, slicing, and more.
 - Array:
 The term "array" is sometimes used to refer to a list in Python. In everyday Python programming, when people talk about arrays, they often mean lists.
 In a more formal sense, an array may refer to the array module in Python, which provides a compact array of items of the same type. This is similar to a list but with a more restrictive structure.
+
+-> why we use cors?(Cross-origin resource sharing)
+- CORS helps when your website asks another website for data, but security measures might block the request. CORS allows these requests, making it possible for your website to get the data it needs from another service.
+
+-> differeance between shallow copy and deep copy 
+- Shallow copy shares references, so changes affect both the original and the copy. Deep copy creates independent copies with values, so changes in one don't impact the other.
+
+-> sum of sql table column
+- select sum(salary) from employees;
+
+-> default port of flask.
+- 5000
+
+-> git fetch vs pull
+- git fetch gets changes from the remote repository but doesn't merge them into your local branch. git pull gets changes and immediately merges them into your current branch.
+
+-> Differences and Applications of List, Tuple, Set, frozenset and Dictionary in Python(C M R R O A D)
+-
+| Feature        | List (`[]`)            | Tuple (`()`)        | Set (`{}`)         | Frozenset (`frozenset()`) | Dictionary (`{key: value}`) |
+|-------------- |----------------------|-------------------|-----------------|-------------------------|-------------------------|
+| **Duplicates** | Yes                  | Yes               | No              | No                      | Keys are unique        |
+| **Creation**   | `list()`              | `tuple()`         | `set()`         | `frozenset()`           | `dict()`                |
+| **Mutable**    | Yes                   | No                | Yes             | No                      | Yes                     |
+| **Ordered**    | Yes                   | Yes               | No              | No                      | Yes                     |
+| **Add**        | `append()`, `extend()` | Not possible      | `add()`         | Not possible            | `dict[key] = value`     |
+| **Remove**     | `remove()`, `pop()`    | Not possible      | `remove()`, `pop()` | Not possible      | `popitem()`             |
+
+
+-> What is MQTT?
+-
+MQTT, which stands for Message Queuing Telemetry Transport.
+MQTT is a messaging protocol used for communication between devices with limited bandwidth. In MQTT, the "broker" is like a hub that manages messages. Devices subscribe to "topics" they are interested in, and the broker ensures messages reach the right devices. "Publish" is sending a message, and "subscribe" is receiving messages on a specific topic. It's a simple and efficient way for devices to communicate in scenarios like IoT
+
+-> differeance between error and exception?
+- 
+Error : -
+Serious issues typically beyond the application's control.
+MemoryError, SystemError
+Not meant to be caught or handled.
+Exception : -
+Disruptions during execution that can be handled.
+ZeroDivisionError, FileNotFoundError
+Caught and handled using try-except blocks.
+
+-> How To create an empty dictionary?
+- 
+empty_dict = {}
+empty_dict = dict()
+
+-> How to create a dictionary using a list
+- Yes, you can create a dictionary using a list where the list elements become the keys of the dictionary. By default, the values for these keys can be set to None or any other default value. 
+
+
+-> What are the key differences between Flask, Django, and FastAPI?
+-
+| Feature         | Flask                               | Django                                | FastAPI                              |
+|----------------|----------------------------------|--------------------------------------|--------------------------------------|
+| Best For       | Small to medium projects        | Large, structured applications      | High-performance APIs               |
+| Description    | Lightweight micro-framework     | Full-stack web framework            | High-performance API framework      |
+| Performance    | Good, not async by default      | Moderate, synchronous by default    | High, async support (ASGI)          |
+| Flexibility    | Highly flexible                 | Predefined structure                | Flexible with async support         |
+| Use Cases     | Small web apps, projects        | Large-scale applications, dashboards | APIs, real-time apps                |
+| Learning Curve | Easy to learn                  | Steeper                             | Moderate    |
+
+
+-> json.dumps() and json.loads() 
+-
+json.dumps():
+Converts a Python object into a JSON-formatted string.
+json.loads():
+Converts a JSON-formatted string into a Python object.
+
+-> differeance between return and yeild?
+-
+return: Exits a function and sends back a value. The function ends and its state is lost.
+yield: Pauses a function and returns a value. The function’s state is preserved, allowing it to resume and produce multiple values over time.
+
+-> What is the difference between a class method and an instance method and static method in Python?
+->(O M D C A)
+
+Instance Method:
+Operates on an instance of the class.
+Can access and modify the instance's attributes.
+Defined using the def keyword inside the class, with self as the first parameter.
+Called on an instance of the class: instance.method().
+Instance attributes are accessed using self inside the class.
+
+Class Method:
+Operates on the class itself, rather than an instance.
+Cannot access or modify instance-specific attributes.
+Defined using the @classmethod decorator, with cls as the first parameter.
+Called on the class: Class.method().
+Class attributes are accessed directly using the class name .
+
+Static Method: Independent of instance and class.
+Cannot access instance or class attributes.
+Defined using @staticmethod.
+Used for utility/helper functions.
+Called using Class.method() or instance.method().- (F U M D U)
+
+-> Difference Between APIView and ViewSet in Django REST Framework (DRF) [D F M U U]
+| Feature        | APIView                                      | ViewSet                                        |
+|---------------|--------------------------------------------|----------------------------------------------|
+| Definition    | A class-based view for handling API requests. | A set of views that automatically handles CRUD operations. |
+| Flexibility   | Full control over request handling (custom logic). | Provides built-in actions like list, create, retrieve, update, destroy. |
+| Methods       | Explicitly defines get(), post(), put(), delete(). | Uses predefined methods like list(), retrieve(), etc. |
+| URL Routing   | Requires manual URL configuration using path(). | Uses routers to auto-generate URLs. |
+| Use Case      | When you need full control over request handling. | When working with standard CRUD operations on models. |

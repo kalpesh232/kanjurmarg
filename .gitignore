@@ -1,9 +1,7 @@
 myenv/
-jobs/neosoft.log
-jobs/__pycache__/
-django/django_project/
+jobs/
+django/
 fastapi/
-python/__pycache__/
+python/
+shark/
 react/
-shark/temp.csv
-

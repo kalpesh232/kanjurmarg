@@ -17,7 +17,3 @@ POST
 PUT
 DELETE
 HEAD
-
-########## How are sessions managed in Flask?
-
-In Flask, sessions are managed using cookies. When using cookies directly, values are stored as-is. However, when using the Flask session object, cookie values are encoded for added security. A secret key is provided to the session object for encoding and decoding, enhancing security by preventing tampering with cookie values.

@@ -1,0 +1,82 @@
+1. Python supports a variety of operators  (C L A A M B I ) [7]
+Arithmetic Operators
+    Used for mathematical operations:
+        + (Addition): Adds two values.
+        - (Subtraction): Subtracts one value from another.
+        * (Multiplication): Multiplies two values.
+        / (Division): Divides one value by another (returns a float).
+        // (Floor Division): Divides and returns the integer part (ignores the remainder).
+        % (Modulus): Returns the remainder of a division.
+        ** (Exponentiation): Raises one value to the power of another.
+Comparison Operators
+    Used to compare values:
+        == (Equal to): Checks if two values are equal.
+        != (Not equal to): Checks if two values are not equal.
+        > (Greater than): Checks if a value is greater than another.
+        < (Less than): Checks if a value is less than another.
+        >= (Greater than or equal to): Checks if a value is greater than or equal to another.
+        <= (Less than or equal to): Checks if a value is less than or equal to another.
+Logical Operators
+    Used to combine conditional statements:
+        and: Returns True if both conditions are true.
+        or: Returns True if at least one condition is true.
+        not: Returns True if the condition is false.
+Assignment Operators
+    Used to assign values to variables:
+        =: Assigns a value to a variable.
+        +=: Adds and assigns.
+        -=: Subtracts and assigns.
+        *=: Multiplies and assigns.
+        /=: Divides and assigns.
+        //=: Floor divides and assigns.
+        %=: Modulus and assigns.
+        **=: Exponentiates and assigns.
+Bitwise Operators
+    The integers are first converted into binary and then operations are performed on each bit or corresponding pair of bits, hence the name bitwise operators.:
+        & (AND): Performs a bitwise AND.
+        | (OR): Performs a bitwise OR.
+        ^ (XOR): Performs a bitwise XOR.
+        ~ (NOT): Performs a bitwise NOT (inverts bits).
+        << (Left shift): Shifts bits to the left.
+        >> (Right shift): Shifts bits to the right.
+Membership Operators
+    Check for membership within a sequence:
+        in: Returns True if a value is found in a sequence.
+        not in: Returns True if a value is not found in a sequence.
+Identity Operators
+    Compare memory locations of objects:
+        is: Returns True if two variables point to the same object.
+        is not: Returns True if two variables do not point to the same object.
+
+2.JWT Tokens (HS256) (JSON Web Token)  and Access Tokens 
+-> A JSON Web Token is a format that includes a header, payload, and signature. It can be used for authentication and data exchange, When a user signs in, the server generates a JWT with the user's information in the payload.
+-> Access Token A token used to grant access to protected resources. 
+
+3.How to convert python object into string
+To convert a Python object into a string, you can use several methods Here are some common ways:
+- Using str() Function
+    Converts any Python object into its string representation.
+    General-purpose conversion to a string.
+- Using repr() Function
+    Returns a string that represents the object in a way that can be used to recreate the object.
+    Conversion to a string with more detail, useful for debugging.
+- Using json.dumps()
+    Converts a Python object into a JSON string.
+-  Using pickle.dumps()
+    Serializes a Python object into a byte stream, which can be encoded into a string.
+
+4.Authentication and Authorization 
+- Authentication: Verifies the identity of a user (e.g., login with username and password).
+- Authorization: Determines what actions or resources the authenticated user can access (e.g., checking     permissions or roles).
+
+5.Scheduler in python
+- In Python, a scheduler is used to run tasks at specific times or intervals
+    schedule Library
+        Simple and human-readable task scheduling.
+    APScheduler (Advanced Python Scheduler)
+        More advanced and flexible scheduling.
+    time and threading Modules
+        Manually implement scheduling with sleep intervals.
+
+6. In Django, serialization 
+- In Django, serialization is the process of converting Django models or querysets into a format like JSON for easy storage or transmission. This is especially useful in APIs.
