@@ -6,4 +6,11 @@ jobs/__pycache__/
 shark/temp.csv
 django/
 python/
+fastapi/eavhdi/
+jobs/cybercorp.py
+jobs/cybercorp.txt
+jobs/mite/
+jobs/thinkbar.py
+jobs/thinkbar.txt
+react/
 
