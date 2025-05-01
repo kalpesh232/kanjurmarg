@@ -1,10 +1,7 @@
 myenv/
-django/django_project/app/
-django/django_project/myapp/migrations/
-jobs/neosoft.log
-jobs/__pycache__/
-shark/temp.csv
+jobs/
 django/
+fastapi/
 python/
 fastapi/eavhdi/
 jobs/cybercorp.py
@@ -13,4 +10,5 @@ jobs/mite/
 jobs/thinkbar.py
 jobs/thinkbar.txt
 react/
+shark/
 

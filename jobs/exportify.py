@@ -1,7 +1,8 @@
-a = [1,2,3]
-b = [3,4,5]
+# a = [1,2,3]
+# b = [3,4,5]
 
-print(set(b) - set(a), set(a) - set(b))
+# print(set(b) - set(a), set(a) - set(b))
+
 # count = 0
 # x = [1,2,3,4]
 # for i in range(len(x)):

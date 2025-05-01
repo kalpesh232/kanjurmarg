@@ -1,0 +1,141 @@
+1. COUNT function
+-> The COUNT function in SQL is used to return the number of rows in a table or the number of non-NULL values in a specified column.
+- SELECT COUNT(*) FROM Employees;
+- SELECT COUNT(Salary) FROM Employees;
+- SELECT COUNT(*) FROM Employees WHERE Department = 'HR';
+- SELECT COUNT(DISTINCT Department) FROM Employees;
+
+2. Indexes in SQL
+-> Indexes in SQL are special data structures that speed up query performance by allowing the database to quickly locate rows without scanning the entire table.
+- CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Department VARCHAR(50)
+);
+- -- Create an index on the Department column
+CREATE INDEX idx_department ON Employees(Department);
+- Types of Indexes: (P U N C T C)
+Primary Index: Created automatically for primary keys.
+Unique Index: Ensures all values in the indexed column are unique.
+Composite Index: Indexes multiple columns together.
+Full-Text Index: Optimized for text searches.
+Clustered Index: Physically sorts rows in the table based on the key values.
+Non-Clustered Index: A separate structure that points to the table's data.
+
+3. To optimize an SQL query: (I D S L E P )
+- Avoid SELECT *: Select only required columns.
+- Limit Results: Use LIMIT to fetch only required rows.
+- Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.
+- Partition Large Tables: Split data logically for scalability.
+- Analyze Execution Plan: Use EXPLAIN to debug.
+- Choose Proper Data Types: Smaller types improve performance.
+
+4. Normalization in SQL (D P T)
+- Normalization in SQL means organizing tables to avoid duplicate data and keep data accurate.
+
+- 1. First Normal Form (1NF):
+Eliminate duplicate columns from a table.
+Example: Before (Not 1NF):
+ID	Name	Phone Numbers
+1	Alice	123, 456
+After (1NF):
+ID	Name	Phone Number
+1	Alice	123
+1	Alice	456
+
+2. Second Normal Form (2NF):
+Achieve 1NF.
+Remove partial dependencies.
+Example: Before (Not 2NF):
+OrderID	ProductID	ProductName	Quantity
+After (2NF):
+Orders Table: | OrderID | ProductID | Quantity |
+Products Table: | ProductID | ProductName |
+
+3. Third Normal Form (3NF):
+Achieve 2NF.
+Remove transitive dependencies .
+Example: Before (Not 3NF):
+EmployeeID	EmployeeName	DepartmentID	DepartmentName
+After (3NF):
+Employees Table: | EmployeeID | EmployeeName | DepartmentID |
+Departments Table: | DepartmentID | DepartmentName |
+
+4. ### **Migrations in Python**
+
+Migrations in Python are a way to manage changes to the database schema in a controlled, and versioned manner.
+
+#### **Purpose**:
+- When we building applications, we often need to add new features or update the database. Migrations help to track these changes and apply them to the database easily.
+
+### **How Migrations Work** (D M E T):
+1. Migrations detect changes made to your database models.
+2. Migration files are created to describe the changes in code.
+3. These migration files are executed to apply changes to the actual database.
+4. Migrations are allowing you to keep track of changes and revert them if needed.
+
+### **Key Commands in Django**:
+1. **Create a Migration**:  
+   python manage.py makemigrations
+
+2. **Apply the Migration**:  
+   python manage.py migrate
+
+3. **List Migrations**:  
+   Identify the migrations in your project:  
+   python manage.py showmigrations
+
+4. **Revert a Specific Migration**:  
+   Roll back to a particular migration:  
+   python manage.py migrate my_app 0001_initial
+
+5. **Undo All Migrations for an App**:  
+   Completely revert all migrations for an app:  
+   python manage.py migrate my_app zero
+
+### **Key Commands in Flask** (Using Flask-Migrate):
+1. **Generate a Migration**:  
+   flask db migrate -m "Your message"
+2. **Apply the Migration**:  
+   flask db upgrade
+
+5. Slicing Notation: [::-1]
+Start from the end of the string (-1 indicates the last character).
+Move backwards one step at a time.
+Continue until the beginning of the string.
+
+6. Structure of a Foreign Key:
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    order_date DATE,
+    customer_id INT,
+    FOREIGN KEY (customer_id) 
+        REFERENCES Customers(customer_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+8. Memory Management in Python
+There are two types of memories in Python: **heap memory** and **stack memory**.  
+- **Heap memory** stores objects like lists, dictionaries, and integers.  
+- **Stack memory** stores local variables and references to objects in heap memory.  
+x = 10  
+Here, `10` is stored in heap memory, and `x` is stored in stack memory.  
+y = x  
+Both `x` and `y` refer to the same memory location.  
+x = None  
+If a variable does not reference any object, Python's garbage collector removes it from heap memory to free up space.  
+
+9. self
+self is a special keyword in Python used in instance methods of a class to refer to the current object (instance) on which the method is being called. It is always the first parameter of instance methods and ensures that the method operates on the current instance when multiple instances of the class exist.
+self acts as a reference (or pointer) to the current instance, allowing access to its attributes and other methods.
+
+11. Explain sessions and cookie in flask python
+- Cookies
+Small pieces of data stored in the user's browser.
+Used to remember information like login details.
+Example: response.set_cookie("key", "value").
+- Sessions
+Stores user-specific data on the server (backed by cookies).
+Flask uses cookies to identify sessions securely.
+Example: session["key"] = "value".

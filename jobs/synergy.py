@@ -43,9 +43,9 @@
 #     scheduler.shutdown()
 
 # -----  Convert dictionary into a flat list (keys and values)
-my_dict = {'a': 1, 'b': 2, 'c': 3}
-l = [item for pair in my_dict.items() for item in pair ]
-print(l)
+# my_dict = {'a': 1, 'b': 2, 'c': 3}
+# l = [item for pair in my_dict.items() for item in pair ]
+# print(l)
 
 # -------------- merge (concatenate) two lists 
 # list1 = [1, 2, 3]
@@ -67,6 +67,27 @@ print(l)
 
 # merged_dict = {**dict1, **dict2}
 # print(merged_dict)
+
+# ---------- unit test in python
+# import unittest
+
+# def add(a, b):
+#     return a + b
+
+# # Unit test class
+# class TestAddFunction(unittest.TestCase):
+#     def test_add_positive_numbers(self):
+#         self.assertEqual(add(2, 3), 5)
+
+#     def test_add_negative_numbers(self):
+#         self.assertEqual(add(-2, -3), -5)
+
+#     def test_add_negative_numbers1(self):
+#         self.assertEqual(add(-2, 3), 1)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
 
 # ---------- veriable lenght argument 
 
