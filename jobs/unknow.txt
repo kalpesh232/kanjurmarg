@@ -1,19 +1,11 @@
 1. DataFrame in Pandas
--> A DataFrame in Pandas is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns). It is similar to a table in a database or an Excel spreadsheet.
+-> A DataFrame in Pandas is a two-dimensional, size-mutable, and potentially tabular data structure with labeled axes (rows and columns). It is similar to a table in a database or an Excel spreadsheet.
 
 2. List comprehension in Python
 -> A list comprehension in Python provides a concise way to create lists. It consists of brackets containing an expression followed by a for clause, and can also include multiple for or if clauses.
 
 4. SQLAlchemy is a Python
 SQLAlchemy is a Python library for SQL database interaction that provides both a low-level SQL toolkit and an Object-Relational Mapping (ORM) layer for managing database schemas and queries.
-
-5. concatenate, join, and merg
-- Concatenate :
-Combining two or more sequences (like strings, lists, arrays) end-to-end.
-- Join :
-Combine elements into a single string with a separator or add columns in DataFrames.
-- Merge :
-Combining two data structures based on common elements. Often used in the context of databases or Pandas DataFrames.
 
 6. Arguments in Python Functions
 -> 1. Positional Arguments:
@@ -31,4 +23,20 @@ These are used to define default values for parameters. If an argument is not pr
 - Keyword-Only (*): Forces some arguments to be passed by keyword.
 
 ----------
-select amount from salary order by amount desc limit 1 offset 2;
+7. select amount from salary order by amount desc limit 1 offset 2;
+
+8. RESTful APIs
+“Yes, I have worked with RESTful APIs. I used HTTP methods like GET for retrieving data and POST for creating data. I also understand RESTful principles, like working with resources, statelessness, and using appropriate status codes.”
+
+Status Code	 Meaning	    When to Use
+200	OK	                    Request was successful and the server returns the requested data.
+201	Created	                Resource has been successfully created.
+204	No Content	            Request is successful but there is no content to return.
+400	Bad Request	            The request was malformed or invalid.
+401	Unauthorized	        Authentication is required or has failed.
+403	Forbidden	            The server understood the request but refuses to authorize it.
+404	Not Found	            The requested resource was not found.
+500	Internal Server Error	The server encountered an unexpected condition.
+502	Bad Gateway	            Invalid response received from an upstream server.
+503	Service Unavailable	    The server is temporarily unable to handle the request.
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+</head>
+<body>
+    {{products}}
+    <h1>Registered Products</h1>
+    <ul>
+    
+        {% for product in myProducts %}
+            <li>{{ product.name }} - ₹{{ product.price }}</li>
+        {% empty %}
+            <li>No products registered yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
