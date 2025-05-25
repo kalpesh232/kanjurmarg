@@ -1,6 +1,9 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 
 # uphd
@@ -9,7 +12,9 @@ db = SQLAlchemy()
 app = Flask(__name__)
 def init_app(app):
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root@localhost/stok'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/stok'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/stok'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/stok'
+
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)  # Initialize the db with the app
 
