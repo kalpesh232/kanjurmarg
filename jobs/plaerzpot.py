@@ -20,28 +20,6 @@ ORDER BY user, rank;
 # # Creating an object of MyClass
 # obj = MyClass(10)
 
-# ########## super method in python
-class Parent:
-    def __init__(self, value1):
-        self.v1 = value1
-
-    def show(self):
-        print(f'Parent value1: {self.v1}')
-
-class Child(Parent):
-    def __init__(self, value2, value3):
-        super().__init__(1)  # Initialize parent class
-        self.v2 = value2
-        self.v3 = value3  # Child-specific attribute
-
-    def show(self):
-        # Including parent attributes in output
-        super().show()
-        print(f'Child value2: {self.v2}, Child value3: {self.v3}')
-
-c = Child(2, 3)
-c.show()
-
 
 # ########## monkey paching
 class Greeting:

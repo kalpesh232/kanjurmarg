@@ -40,3 +40,29 @@ Status Code	 Meaning	    When to Use
 502	Bad Gateway	            Invalid response received from an upstream server.
 503	Service Unavailable	    The server is temporarily unable to handle the request.
 
+9. In Python, **SOLID** refers to a set of **five object-oriented design principles** that help make software more understandable, flexible, and maintainable. SOLID is an acronym for:
+
+---
+
+### **S – Single Responsibility Principle (SRP)**
+> A class should have only one reason to change.
+🔹 **Meaning:** Each class should do only one thing. If it has more than one responsibility, it should be split.
+
+### **O – Open/Closed Principle (OCP)**
+> Software entities should be open for extension but closed for modification.
+🔹 **Meaning:** You should be able to add new features without changing existing code.
+
+### **L – Liskov Substitution Principle (LSP)**
+> Subclasses should be substitutable for their base classes.
+🔹 **Meaning:** Objects of a subclass should behave correctly when used in place of the superclass.
+❌ Bad: A `Penguin(Bird)` class with `fly()` would violate LSP.
+
+### **I – Interface Segregation Principle (ISP)**
+> Clients should not be forced to depend on methods they do not use.
+🔹 **Meaning:** Avoid creating large, bloated interfaces. Split them into smaller ones.
+
+### **D – Dependency Inversion Principle (DIP)**
+> High-level modules should not depend on low-level modules. Both should depend on abstractions.
+🔹 **Meaning:** Use interfaces or abstractions so that classes depend on behavior, not concrete implementations.
+
+
