@@ -32,10 +32,12 @@ Status Code	 Meaning	    When to Use
 200	OK	                    Request was successful and the server returns the requested data.
 201	Created	                Resource has been successfully created.
 204	No Content	            Request is successful but there is no content to return.
+
 400	Bad Request	            The request was malformed or invalid.
 401	Unauthorized	        Authentication is required or has failed.
 403	Forbidden	            The server understood the request but refuses to authorize it.
 404	Not Found	            The requested resource was not found.
+
 500	Internal Server Error	The server encountered an unexpected condition.
 502	Bad Gateway	            Invalid response received from an upstream server.
 503	Service Unavailable	    The server is temporarily unable to handle the request.
@@ -55,7 +57,6 @@ Status Code	 Meaning	    When to Use
 ### **L – Liskov Substitution Principle (LSP)**
 > Subclasses should be substitutable for their base classes.
 🔹 **Meaning:** Objects of a subclass should behave correctly when used in place of the superclass.
-❌ Bad: A `Penguin(Bird)` class with `fly()` would violate LSP.
 
 ### **I – Interface Segregation Principle (ISP)**
 > Clients should not be forced to depend on methods they do not use.
