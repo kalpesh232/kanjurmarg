@@ -70,18 +70,18 @@ Yes, you can perform join operations using Object-Relational Mapping (ORM) frame
 3. Background workers execute the queued tasks asynchronously.
 4. Tasks are executed outside the main Django request/response cycle.
 
----------- primary keys and unique keys(U I F I)
+---------- primary keys and unique keys(U T F I)
 Primary Key :-
 Ensures uniqueness and cannot be NULL.
-Automatically indexed for faster queries.
-Used to maintain relationships (foreign keys).
 Only one per table (single or composite).
+Used to maintain relationships (foreign keys).
+Automatically indexed for faster queries.
 
 Unique Key:-
 Ensures uniqueness but allows NULL values.
-Automatically indexed like a primary key.
-Can be used as a foreign key, but rarely.
 Multiple unique keys can exist in a table.
+Can be used as a foreign key, but rarely.
+Automatically indexed like a primary key.
 
 ---------- Foreign Key(C M N C M)
 Relationship: Connects two tables by referring to the primary key of another table.

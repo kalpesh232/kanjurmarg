@@ -1,4 +1,4 @@
-1. what is abstraction and encapsulation?
+1. what is abstraction and encapsulation? (cube,rectangle)
 -> Abstraction :
 1. Abstraction is a  concept that involves hiding the complex 
 implementation details and showing only the necessary features. 
@@ -7,7 +7,7 @@ It may contain abstract methods, which are methods without a body.
 3. Abstract base classes allow you to define a common interface for a set of subclasses.
 4. In Python, you cannot directly create an instance of an abstract class. 
 
--> Encapsulation 
+-> Encapsulation (BankAccount)
 1. Encapsulation in Python is like putting data and the actions that work on that data into a box called a 
 class. 
 2. This helps to organize and protect the data, keeping some parts private ( using double underscores) 
@@ -33,7 +33,7 @@ In Python, the with statement is like a helper for managing resources, such as f
 The code without with  manually opens, reads, and closes a file. The  code, using with, automatically takes care of opening and closing the file, making the code cleaner and less prone to mistakes
 
 -> Logging  
-In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info,wrapping, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info,warning, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
 Logging Level	Value
 NOTSET	0
 DEBUG	10
@@ -160,10 +160,10 @@ empty_dict = dict()
 
 -> json.dumps() and json.loads() 
 -
-json.dumps():
+json.dumps(): (official format).
 - Converts a Python object into a JSON-formatted string.
 - sending/storing
-json.loads():
+json.loads(): (usable in code).
 - Converts a JSON-formatted string into a Python object.
 - reading/processing
 

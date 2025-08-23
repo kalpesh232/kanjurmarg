@@ -23,12 +23,12 @@ Clustered Index: Physically sorts rows in the table based on the key values.
 Non-Clustered Index: A separate structure that points to the table's data.
 
 3. To optimize an SQL query: (I D S L E P )
+- Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.
+- Choose Proper Data Types: Smaller types improve performance.
 - Avoid SELECT *: Select only required columns.
 - Limit Results: Use LIMIT to fetch only required rows.
-- Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.
-- Partition Large Tables: Split data logically for scalability.
 - Analyze Execution Plan: Use EXPLAIN to debug.
-- Choose Proper Data Types: Smaller types improve performance.
+- Partition Large Tables: Split data logically for scalability.
 
 4. Normalization in SQL (D P T)
 - Normalization in SQL means organizing tables to avoid duplicate data and keep data accurate.
@@ -127,7 +127,7 @@ x = None
 If a variable does not reference any object, Python's garbage collector removes it from heap memory to free up space.  
 
 9. self
-self is a special keyword in Python used in instance methods of a class to refer to the current object (instance) on which the method is being called. It is always the first parameter of instance methods and ensures that the method operates on the current instance when multiple instances of the class exist.
+self is a special keyword in Python used in instance methods of a class to refer to the current object (instance) on which the method is being called. ensures that the method operates on the current instance when multiple instances of the class exist.
 self acts as a reference (or pointer) to the current instance, allowing access to its attributes and other methods.
 
 11. Explain sessions and cookie in flask python
