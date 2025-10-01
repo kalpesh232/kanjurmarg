@@ -12,3 +12,9 @@
    docker exec -it student-app/bin/bash
    docker rmi student-performance:1.0
    docker rm <container_id>
+10. docker tag student-performance:1.0 ghnsham/student-performance:1.0
+11. docker login
+    docker push ghnsham/student-performance:1.0
+12. On another machine:
+    docker pull ghnsham/student-performance:1.0 
+    docker run -p 5000:5000 ghnsham/student-performance:1.0
