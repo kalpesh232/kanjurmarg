@@ -18,3 +18,4 @@
 12. On another machine:
     docker pull ghnsham/student-performance:1.0 
     docker run -p 5000:5000 ghnsham/student-performance:1.0
+    docker run -v /absolute/path/to/csv:/app/uploads -p 5000:5000 ghnsham/student-performance:1.0
