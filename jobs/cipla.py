@@ -71,6 +71,36 @@
 # string_data = byte_stream.decode('latin1')  # Convert bytes to string
 # print('string_data : ', string_data)
 
+########## -> JWT + Role-Based Authorization
+from flask import Flask, request, jsonify
+import jwt
+
+app = Flask(__name__)
+SECRET_KEY = "khsalpeshhindearishchandra"
+
+# Example: user logs in and gets a token
+# @app.route("/login", methods=["POST"])
+# def login():
+#     user = {"username": "kalpesh", "role": "admin"}  # Normally comes from DB
+#     token = jwt.encode(user, SECRET_KEY, algorithm="HS256")
+#     return jsonify({"token": token})
+
+# # Authorization check
+# @app.route("/admin", methods=["GET"])
+# def admin_only():
+#     token = request.headers.get("Authorization", "").replace("Bearer ", "")
+#     try:
+#         payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+#         if payload.get("role") != "admin":
+#             return jsonify({"error": "Access denied"}), 403
+#         return jsonify({"message": "Welcome, Admin!"})
+#     except Exception as e:
+#         return jsonify({"error": "Invalid token"}), 401
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+
 # ##### Scheduler in python
 
 # -----> schedule 

@@ -5,6 +5,7 @@ unit test in flask
 def display(**kargs)
 if age < 15 throw user  not allow
 how we use venv
+
 if one of my collegue commit a changes that i don't want so how can i revert back
 
 -> revert in a version-controlled system (such as Git)
@@ -46,7 +47,7 @@ Concatenate (pd.concat()): Stacks DataFrames vertically (axis=0) or horizontally
 
 Join (df.join()): Combines two DataFrames based on their index. It's a simpler way to merge on index rather than a specific column. By default, it performs a left join but can be adjusted.
 
-Merge (pd.merge()): Combines DataFrames based on common columns or indices, similar to SQL joins (inner, left, right, outer). It's the most flexible but requires specifying the key(s).  
+Merge (pd.merge()): Combines DataFrames based on common columns or indices, similar to SQL joins (inner, left, right, outer). It's the most flexible but requires specifying the key(s).  In pd.merge(), the default join is inner.
 
 option method
 linux 

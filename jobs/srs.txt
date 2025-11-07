@@ -68,7 +68,7 @@ Migrations in Python are a way to manage changes to the database schema in a con
 #### **Purpose**:
 - When we building applications, we often need to add new features or update the database. Migrations help to track these changes and apply them to the database easily.
 
-### **How Migrations Work** (D M E T):
+### **How Migrations Work** (D F E T):
 1. Migrations detect changes made to your database models.
 2. Migration files are created to describe the changes in code.
 3. These migration files are executed to apply changes to the actual database.
@@ -139,3 +139,7 @@ Example: response.set_cookie("key", "value").
 Stores user-specific data on the server (backed by cookies).
 Flask uses cookies to identify sessions securely.
 Example: session["key"] = "value".
+Session information is kept until:
+Flask → Session lasts 31 days by default.
+Django → Session lasts 2 weeks (14 days) by default.
+FastAPI → No default session, you must handle it manually.
