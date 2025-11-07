@@ -64,6 +64,5 @@ Status Code	 Meaning	    When to Use
 
 ### **D – Dependency Inversion Principle (DIP)**
 > High-level modules should not depend on low-level modules. Both should depend on abstractions.
-🔹 **Meaning:** Use interfaces or abstractions so that classes depend on behavior, not concrete implementations.
-
+🔹 **Meaning:** Code should rely on what something does, not on how it’s implemented — so you can swap implementations without breaking anything.
 
