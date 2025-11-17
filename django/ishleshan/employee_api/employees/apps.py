@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class EmpCurdAppConfig(AppConfig):
+class EmployeesConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "emp_curd_app"
+    name = "employees"
