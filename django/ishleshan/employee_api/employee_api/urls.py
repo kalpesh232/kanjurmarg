@@ -1,5 +1,5 @@
 """
-URL configuration for emp_curd project.
+URL configuration for employee_api project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,9 +16,18 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
+from rest_framework_simplejwt.views import(
+    TokenObtainPairView, TokenRefreshView
+)
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("/", include('urls.py'))
+
+    # JWT Auth
+    path('api/token/', TokenObtainPairView.as_view()),
+    path('api/token/refresh', TokenRefreshView.as_view()),
+
+    path("api/",include('employees.urls'))
 ]
