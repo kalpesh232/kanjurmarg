@@ -70,7 +70,7 @@ Yes, you can perform join operations using Object-Relational Mapping (ORM) frame
 3. Background workers execute the queued tasks asynchronously.
 4. Tasks are executed outside the main Django request/response cycle.
 
----------- primary keys and unique keys(U I F I)
+---------- primary keys and unique keys(U I F Q)
 Primary Key :-
 Ensures uniqueness and cannot be NULL.
 Automatically indexed for faster queries.
