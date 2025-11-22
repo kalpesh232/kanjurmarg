@@ -61,7 +61,7 @@ After (3NF):
 Employees Table: | EmployeeID | EmployeeName | DepartmentID |
 Departments Table: | DepartmentID | DepartmentName |
 
-4. ### **Migrations in Python**
+5. ### **Migrations in Python**
 
 Migrations in Python are a way to manage changes to the database schema in a controlled, and versioned manner.
 
@@ -99,12 +99,12 @@ Migrations in Python are a way to manage changes to the database schema in a con
 2. **Apply the Migration**:  
    flask db upgrade
 
-5. Slicing Notation: [::-1]
+6. Slicing Notation: [::-1]
 Start from the end of the string (-1 indicates the last character).
 Move backwards one step at a time.
 Continue until the beginning of the string.
 
-6. Structure of a Foreign Key:
+7. Structure of a Foreign Key:
 CREATE TABLE Orders (
     order_id INT PRIMARY KEY,
     order_date DATE,
