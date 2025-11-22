@@ -435,6 +435,47 @@
 #             s[j] = temmp
 # print(s)
 
+########## SOLID ##########
+# -- S – Single Responsibility Principle (SRP)
+class Invoice:
+    def calculate_total(self): ...
+    
+class InvoicePrinter:
+    def print_invoice(self): ...
+
+# -- O – Open/Closed Principle (OCP)
+class Shape:
+    def area(self): pass
+
+class Circle(Shape):
+    def area(self):
+        r = 9
+        return 3.14 * r * r
+
+# -- L – Liskov Substitution Principle (LSP)
+class Bird:
+    def fly(self): ...
+
+class Sparrow(Bird):
+    def fly(self): ...
+
+# -- I – Interface Segregation Principle (ISP)
+class Printer:
+    def print(self): ...
+
+class Scanner:
+    def scan(self): ...
+
+# -- D – Dependency Inversion Principle (DIP)
+class Keyboard:
+    def get_input(self): ...
+
+class Computer:
+    def __init__(self, keyboard: Keyboard):
+        self.keyboard = keyboard
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-1. what is abstraction and encapsulation?
+1. what is abstraction and encapsulation? (cube,rectangle)
 -> Abstraction :
 1. Abstraction is a  concept that involves hiding the complex 
 implementation details and showing only the necessary features. 
@@ -7,7 +7,7 @@ It may contain abstract methods, which are methods without a body.
 3. Abstract base classes allow you to define a common interface for a set of subclasses.
 4. In Python, you cannot directly create an instance of an abstract class. 
 
--> Encapsulation 
+-> Encapsulation (BankAccount)
 1. Encapsulation in Python is like putting data and the actions that work on that data into a box called a 
 class. 
 2. This helps to organize and protect the data, keeping some parts private ( using double underscores) 
@@ -32,8 +32,8 @@ You can handle exceptions using try and except blocks. If you want to prevent ex
 In Python, the with statement is like a helper for managing resources, such as files. It makes sure that things are set up and cleaned up properly around a block of code.
 The code without with  manually opens, reads, and closes a file. The  code, using with, automatically takes care of opening and closing the file, making the code cleaner and less prone to mistakes
 
-->  
-In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info,wrapping, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
+-> Logging  
+In Flask, you can use the Python logging module to keep track of different types of events and exceptions in your application. There are several levels like notset, debug, info,warning, error, and critical. If you set the logging level , for example, info, it will include logs of info level and above (like error and critical), but it will ignore debug and lower levels
 Logging Level	Value
 NOTSET	0
 DEBUG	10
@@ -83,16 +83,12 @@ Things can happen independently, not necessarily in a specific order.
 Things happening independently, not strictly in order.
 Example: Like sending messages and doing other things while waiting for replies.
 
--> "list" and "array"
+-> "list" 
 - List:(DVIO)
 In Python, a list is a built-in data type that represents a collection of items.
 Lists are versatile and can contain elements of different data types.
 Elements in a list are accessed by their index.
 Lists support various operations like appending, slicing, and more.
-
-- Array:
-The term "array" is sometimes used to refer to a list in Python. In everyday Python programming, when people talk about arrays, they often mean lists.
-In a more formal sense, an array may refer to the array module in Python, which provides a compact array of items of the same type. This is similar to a list but with a more restrictive structure.
 
 -> why we use cors?(Cross-origin resource sharing)
 - CORS helps when your website asks another website for data, but security measures might block the request. CORS allows these requests, making it possible for your website to get the data it needs from another service.
@@ -106,8 +102,8 @@ In a more formal sense, an array may refer to the array module in Python, which 
 -> default port of flask.
 - 5000
 
--> git fetch vs pull
-- git fetch gets changes from the remote repository but doesn't merge them into your local branch. git pull gets changes and immediately merges them into your current branch.
+-> What’s the difference between `git pull`, `git fetch`, and `git merge`?
+git fetch retrieves changes from the remote repository without merging them into your local branch. git merge applies those changes. git pull combines both steps (fetch + merge) into one command, updating your local branch automatically.
 
 -> Differences and Applications of List, Tuple, Set, frozenset and Dictionary in Python(C M R R O A D)
 -
@@ -151,7 +147,7 @@ empty_dict = dict()
 | Feature         | Flask                               | Django                                | FastAPI                              |
 |----------------|----------------------------------|--------------------------------------|--------------------------------------|
 | Best For       | Small to medium projects        | Large, structured applications      | High-performance APIs               |
-| Description    | Lightweight micro-framework     | Full-stack web framework            | High-performance API framework      |
+| Framework    | Lightweight micro-framework     | Full-stack web framework            | High-performance API framework      |
 | Performance    | Good, not async by default      | Moderate, synchronous by default    | High, async support (ASGI)          |
 | Flexibility    | Highly flexible                 | Predefined structure                | Flexible with async support         |
 | Use Cases     | Small web apps, projects        | Large-scale applications, dashboards | APIs, real-time apps                |
@@ -160,10 +156,12 @@ empty_dict = dict()
 
 -> json.dumps() and json.loads() 
 -
-json.dumps():
-Converts a Python object into a JSON-formatted string.
-json.loads():
-Converts a JSON-formatted string into a Python object.
+json.dumps(): (official format).
+- Converts a Python object into a JSON-formatted string.
+- sending/storing
+json.loads(): (usable in code).
+- Converts a JSON-formatted string into a Python object.
+- reading/processing
 
 -> differeance between return and yeild?
 -
@@ -201,3 +199,4 @@ Called using Class.method() or instance.method().- (F U M D U)
 | Methods       | Explicitly defines get(), post(), put(), delete(). | Uses predefined methods like list(), retrieve(), etc. |
 | URL Routing   | Requires manual URL configuration using path(). | Uses routers to auto-generate URLs. |
 | Use Case      | When you need full control over request handling. | When working with standard CRUD operations on models. |
+    

@@ -50,6 +50,7 @@ Identity Operators
 
 2.JWT Tokens (HS256) (JSON Web Token)  and Access Tokens 
 -> A JSON Web Token is a format that includes a header, payload, and signature. It can be used for authentication and data exchange, When a user signs in, the server generates a JWT with the user's information in the payload.
+-> In Postman, add your JWT token as Authorization: Bearer <token> to access protected APIs.
 -> Access Token A token used to grant access to protected resources. 
 
 3.How to convert python object into string
