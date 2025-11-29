@@ -1,7 +1,7 @@
 1. Tell me about yourself
 -> Hello, my name is Kalpesh Harishchandra Shinde. I have 4 years of experience, including 3.5 years in Python development. I began my career as a PHP developer and later worked as a Python and Django instructor.
 
-I then worked as a Software Developer at Software Plus Electronics, where I handled database management, dynamic web development, backend integration, and MQTT communication using Flask. I also automated tasks with Cron jobs, performed CRUD operations in MySQL, debugged applications, generated logs, and managed project repositories on GitHub.
+I then worked as a Software Developer at Software Plus Electronics, where I handled database management, dynamic web development, backend integration, and MQTT communication using Flask. performed CRUD operations in MySQL, debugged applications, generated logs, and managed project repositories on GitHub.
 
 Most recently, I worked at PlayerzPot Media Pvt. Ltd., a fantasy gaming platform, where I focused on testing, debugging, ensuring match accuracy, managing refunds, and optimizing performance using PySpark.
 
@@ -15,7 +15,7 @@ I strongly believe in professional ethics, continuous improvement, teamwork, and
 4.what is inheritance in python?
 -> In Python, inheritance lets a class to inherit properties and methods from another class. It helps to reuse and extend code by utilizing properties and methods from other classes.There are  single level, multi-level, multiple, hybrid, and hierarchical.
 
-5.join
+5.join Query
 -> Select * from table1 join table2 on table1.column = table2.column where table1.column = 'something'
 
 6.how can or in how many tpe we defin e a url in  flask python?
