@@ -1,0 +1,46 @@
+fastapi
+numpy 
+pandas
+----------
+-> Validate input parameters in Python using:
+Type checks – using isinstance()
+Value checks – using conditions
+
+-> Time librery in threading :
+- We use the **time** library in threading to make threads **pause for a short time** (using `time.sleep()`), so other threads also get a chance to run. This stops any one thread from **using all the CPU time** (hogging it) and keeps everything running smoothly.
+- Without time.sleep(), threads will still run concurrently — but if your code is CPU-heavy and runs in a tight loop, one thread may dominate CPU time.
+
+-> Why we use threading 
+- We use threading to let multiple tasks run concurrently within the same program, improving responsiveness and efficiency—especially when tasks involve waiting (like I/O, network calls, or user input) rather than heavy computation.
+
+-> Encryption and Decryption 
+- Encryption means converting readable data (plaintext) into unreadable form (ciphertext) using a key, so others can’t understand it.
+- Decryption is converting that ciphertext back to plaintext using the same (or corresponding) key.
+
+-> How to send email :           
+In Python, you send emails using SMTP (Simple Mail Transfer Protocol):
+Create the email (subject, sender, receiver, body).
+Connect to an SMTP server (e.g., Gmail: smtp.gmail.com, port 587).
+Secure the connection with starttls().
+Login with email and app password.
+Send the email using sendmail() or send_message().
+Close the connection (or use with to auto-close).
+
+docker
+-> Create array 
+
+**1. Python list: The term "array" is sometimes used to refer to a list in Python. In everyday Python programming, when people talk about arrays, they often mean lists.
+In a more formal sense.  ** A built-in, flexible container that can store mixed data types. Good for general use but slow for heavy math.
+
+**2. `array` module: An array may refer to the array module in Python, which provides a compact array of items of the same type. This is similar to a list but with a more restrictive structure. ** Stores only one data type (like integers). More memory-efficient than lists but less powerful than NumPy.
+
+**3. NumPy array:** Fast, optimized array for numerical data. Supports vectorized math (`arr * 2`), widely used in data science and ML.
+
+-> Create empty daaframe 
+* **`pd.DataFrame()`** creates an empty table.
+* **`columns=[...]`** lets you set column names upfront.
+
+-> what pd.DataFrame does
+`pd.DataFrame()` creates a **table-like data structure** (rows and columns) in pandas.
+* It can be empty or filled with data.
+* Stores data in labeled columns for **easy access, analysis, and manipulation** (like Excel but in Python).

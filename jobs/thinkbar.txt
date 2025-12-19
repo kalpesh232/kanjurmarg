@@ -1,0 +1,8 @@
+Search time in set vs dictionary:
+Search time in set vs dictionary:
+Feature       | set                   | dict
+Structure     | Only values           | Keys and values
+Search time   | O(1) (constant)       | O(1) (constant)
+Search method | Check if value exists | Check if key exists
+Both set and dictionary have O(1) search time in Python because they are implemented using hash tables. Set checks for values, dict checks for keys.
+
