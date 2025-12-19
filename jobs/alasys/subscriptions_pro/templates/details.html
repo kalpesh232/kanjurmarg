@@ -1,0 +1,11 @@
+<h2>Subscription Details</h2>
+<p>Plan: {{ sub.plan }}</p>
+<p>Credits: {{ sub.credits }}</p>
+<p>Next renewal: {{ sub.next_renewal }}</p>
+
+<a href="{% url 'perform_action' 5 %}">Do action (cost 5)</a><br>
+<a href="{% url 'recharge_credits' %}">Recharge</a>
+
+{% for msg in messages %}
+  <p>{{ msg }}</p>
+{% endfor %}

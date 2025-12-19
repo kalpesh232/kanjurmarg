@@ -1,0 +1,77 @@
+1. How can you secure you app in django
+- I secure my Django app by using CSRF protection, XSS protection, Django ORM to prevent SQL injection, storing SECRET_KEY in .env, enabling HTTPS, setting ALLOWED_HOSTS, and keeping DEBUG=False in production. I also use strong authentication and validate all user inputs. 
+
+2. Have you deploy any app or project ?
+- Yes, I have deployed applications, mainly within our internal team network. I set up the app on a local server that was accessible to 4–5 colleagues on the same Wi-Fi/LAN. For deployment, I followed the standard process: created a virtual environment, installed dependencies, configured Gunicorn as the application server, and set up Nginx as a reverse proxy. I also created a systemd service to keep the app running and monitored logs for troubleshooting.
+Though I haven’t done large-scale production deployment for external clients yet, I clearly understand the full deployment flow and can handle it.
+
+sudo apt update
+sudo apt upgrade
+sudo apt install python3 python3-pip python3-venv nginx
+
+cd /mnt/c/Users/kalpe/test/stok
+python3 -m venv venv
+source venv/bin/activate
+pip install flask gunicorn
+
+python3 stok.py
+# OR
+gunicorn stok:app --bind 0.0.0.0:5000
+
+sudo nano /etc/systemd/system/stok.service
+
+Paste this (make sure `stok:app` is correct):
+
+```ini
+[Unit]
+Description=Gunicorn instance to serve stokapp
+After=network.target
+
+[Service]
+User=ghnsham
+Group=www-data
+WorkingDirectory=/mnt/c/Users/kalpe/test/stok
+Environment="PATH=/mnt/c/Users/kalpe/test/stok/venv/bin"
+ExecStart=/mnt/c/Users/kalpe/test/stok/venv/bin/gunicorn --workers 3 --bind unix:/run/stokapp.sock stok:app
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl daemon-reload
+sudo systemctl start stok
+sudo systemctl enable stok
+
+sudo nano /etc/nginx/sites-available/stokapp
+
+Paste this config (match the socket path `/run/stokapp.sock`):
+
+```nginx
+server {
+    listen 80;
+    server_name 192.168.1.5;
+
+    location / {
+        proxy_pass http://unix:/run/stokapp.sock;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+}
+
+sudo ln -s /etc/nginx/sites-available/stokapp /etc/nginx/sites-enabled
+sudo nginx -t
+sudo systemctl reload nginx
+
+Visit your app in browser:
+**[http://192.168.1.5/](http://192.168.1.5/)**
+
+3.What architecture do you use in Flask?
+Django uses the MVT architecture, but unlike Django, Flask does not enforce any fixed architecture. In Flask, we follow a modular structure using Blueprints — separating routes, services, models, and configurations. It works similar to an MVC-style pattern but is more flexible and lightweight
+
+
+
+
+
+

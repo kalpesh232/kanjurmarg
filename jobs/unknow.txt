@@ -24,9 +24,9 @@ These are used to define default values for parameters. If an argument is not pr
 
 ----------
 7. select amount from salary order by amount desc limit 1 offset 2;
-
+    
 8. RESTful APIs
-“Yes, I have worked with RESTful APIs. I used HTTP methods like GET for retrieving data and POST for creating data. I also understand RESTful principles, like working with resources, statelessness, and using appropriate status codes.”
+“Yes, I have worked with RESTful APIs. First, decide what data i want to expose  Then create clear URLs for them, use proper HTTP methods GET for retrieving data and POST for creating data and using appropriate status codes.”
 
 Status Code	 Meaning	    When to Use
 200	OK	                    Request was successful and the server returns the requested data.

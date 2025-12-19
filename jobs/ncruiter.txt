@@ -1,0 +1,15 @@
+- Have you worked on the CRUD operations.
+Yes, I have done CRUD in Flask.
+I use mysql.connector for DB connection.
+I write separate routes for Create (POST), Read (GET), Update (PUT), and Delete (DELETE).
+Inside each route, I connect to DB, run queries, commit, and return JSON response+
+
+- Write unit test for API calls or database operation/queries in python?
+For API testing, I use pytest with Flask’s test client.
+I call the endpoints using client.get() or client.post() and assert status codes and JSON.
+For database tests, I never hit the real DB — I mock the connection using unittest.mock so queries run safely and tests stay fast.
+
+- What is  Atomicity 
+Atomicity is a database concept.
+It means a transaction must fully succeed or fully fail.
+In Python we use it only when doing DB transactions with commit/rollback.

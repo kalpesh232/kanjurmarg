@@ -7,6 +7,9 @@
 
 2. Indexes in SQL
 -> Indexes in SQL are special data structures that speed up query performance by allowing the database to quickly locate rows without scanning the entire table.
+-> Use index on Columns used in WHERE , JOIN conditions , ORDER BY , GROUP BY
+-> Avoid index on Small tables , Columns with few unique values (gender, status)
+-> Because DB can scan small tables very fast , Index itself takes extra memory
 - CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,
     Name VARCHAR(100),
