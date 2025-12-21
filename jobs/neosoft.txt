@@ -142,7 +142,7 @@ empty_dict = dict()
 - Yes, you can create a dictionary using a list where the list elements become the keys of the dictionary. By default, the values for these keys can be set to None or any other default value. 
 
 
--> What are the key differences between Flask, Django, and FastAPI?
+-> What are the key differences between Flask, Django, and FastAPI? ( B F P F U C)
 -
 | Feature         | Flask                               | Django                                | FastAPI                              |
 |----------------|----------------------------------|--------------------------------------|--------------------------------------|

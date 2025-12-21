@@ -8,11 +8,35 @@ httpresponse, httprequest
 1. Choose Flask: For small projects, APIs, or when you need flexibility and control.
 2. Choose Django: For large, complex projects needing built-in tools like authentication, admin panel, and scalability.
 
-- Can you explain the **request-response cycle** in Flask or Django?  
-1. Client sends request Browser  hits the server.
-2. Server routes Matches URL to a route (Flask) or URL pattern (Django).
-3. View processes request Executes logic, fetches data, or renders templates.
-4. Response sent back HTML, JSON, or other data is returned to the client.
+- How request–response cycle works Flask (Request → Route → View → Response)
+1. Client sends request (browser/Postman → URL)
+2. Flask receives request using WSGI server
+3. URL routing matches the request to a view function
+4. View function executes (logic, DB, processing)
+5. Response is created (JSON/HTML + status code)
+6. Response sent back to client
+
+- How request–response cycle works django (Client → Server → Middleware → URLs → View → Middleware → Response)
+1. Client sends request (browser / Postman)
+2. Web server (Gunicorn / uWSGI) receives the request
+3. Django middleware processes the request
+4. URL dispatcher (urls.py) matches the URL
+5. View (FBV / CBV) executes logic
+6. Response is created
+7. Middleware processes the response
+8. Response sent back to client
+
+- How request–response cycle works fastapi (Client → Uvicorn → Middleware → Route → Dependencies → Validation → Logic → Response)
+1. Client sends request (browser / Postman)
+2. ASGI server (Uvicorn) receives the request
+3. FastAPI middleware runs (CORS, auth, logging)
+4. Path operation (route) is matched
+5. Dependency injection runs (Depends)
+6. Request data is validated (Pydantic)
+7. Endpoint function executes (business logic)
+8. Response is created
+9. Middleware processes response
+10. Response sent back to client
 
 - How would you structure a REST API in Flask or Django? 
 ### **In Flask**:
