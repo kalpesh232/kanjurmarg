@@ -1,3 +1,4 @@
+
 django/django_project/
 myenv/
 django/django_project/app/
@@ -9,3 +10,9 @@ shark/temp.csv
 shark/
 react/
 fastapi/eavhdi/__pycache__/
+django/
+fastapi/
+python/
+react/
+shark/
+

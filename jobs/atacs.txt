@@ -1,0 +1,9 @@
+1. Difference between PHP and Python
+PHP → Server-side scripting language mainly for web development.
+Python → General-purpose language used for web, data science, AI, automation, scripting, etc.
+
+2. Duck Typing in Python
+Duck typing means Python checks behavior, not the type.
+“If it walks like a duck and quacks like a duck, it is a duck.”
+Python does not check object’s class → only checks if it has required methods/attributes.
+
