@@ -1,0 +1,8 @@
+1. How Maintained backend scripts for match processing & refund automation
+- Refunds were processed only when a match was cancelled. Our cron job checked cancelled matches, fetched all users who had paid the entry fee for that match, and refunded them automatically.
+
+2.If you call a function that creates an object multiple times, will each call return the same object or a new object?
+- Each time you call a function that creates an object, it returns a new object.
+
+3. If an API allows only 10 requests per second, how will you make sure your program doesn’t cross that limit?
+- I send only 10 requests, then wait 1 second, then send the next 10. This way I never cross the 10-per-second limit.

@@ -24,19 +24,45 @@ These are used to define default values for parameters. If an argument is not pr
 
 ----------
 7. select amount from salary order by amount desc limit 1 offset 2;
-
+    
 8. RESTful APIs
-“Yes, I have worked with RESTful APIs. I used HTTP methods like GET for retrieving data and POST for creating data. I also understand RESTful principles, like working with resources, statelessness, and using appropriate status codes.”
+“Yes, I have worked with RESTful APIs. First, decide what data i want to expose  Then create clear URLs for them, use proper HTTP methods GET for retrieving data and POST for creating data and using appropriate status codes.”
 
 Status Code	 Meaning	    When to Use
 200	OK	                    Request was successful and the server returns the requested data.
 201	Created	                Resource has been successfully created.
 204	No Content	            Request is successful but there is no content to return.
+
 400	Bad Request	            The request was malformed or invalid.
 401	Unauthorized	        Authentication is required or has failed.
 403	Forbidden	            The server understood the request but refuses to authorize it.
 404	Not Found	            The requested resource was not found.
+
 500	Internal Server Error	The server encountered an unexpected condition.
 502	Bad Gateway	            Invalid response received from an upstream server.
 503	Service Unavailable	    The server is temporarily unable to handle the request.
+
+9. In Python, **SOLID** refers to a set of **five object-oriented design principles** that help make software more understandable, flexible, and maintainable. SOLID is an acronym for:
+
+---
+
+### **S – Single Responsibility Principle (SRP)**
+> A class should have only one reason to change.
+🔹 **Meaning:** Each class should do only one thing. If it has more than one responsibility, it should be split.
+
+### **O – Open/Closed Principle (OCP)**
+> Software entities should be open for extension but closed for modification.
+🔹 **Meaning:** You should be able to add new features without changing existing code.
+
+### **L – Liskov Substitution Principle (LSP)**
+> Subclasses should be substitutable for their base classes.
+🔹 **Meaning:** Objects of a subclass should behave correctly when used in place of the superclass.
+
+### **I – Interface Segregation Principle (ISP)**
+> Clients should not be forced to depend on methods they do not use.
+🔹 **Meaning:** Avoid creating large, bloated interfaces. Split them into smaller ones.
+
+### **D – Dependency Inversion Principle (DIP)**
+> High-level modules should not depend on low-level modules. Both should depend on abstractions.
+🔹 **Meaning:** Code should rely on what something does, not on how it’s implemented — so you can swap implementations without breaking anything.
 

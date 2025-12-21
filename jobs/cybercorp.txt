@@ -1,0 +1,5 @@
+- PySpark :
+PySpark is the Python library for Apache Spark. It lets you process big data using Python, supporting tasks like data analysis, machine learning, and real-time processing across many computers.
+
+- Super() :
+super() is a function in Python used to call a method or constructor from the parent class. It helps in accessing and using the parent class's methods without explicitly naming the class.

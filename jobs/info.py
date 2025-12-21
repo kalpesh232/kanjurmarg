@@ -156,14 +156,14 @@
 # x = lambda x,y : x+y 
 # print(x(10,20))
 
-mychar = 'kalpeshharishchandrashinde'
-mystr , mylst= '',  []
-for i in mychar:
-    if i in mystr:
-        mylst.append(mystr)
-        mystr = ''
-    mystr += i
-mylst.append(mystr)
-mydict = {i: len(i) for i in mylst if len(i) == max(map(len, mylst)) } # applies the len function to each element in mylst
-print(mydict)
+# mychar = 'kalpeshharishchandrashinde'
+# mystr , mylst= '',  []
+# for i in mychar:
+#     if i in mystr:
+#         mylst.append(mystr)
+#         mystr = ''
+#     mystr += i
+# mylst.append(mystr)
+# mydict = {i: len(i) for i in mylst if len(i) == max(map(len, mylst)) } # applies the len function to each element in mylst
+# print(mydict)
 

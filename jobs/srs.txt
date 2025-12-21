@@ -7,6 +7,9 @@
 
 2. Indexes in SQL
 -> Indexes in SQL are special data structures that speed up query performance by allowing the database to quickly locate rows without scanning the entire table.
+-> Use index on Columns used in WHERE , JOIN conditions , ORDER BY , GROUP BY
+-> Avoid index on Small tables , Columns with few unique values (gender, status)
+-> Because DB can scan small tables very fast , Index itself takes extra memory
 - CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,
     Name VARCHAR(100),
@@ -23,12 +26,12 @@ Clustered Index: Physically sorts rows in the table based on the key values.
 Non-Clustered Index: A separate structure that points to the table's data.
 
 3. To optimize an SQL query: (I D S L E P )
+- Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.
+- Choose Proper Data Types: Smaller types improve performance.
 - Avoid SELECT *: Select only required columns.
 - Limit Results: Use LIMIT to fetch only required rows.
-- Use Indexes: On columns in WHERE, JOIN, ORDER BY, etc.
-- Partition Large Tables: Split data logically for scalability.
 - Analyze Execution Plan: Use EXPLAIN to debug.
-- Choose Proper Data Types: Smaller types improve performance.
+- Partition Large Tables: Split data logically for scalability.
 
 4. Normalization in SQL (D P T)
 - Normalization in SQL means organizing tables to avoid duplicate data and keep data accurate.
@@ -61,14 +64,14 @@ After (3NF):
 Employees Table: | EmployeeID | EmployeeName | DepartmentID |
 Departments Table: | DepartmentID | DepartmentName |
 
-4. ### **Migrations in Python**
+5. ### **Migrations in Python**
 
 Migrations in Python are a way to manage changes to the database schema in a controlled, and versioned manner.
 
 #### **Purpose**:
 - When we building applications, we often need to add new features or update the database. Migrations help to track these changes and apply them to the database easily.
 
-### **How Migrations Work** (D M E T):
+### **How Migrations Work** (D F E T):
 1. Migrations detect changes made to your database models.
 2. Migration files are created to describe the changes in code.
 3. These migration files are executed to apply changes to the actual database.
@@ -99,12 +102,12 @@ Migrations in Python are a way to manage changes to the database schema in a con
 2. **Apply the Migration**:  
    flask db upgrade
 
-5. Slicing Notation: [::-1]
+6. Slicing Notation: [::-1]
 Start from the end of the string (-1 indicates the last character).
 Move backwards one step at a time.
 Continue until the beginning of the string.
 
-6. Structure of a Foreign Key:
+7. Structure of a Foreign Key:
 CREATE TABLE Orders (
     order_id INT PRIMARY KEY,
     order_date DATE,
@@ -127,7 +130,7 @@ x = None
 If a variable does not reference any object, Python's garbage collector removes it from heap memory to free up space.  
 
 9. self
-self is a special keyword in Python used in instance methods of a class to refer to the current object (instance) on which the method is being called. It is always the first parameter of instance methods and ensures that the method operates on the current instance when multiple instances of the class exist.
+self is a special keyword in Python used in instance methods of a class to refer to the current object (instance) on which the method is being called. ensures that the method operates on the current instance when multiple instances of the class exist.
 self acts as a reference (or pointer) to the current instance, allowing access to its attributes and other methods.
 
 11. Explain sessions and cookie in flask python
@@ -139,3 +142,7 @@ Example: response.set_cookie("key", "value").
 Stores user-specific data on the server (backed by cookies).
 Flask uses cookies to identify sessions securely.
 Example: session["key"] = "value".
+Session information is kept until:
+Flask → Session lasts 31 days by default.
+Django → Session lasts 2 weeks (14 days) by default.
+FastAPI → No default session, you must handle it manually.

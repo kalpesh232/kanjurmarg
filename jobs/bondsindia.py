@@ -97,7 +97,7 @@
 # data = {"name": "John", "age": 30}
 # print('data : ', data)
 # print('dataT : ', type(data))
-# # Use json.dumps() to convert the dictionary into a JSON string
+# # Use json.dumps() to convert the dictionary into a JSON string 
 # json_data = json.dumps(data)
 # print('json_data : ', json_data)
 # print('json_dataT : ', type(json_data))

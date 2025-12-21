@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Upload</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #FF9A8B  , #FF6B95  , #FF8E53);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: linear-gradient(to right, #FFDEE9  , #B5FFFC);
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px linear-gradient(to right, #0F2027  , #203A43, #2C5364);
+            padding: 30px 40px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: linear-gradient(to right, #FDBB2D  , #CF8B2B);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input[type="file"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid linear-gradient(to right, #00DBDE  , #FC00FF);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        input:focus,
+        button:focus {
+            outline: none;
+            border-color: linear-gradient(to right, #A1FFCE  , #FAFFD1);
+        }
+
+        button {
+            background: linear-gradient(to right, #D8B5FF   , #6DD5FA , #A3FFD6);
+            color: linear-gradient(to right, #B2B2B2  , #7A7A7A);
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #A3FFD6  , #7BFF88, #59C7F2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input[type="file"],
+            input[type="number"],
+            button {
+                font-size: 14px;
+            }
+        }
+
+        .stock-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: linear-gradient(to right, #E0C3FC  , #8EC5FC);
+            background: linear-gradient(to right, #FDC830  , #F37335);
+            padding: 12px 20px;
+            margin: 20px auto;
+            border-left: 6px solid linear-gradient(to right, #B76E79  , #E6AE8C);
+            border-radius: 8px;
+            box-shadow: 0 3px 6px linear-gradient(to right, #9D50BB  , #6E48AA);
+            max-width: 600px;
+        }
+
+        .stock-name {
+            color: linear-gradient(to right, #FFD3B5  , #FFAAA6);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px linear-gradient(to right, #C31432  , #240B36);
+        }
+
+        .separator {
+            color: linear-gradient(to right, #8E9EAB  , #EEF2F3);
+            margin: 0 8px;
+        }
+
+        .stock-index {
+            color: linear-gradient(to right, #F43B47  , #453A94);
+        }
+
+        @media (max-width: 600px) {
+            .stock-info {
+                font-size: 18px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .separator {
+                display: none;
+            }
+        }
+
+        .buy-sell-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            padding: 0.7rem;
+        }
+
+        .buy-section,
+        .sell-section {
+            color: linear-gradient(to right, #C6FFDD  , #FBD786, #F7797D);
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            flex: 1 1 160px;
+            box-shadow: 0 4px 6px linear-gradient(to right, #1D4350  , #A43931);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .sell-section {
+            background-color: linear-gradient(to right, #348F50  , #56B4D3);
+            border-left-color: linear-gradient(to right, #FF512F  , #DD2476);
+        }
+
+        .buy-section:hover,
+        .sell-section:hover {
+            transform: scale(1.02);
+        }
+
+        .buy-section p,
+        .sell-section p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: linear-gradient(to right, #FFF6EB  , #E8E8E8);
+        }
+
+        .home-button-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .home-button-form button {
+            background: linear-gradient(to right, #16a085, #1abc9c); /* teal to green-blue */
+    color: linear-gradient(to right, #232526  , #414345);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px linear-gradient(to right, #C9A66B  , #8A6B3F);
+        }
+
+        .home-button-form button:hover {
+            background-color: linear-gradient(to right, #1A2980  , #26D0CE);
+        }
+
+        @media (max-width: 480px) {
+
+            .buy-sell-box,
+            .day-stats {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .buy-section,
+            .sell-section,
+            .stat-box {
+                flex: 1 1 45%;
+            }
+
+            .buy-section p,
+            .sell-section p,
+            .stat-box p {
+                margin: 0.3rem 0;
+            }
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: linear-gradient(to right, #D8B5FF   , #6DD5FA , #A3FFD6);
+            color: linear-gradient(to right, #1E3C72  , #2A5298);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: linear-gradient(to right, #FF5F6D  , #FFC371);
+        }
+
+        .day-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.7rem;
+        }
+
+        .stat-box {
+            background: linear-gradient(to right, #D4FC79, #96E6A1);
+            /* Vibrant orange to yellow */
+            color: linear-gradient(to right, #3A3A3A  , #5A5A5A);
+            border-radius: 12px;
+            padding: 0.6rem 1rem;
+            text-align: center;
+            flex: 1 1 130px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px linear-gradient(to right, #FDFD96, #F9D976);
+        }
+
+        .stat-box strong {
+            color: linear-gradient(to right, #870000  , #190A05);
+            font-size: 1.1rem;
+        }
+
+        .buy-section {
+            background: linear-gradient(to right, #00c9a7, #92fe9d);
+        }
+
+        .sell-section {
+            background: linear-gradient(to right, #654EA3, #EAAFC8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        {% if stok_dic %}
+        <div class="stock-info">
+            <span class="stock-name">{{ stok_dic.stok_name }}</span>
+            <span class="separator">|</span>
+            <span class="stock-index">{{ stok_dic.stok_index }}</span>
+        </div>
+        {% endif %}
+
+        {% if buy_sell %}
+        <div class="buy-sell-box">
+            <div class="buy-section">
+                <p><strong>Min Buy At:</strong> ₹{{ buy_sell.min_buy }}</p>
+                <p><strong>Max Buy At:</strong> ₹{{ buy_sell.max_buy }}</p>
+            </div>
+            <div class="sell-section">
+                <p><strong>Min Sell At:</strong> ₹{{ buy_sell.min_sell }}</p>
+                <p><strong>Max Sell At:</strong> ₹{{ buy_sell.max_sell }}</p>
+            </div>
+        </div>
+        <div class="day-stats">
+            <div class="stat-box">
+                <p><strong>Single Day Ideally Low :</strong> ₹{{ buy_sell.single_day_low }}</p>
+            </div>
+            <div class="stat-box">
+                <p><strong>Single Day Ideally High:</strong> ₹{{ buy_sell.single_day_high }}</p>
+            </div>
+        </div>
+
+
+        <form action="/" method="get" class="home-button-form">
+            <a href="/" class="home-button">Home</a>
+        </form>
+        {% else%}
+
+        <h2>Upload CSV File</h2>
+        <form action="/" method="post" enctype="multipart/form-data" novalidate>
+            <label for="file">Select CSV File:</label>
+            <input type="file" id="file" name="file" accept=".csv" required>
+
+            <label for="open">Enter Open Value:</label>
+            <input type="number" id="open" name="open" placeholder="Enter a number">
+
+            <!-- <label for="per">Buy Increse %:</label>
+            <input type="number" id="per" name="per" placeholder="Enter a percentage"> -->
+
+            <button type="submit">Upload and Calculate</button>
+        </form>
+
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
