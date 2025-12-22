@@ -15,4 +15,5 @@ python/
 react/
 shark/
 fastapi/eavhdi/fastapi-crud_ci_cd/venv
+fastapi/eavhdi/fastapi-crud_ci_cd/app/__pycache__/
 
