@@ -71,6 +71,7 @@ Yes, you can perform join operations using Object-Relational Mapping (ORM) frame
 4. Tasks are executed outside the main Django request/response cycle.
 
 ---------- primary keys and unique keys(U T F I)
+
 Primary Key :-
 Ensures uniqueness and cannot be NULL.
 Only one per table (single or composite).

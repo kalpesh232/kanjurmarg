@@ -1,8 +1,9 @@
+
 django/django_project/
 myenv/
-python/__pycache__/
-shark/
+django/
+fastapi/
+python/
 fastapi/eavhdi/
 react/
-
-
+shark/
