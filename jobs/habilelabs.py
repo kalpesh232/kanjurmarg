@@ -1,3 +1,5 @@
+"""Given a list of prices, find the maximum difference where the larger number comes after the smaller one."""
+
 def max_profit(prices):
     min_price = float('inf')  # Track lowest price seen so far
     max_profit = 0            # Track max profit

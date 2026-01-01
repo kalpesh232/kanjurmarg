@@ -1,3 +1,5 @@
+"""How do you flatten a deeply nested list in Python without using built-in libraries?"""
+
 # flat_ls = []
 # def flatten_list(data):
 #     for item in data:

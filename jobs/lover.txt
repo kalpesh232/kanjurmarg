@@ -71,6 +71,17 @@ Visit your app in browser:
 Django uses the MVT architecture, but unlike Django, Flask does not enforce any fixed architecture. In Flask, we follow a modular structure using Blueprints — separating routes, services, models, and configurations. It works similar to an MVC-style pattern but is more flexible and lightweight
 
 
+About work previous project what was your actual work 
+Sqlalchemy or Raw queries, why not you used ORM 
+GIL what python version are you using 
+How you manage the sessions 
+Encryption and decryption 
+AWS 
+About deploying the real application 
+Gunicorn vs flask server advantages 
+Reverse proxy exact 
+Jwt token
+
 
 
 
