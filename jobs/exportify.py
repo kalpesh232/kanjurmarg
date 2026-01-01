@@ -2,6 +2,8 @@
 # b = [3,4,5]
 # print(set(b) - set(a), set(a) - set(b))
 
+"""How do you count duplicate comparisons in a list using nested loops"""
+
 # count = 0
 # x = [1,2,3,4]
 # for i in range(len(x)):

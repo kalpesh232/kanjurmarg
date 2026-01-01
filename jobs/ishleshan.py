@@ -1,3 +1,5 @@
+"""Given a string, split it into words, sort the words in reverse alphabetical order, and join them back into a string."""
+
 # myStr = "Django is powerful"
 # myLssplit = myStr.split()
 # myLssplit.sort(reverse=True)
