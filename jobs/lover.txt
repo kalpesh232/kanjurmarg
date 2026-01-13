@@ -70,15 +70,39 @@ Visit your app in browser:
 3.What architecture do you use in Flask?
 Django uses the MVT architecture, but unlike Django, Flask does not enforce any fixed architecture. In Flask, we follow a modular structure using Blueprints — separating routes, services, models, and configurations. It works similar to an MVC-style pattern but is more flexible and lightweight
 
+What is a Queue library in Python? 
+- Queue library is used to safely store and process tasks in order, especially when multiple threads or background jobs are involved.
 
 About work previous project what was your actual work 
 Sqlalchemy or Raw queries, why not you used ORM 
 GIL what python version are you using 
-How you manage the sessions 
+
+ - How you manage the sessions 
+I store user identity after login.
+For APIs, I use JWT token in headers.
+Token expires automatically.
+For web apps, I use framework sessions.
+Logout clears the session/token.
+
 Encryption and decryption 
 AWS 
 About deploying the real application 
-Gunicorn vs flask server advantages 
+
+- Gunicorn vs flask server advantages 
+Flask server :-
+For development only
+Single process
+Not fast
+Not secure
+Don’t use in production
+
+Gunicorn :- 
+For production
+Multiple workers
+Handles many users
+More stable
+Faster
+
 Reverse proxy exact 
 Jwt token
 
