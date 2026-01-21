@@ -1,19 +1,11 @@
-
-django/django_project/
 myenv/
-django/django_project/app/
-django/django_project/myapp/migrations/
 jobs/neosoft.log
 jobs/__pycache__/
-python/__pycache__/
-shark/temp.csv
+fastapi/
 shark/
 react/
-fastapi/eavhdi/__pycache__/
 django/
 python/
-react/
-shark/
-fastapi/eavhdi/fastapi-crud_ci_cd/venv
-fastapi/eavhdi/fastapi-crud_ci_cd/app/__pycache__/
+
+
 
