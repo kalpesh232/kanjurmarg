@@ -1,0 +1,67 @@
+--------- pre start ----------
+Since you have experience in **MySQL**, **Flask**, and **Django**, focus on your strengths and highlight transferable skills during the interview. Here's a tailored list of **interview questions** based on your expertise:
+
+httpresponse, httprequest
+----------
+
+- How do you choose between Flask and Django for a project?
+1. Choose Flask: For small projects, APIs, or when you need flexibility and control.
+2. Choose Django: For large, complex projects needing built-in tools like authentication, admin panel, and scalability.
+
+- How request–response cycle works Flask (Request → Route → View → Response)
+1. Client sends request (browser/Postman → URL)
+2. Flask receives request using WSGI server
+3. URL routing matches the request to a view function
+4. View function executes (logic, DB, processing)
+5. Response is created (JSON/HTML + status code)
+6. Response sent back to client
+
+- How request–response cycle works django (Client → Server → Middleware → URLs → View → Middleware → Response)
+1. Client sends request (browser / Postman)
+2. Web server (Gunicorn / uWSGI) receives the request
+3. Django middleware processes the request
+4. URL dispatcher (urls.py) matches the URL
+5. View (FBV / CBV) executes logic
+6. Response is created
+7. Middleware processes the response
+8. Response sent back to client
+
+- How request–response cycle works fastapi (Client → Uvicorn → Middleware → Route → Dependencies → Validation → Logic → Response)
+1. Client sends request (browser / Postman)
+2. ASGI server (Uvicorn) receives the request
+3. FastAPI middleware runs (CORS, auth, logging)
+4. Path operation (route) is matched
+5. Dependency injection runs (Depends)
+6. Request data is validated (Pydantic)
+7. Endpoint function executes (business logic)
+8. Response is created
+9. Middleware processes response
+10. Response sent back to client
+
+- How would you structure a REST API in Flask or Django? 
+### **In Flask**:
+   - Create a project folder and set up a virtual environment.
+   - Install Flask and necessary libraries `Flask-RESTful`. via `pip install flask-restful`.
+   - Use Flask decorators (`@app.route`) to define API routes.
+   - Use **Flask-RESTful**.
+   - jsonify Converts Python dictionaries or objects to JSON.
+   - Api organizes resources and routes in the app.
+   - Resource Defines logic for API endpoints with methods like get(), post().
+   - /project
+     ├── app.py (main application)
+     ├── /models.py (database models)
+     ├── /resources.py (API resource handling) 
+     └── /schemas.py (serialization) 
+### **In Django**:
+   - Install Django and Django REST Framework (DRF) via `pip install djangorestframework`.
+   - Create a new Django project and app.
+   - Use Django models for data storage and define serializers for API responses.
+   - Use **Django REST Framework**'s **views** to define API logic.
+   - Define URLs using `urls.py` to map endpoints to views.
+   - Serialization converts Python objects (like models) into formats like JSON for APIs.
+   - class Meta specifies model and fields to include in the API response.
+### **General REST API Structure**:
+- **Resources**: Each endpoint represents a resource (e.g., `/api/items`).
+- **HTTP Methods**: Use standard HTTP methods (`GET`, `POST`, `PUT`, `DELETE`).
+- **Status Codes**: Return appropriate status codes (`200 OK`, `404 Not Found`, `500 Internal Server Error`).
+- **JSON Responses**: Ensure the API responds with JSON format.

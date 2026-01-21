@@ -1,0 +1,40 @@
+Is set mutable ? 
+Set → mutable (you can add/remove items)
+Set elements → immutable (they cannot change)
+
+How garbage collection remove the object from heap memory 
+Python uses garbage collection based on reference counting.
+When an object has no references pointing to it, it is automatically removed from heap memory.
+
+Why pandas fast
+Pandas is fast because behind the scenes it uses very fast C programs instead of pure Python code.
+
+Why we use gunicorn 
+Gunicorn is used to run Python web apps in production because it handles multiple users efficiently and is faster and more stable than the built-in server.
+
+What is proxy and reverse proxy 
+Proxy (Forward Proxy)
+👉 Acts on behalf of the client
+👉 Hides the client from the server
+👉 Example: Company internet proxy
+Reverse Proxy
+👉 Acts on behalf of the server
+👉 Hides the server from the client
+👉 Example: Nginx in front of Flask/Django
+One line:
+Proxy = protects clients
+Reverse proxy = protects servers
+
+What is load balancing 
+Load balancing distributes incoming traffic across multiple servers to prevent overload, ensuring high availability, reliability, and better performance of applications.
+
+Singleton design pattern in python
+Singleton is a design pattern that ensures a class has only one instance and provides a global point of access to it.
+ 
+What is database sharding? 
+Sharding is a technique to split large databases into smaller pieces across multiple servers to improve scalability and performance.
+
+Size of data , how much seconds its required 
+Sensor data was small JSON payloads (few hundred bytes). MQTT delivery and dashboard updates were near real-time, typically under a second including database storage
+
+

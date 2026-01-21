@@ -1,0 +1,6 @@
+1. what is the requirement.txt in python
+- requirements.txt is a file that lists all the Python libraries your project needs so others can install them easily.
+
+2. what is itrater __inter__ ?
+- __iter__ is a special method in Python that makes an object iterable.
+It returns an iterator so you can use the object in a for loop.
