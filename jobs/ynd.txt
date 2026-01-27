@@ -14,13 +14,13 @@ Gunicorn is used to run Python web apps in production because it handles multipl
 
 What is proxy and reverse proxy 
 Proxy (Forward Proxy)
-👉 Acts on behalf of the client
-👉 Hides the client from the server
-👉 Example: Company internet proxy
+Acts on behalf of the client
+Hides the client from the server
+Example: Company internet proxy
 Reverse Proxy
-👉 Acts on behalf of the server
-👉 Hides the server from the client
-👉 Example: Nginx in front of Flask/Django
+Acts on behalf of the server
+Hides the server from the client
+Example: Nginx in front of Flask/Django
 One line:
 Proxy = protects clients
 Reverse proxy = protects servers

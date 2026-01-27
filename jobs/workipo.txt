@@ -18,7 +18,7 @@ httpresponse, httprequest
 
 - How request–response cycle works django (Client → Server → Middleware → URLs → View → Middleware → Response)
 1. Client sends request (browser / Postman)
-2. Web server (Gunicorn / uWSGI) receives the request
+2. Web server (Gunicorn / WSGI) receives the request
 3. Django middleware processes the request
 4. URL dispatcher (urls.py) matches the URL
 5. View (FBV / CBV) executes logic
