@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Results</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    .table, .table th, .table td { border: 1px solid black; padding: 6px; }
+  </style>
+</head>
+<body>
+  <h2>Results</h2>
+
+  <h3>Uploaded Data</h3>
+  {{ df|safe }}
+
+  <h3>Subject-wise Toppers</h3>
+  <ul>
+    {% for subject, topper in toppers.items() %}
+      <li><b>{{ subject }}</b>: {{ topper }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Pass/Fail Count</h3>
+  <ul>
+    {% for res, count in result_count.items() %}
+      <li>{{ res }}: {{ count }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Statistics</h3>
+  <ul>
+    <li>Mean: {{ stats.mean }}</li>
+    <li>Median: {{ stats.median }}</li>
+    <li>Std Dev: {{ stats.std }}</li>
+  </ul>
+
+  <h3>Normalized Marks (0–1)</h3>
+  <pre>{{ normalized }}</pre>
+
+  <br>
+  <a href="/">⬅ Upload another file</a>
+</body>
+</html>

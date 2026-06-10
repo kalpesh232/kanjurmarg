@@ -1,11 +1,19 @@
 myenv/
-django/django_project/app/
-django/django_project/myapp/migrations/
 jobs/neosoft.log
 jobs/__pycache__/
+<<<<<<< HEAD
 django/django_project/myproject/__pycache__/
 django/django_project/myapp/__pycache__/
 django/django_project/myapp/__pycache__/
 django/django_project/myapp/__pycache__
 django/Affluent_1/
+=======
+fastapi/
+shark/
+react/
+django/
+python/
+
+
+>>>>>>> 564d89b6c0a34ca556f4e105a404cc1dd3d4e28e
 

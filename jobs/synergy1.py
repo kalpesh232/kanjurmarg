@@ -1,33 +1,12 @@
+
+
 # ----- modify string 
-# x = "kalpesh"
-# x1 = list(x)
-# x1[3] = 'x'
-# y = str(x1)
-# print("".join(x1))
+# mystr = "kalpesh"
+# ls_str = list(mystr)
+# ls_str[3] = 'xxx'
+# result = (''.join(ls_str))
+# print('ls_str : ', result)
 
-# ----------    Write a Python program to check if a string is a palindrome.
-
-# x = "shinde"
-# x1 = list(x)
-# x2 = x1[::-1]
-# if x1 == x2 :
-#     print('x1 and x2 are palindrom')
-# else:
-#     print('x1 and x2 are not palindrom')
-
-# print(x1)
-# print(x2)
-
-
-# ------------ Write a Python program to find the factorial of a number.
-
-# def fact(n):
-#     if n < 2 :
-#         return n
-#     else :
-#         return fact(n-1) * n
-# x = fact(8)
-# print(x)
 
 # ---------- Write a Python program to find the largest element in a list.
 
@@ -51,89 +30,33 @@
 
 # ----------  Write a Python program to count the frequency of each element in a list.
 
-# x = [8,0,0,7,2,8,9,7,7,6]
-# x1 = {}
-# for i in x:
-#    x1[i] = 0
-# x2 = list(x1.keys())
-# count = 0
-# for i in range(len(x2)):
-#     for j in range(len(x)):
-#         if x2[i] == x[j] :
-#             count += 1
-#         x1[x2[i]] = count
-#     count = 0
-# print('frequency_count 1 : ', x1)
-
-# --------- Write a Python program to check if a number is prime.
-
-# primt_list = []
-
-# def is_prime(x):
-#     if x < 2:
-#         print(f'{x} is not a Prime Number')
-#         return False
-#     for i in range(2, x):
-#         if x % i == 0 :
-#             print(f'{x} is Not  a Prime Number')
-#             return False
-#             break
+# x = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
+# x_dict = {}
+# for item in x:
+#     if item in x_dict:
+#         x_dict[item] += 1
 #     else:
-#         print(f'{x} is  a Prime Number')
-#         return True
-        
+#         x_dict[item] = 1
 
-# # x = int(input('Enter Number : '))
-# # is_prime(x)
-# countter = 1
-# while len(primt_list) < 50 :
-#     result = is_prime(countter)
-#     if result :
-#         primt_list.append(countter)
-#     countter += 1
-# print(len(primt_list))
-# print(sum(primt_list))
+# print('Result:', x_dict)
 
 # --------- Write a Python program to find the common elements between two lists.
 
-# x = [1, 2, 3, 4, 5]
-# y = [4, 5, 6, 7, 8,1,2,3]
-# common = []
+# x1 = [9, 7, 6, 9, 9, 7, 3, 7, 6, 6]
+# x2 = [9, 1, 7, 2, 4, 2, 6, 7, 3, 1]
 
-# if len(x) > len(y):
-#     list_a , list_b = x  ,y
-# else:
-#     list_a , list_b = y  ,x
+# # Using set intersection to find common elements efficiently
+# common_elements = set(x1) & set(x2)
 
-# for i in list_a:
-#     for j in list_b:
-#         if i == j :
-#             common.append(i)
+# print('Common elements:', common_elements)
 
-# print(common)
 
 # ----------  Write a Python program to remove duplicates from a list.
 
-# x =  [1, 2, 3, 2, 1, 3, 2, 4, 5, 4,2,7,8,5,4,1,2,5,8,9]
-# x1 = {}
-# for i in x:
-#     x1[i] = i
-# x2 = list(x1.keys())
-# print(x2)
-# print(type(x2))
-
-# ---------- monkey patching in Python
-
-# class monkey():
-#     def patch(self):
-#         print("patch() being called")
-
-# def monk_p(self):
-#     print("monk_p being called ")
-
-# obj = monkey()
-# monkey.patch = monk_p
-# obj.patch()
+# x1 = [9,7,6,9,9,7,3,7,6,6,9,1,7,2,4,2,6,7,3,1]
+# print('x1 : ', x1)
+# set_x = list(dict.fromkeys(x1))
+# print('x1 : ', list(set_x))
 
 # ---------- difference between merge, join and concatenate
 
@@ -171,19 +94,20 @@
 # dict = {
 #     'id' : [1,4,np.nan, 9],
 #     'age' : [30,45,90, 55],
-#     'score' : [130, 140, np.nan, 198]
+#     'score' : [130,  np.nan, 140, 198]
 # }
 
 # df = pd.DataFrame(dict)
-
+# print(df)
+# print('')
 # # print(df.isnull().sum())
 # # drop missing values
-# # df.dropna(axis = 1, how = 'all')
-
+# # output = df.dropna(axis = 1, how = 'all')
+# # print(output)
 # # x = df.dropna()
 # # x = df.fillna(00.00)
 # # x = df.replace(to_replace=30, value=999)
-# x = df.interpolate(method='slinear', limit_direction='both')
+
 
 # print(x)
 
@@ -209,15 +133,17 @@
 
 # --------- class representing a Book with properties such as title, author, and publication year. Include a method to display the book details.
 
-class book():
-    def __init__(self, title, author, year):
-        self.title = title
-        self.author = author
-        self.year = year
-    def display(self):
-        return f"Book Title : {self.title} | Author : {self.author} | Publish Year : {self.year}"
-b = book('myBook', 'kalpesh','2024')
-result = b.display()
-print(result)
+# class book():
+#     def __init__(self, title, author, year):
+#         self.title = title
+#         self.author = author
+#         self.year = year
+#     def display(self):
+#         return f"Book Title : {self.title} | Author : {self.author} | Publish Year : {self.year}"
+# b = book('myBook', 'kalpesh','2024')
+# result = b.display()
+# print(result)
+
+
 
 

@@ -1,0 +1,20 @@
+2026-01-13 10:15:32,382 | INFO | Application started
+2026-01-13 10:15:33,134 | INFO | Application started
+2026-01-13 10:16:03,700 | INFO | Application started
+2026-01-13 10:16:11,302 | INFO | Application started
+2026-01-13 10:16:14,409 | INFO | Application started
+2026-01-13 10:18:07,499 | INFO | /divide called
+2026-01-13 10:18:07,502 | WARNING | Cannot divide by zero
+2026-01-13 10:18:25,778 | INFO | /divide called
+2026-01-13 10:18:25,779 | INFO | Result: 3.0
+2026-01-13 10:18:45,207 | INFO | /divide called
+2026-01-13 10:18:45,208 | INFO | Result: 3.0
+2026-01-13 10:20:07,125 | INFO | Health endpoint called
+2026-01-13 10:22:56,661 | INFO | Application started
+2026-01-13 10:23:07,722 | INFO | Health endpoint called
+2026-01-13 10:23:25,231 | INFO | Application started
+2026-01-13 10:23:26,852 | INFO | Application started
+2026-01-13 10:23:38,662 | INFO | Health endpoint called
+2026-01-13 10:23:50,237 | INFO | /divide called
+2026-01-13 10:23:50,238 | INFO | Result: 3.0
+2026-01-13 10:25:11,733 | INFO | Application started

@@ -1,0 +1,7 @@
+<h3>Recharge Credits</h3>
+<form method="post">
+  {% csrf_token %}
+  <input name="amount" type="number" min="1" placeholder="credits">
+  <button type="submit">Add</button>
+</form>
+<a href="{% url 'subscription_details' %}">Back</a>

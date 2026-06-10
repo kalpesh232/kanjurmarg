@@ -1,0 +1,27 @@
+1. Multithreading vs Multiprocessing
+
+- Multithreading
+Uses multiple threads inside one process.
+Shares the same memory.
+Good for I/O-bound tasks (API calls, DB queries, file read/write).
+In Python, limited by GIL for CPU-heavy tasks.
+
+- Multiprocessing
+Uses multiple processes, each with its own memory.
+No shared GIL → Processes run in parallel without blocking each other
+Good for CPU-bound tasks (heavy computation, data processing).
+
+2. What is select_related() vs prefetch_related()?
+select_related()
+Works for ForeignKey / One-to-One.
+Makes ONE SQL JOIN.
+Faster when you expect one related object.
+Example: Book.objects.select_related("author")
+
+prefetch_related()
+Works for Many-to-Many / One-to-Many.
+Makes TWO SQL queries, Django joins results in Python.
+Faster when you expect many related objects.
+Example: Author.objects.prefetch_related("books")
+
+

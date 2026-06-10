@@ -1,0 +1,41 @@
+body{
+    background-color: #a5a1d8 !important;
+}
+
+/* #profile-wraper{
+    text-align: center;
+} */
+
+#profile-pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-links ul,li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.social{
+    width: 20px;
+    height: 20px;
+}
+
+strong {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 5px; /* Adds space between title and value */
+}
+
+p {
+    margin: 0;
+    line-height: 1.6; /* Adjusts line spacing */
+}

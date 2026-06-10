@@ -1,0 +1,18 @@
+https://redis.io/docs/latest/get-started/
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-stack/docker/
+https://redis.io/docs/latest/develop/data-types/
+
+run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+docker ps
+docker exec -it 5aef2f7c98c2 bash
+redis-cli ping
+redis-cli 
+set name kalpesh
+get name
+set user:1 kalpesh
+get user:1
+mget user:1 msg:1 status_code:1
+mset bike:1 "bajaj" bike:2 "honda" bike:3 "ktm" bike:4 "royal enfield" bike:5 "yamaha" bike:6 "aprilia"  bike:7 "kawasaki" bike:8 "benelli"
+set count 0
+incr count
+incrby count 10
